@@ -11,7 +11,7 @@ tags:
 - jenkins
 - tech
 - technology
-title: Jenkins Dynamic EC2 Slaves
+title: Jenkins Dynamic EC2 Executors
 wordpress_id: 844
 ---
 
