@@ -4,7 +4,7 @@ path = 'github.com/luizdepra/hugo-coder'
 
 baseURL = 'https://danielschaaff.com'
 languageCode = 'en-us'
-title = 'Daniel Schaaff'
+title = "Daniel Schaaff"
 theme = "hugo-coder"
 defaultContentLanguage = "en"
 paginate = 20
@@ -31,13 +31,18 @@ colorScheme = "auto"
 since = 2010
 
 [[languages.en.menu.main]]
+name = "Home"
+weight = 1
+url = ""
+
+[[languages.en.menu.main]]
 name = "Blog"
-weight = 2
+weight = 3
 url = "posts/"
 
 [[languages.en.menu.main]]
 name = "About"
-weight = 1
+weight = 2
 url = "about/"
 
 [[params.social]]
