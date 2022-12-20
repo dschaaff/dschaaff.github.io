@@ -1,0 +1,34 @@
+---
+author: dschaaff
+categories:
+- techology
+comments: true
+date: "2017-07-25T22:50:10Z"
+link: http://danielschaaff.com/2017/07/25/844/
+slug: "844"
+tags:
+- aws
+- jenkins
+- tech
+- technology
+title: Jenkins Dynamic EC2 Slaves
+wordpress_id: 844
+---
+
+There is a nice plugin for Jenkins that lets you dynamically add capacity by spinning up EC2 instances on demand and then terminating them when the job queue expires. This is a great way to save money on an AWS based build infrastructure.
+
+Unfortunately, the plugin documentation is really light and there are a few gotchas to look out for.
+
+## Security Groups
+
+This field only accepts comma separated security group IDs, not names. This is frustrating because other fields in the plugin take a space separated list (e.g. labels)
+
+## Running in VPC
+
+If you're a sane person you're going to want to run these instances in a private VPC. This is entirely possible but is hidden in the advanced settings. If you expand the advanced settings you'll see a field to enter your desired subnet ID. Set this to the ID of the private subnet in your VPC you want the instances to run in.
+
+## Don't Rely On the User Data/Init Scrip to Install Dependencies
+
+This adds a lot of time to the instance coming on line and being usable by Jenkins. A better approach is to make an AMI with all the build dependencies you need. The only delay is then the instance boot time.
+
+This is far from an exhaustive walkthrough but highlights the issues I ran into setting it up.

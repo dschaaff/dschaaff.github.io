@@ -1,3 +1,73 @@
-baseURL = 'http://example.org/'
+[module]
+[[module.imports]]
+path = 'github.com/luizdepra/hugo-coder'
+
+baseURL = 'https://danielschaaff.com'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Daniel Schaaff'
+theme = "hugo-coder"
+defaultContentLanguage = "en"
+paginate = 20
+pygmentsStyle = "bw"
+pygmentsCodeFences = true
+pygmentsCodeFencesGuessSyntax = true
+enableEmoji = true
+# Enable Disqus comments
+# disqusShortname = "yourdiscussshortname"
+
+[params]
+author = "Daniel Schaaff"
+description = "My humble home on the internet."
+info = ["He/Him/His", "DevOps", "Kubernetes", "Yaml Wrangling", "Guitar"]
+keywords = "blog,developer,personal"
+avatarURL = "images/avatar.jpg"
+#gravatar = "daniel@danielschaaff.com"
+# Specify light/dark colorscheme
+# Supported values:
+# "auto" (use preference set by browser)
+# "dark" (dark background, light foreground)
+# "light" (light background, dark foreground) (default)
+colorScheme = "auto"
+since = 2010
+
+[[languages.en.menu.main]]
+name = "Blog"
+weight = 2
+url = "posts/"
+
+[[languages.en.menu.main]]
+name = "About"
+weight = 1
+url = "about/"
+
+[[params.social]]
+name = "Github"
+icon = "fa fa-2x fa-github"
+weight = 1
+url = "https://github.com/dschaaff/"
+
+[[params.social]]
+name = "Twitter"
+icon = "fa fa-2x fa-twitter"
+weight = 3
+url = "https://twitter.com/papaschaaff/"
+
+[[params.social]]
+name = "Mastodon"
+icon = "fa fa-2x fa-mastodon"
+weight = 3
+url = "https://hachyderm.io/@papaschaaff"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "fa fa-2x fa-linkedin"
+weight = 4
+url = "https://www.linkedin.com/in/danielschaaff/"
+
+[[params.social]]
+name = "RSS"
+icon = "fa fa-2x fa-rss"
+weight = 6
+url = "https://myhugosite.com/index.xml"
+rel = "alternate"
+type = "application/rss+xml"
