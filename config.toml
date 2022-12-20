@@ -54,6 +54,7 @@ url = "https://twitter.com/papaschaaff/"
 
 [[params.social]]
 name = "Mastodon"
+rel = "me"
 icon = "fa fa-2x fa-mastodon"
 weight = 3
 url = "https://hachyderm.io/@papaschaaff"
