@@ -1,20 +1,18 @@
-[module]
-[[module.imports]]
-path = 'github.com/luizdepra/hugo-coder'
-
 baseURL = 'https://danielschaaff.com'
 languageCode = 'en-us'
 title = "Daniel Schaaff"
-theme = "hugo-coder"
 defaultContentLanguage = "en"
-paginate = 20
+paginate = 40
 pygmentsStyle = "bw"
 pygmentsCodeFences = true
 pygmentsCodeFencesGuessSyntax = true
 enableEmoji = true
-# Enable Disqus comments
-# disqusShortname = "yourdiscussshortname"
 
+[module]
+[[module.imports]]
+path = 'github.com/luizdepra/hugo-coder'
+
+theme = "hugo-coder"
 [params]
 author = "Daniel Schaaff"
 description = "My humble home on the internet."
@@ -29,11 +27,6 @@ avatarURL = "images/avatar.jpg"
 # "light" (light background, dark foreground) (default)
 colorScheme = "auto"
 since = 2010
-
-[[languages.en.menu.main]]
-name = "Home"
-weight = 1
-url = ""
 
 [[languages.en.menu.main]]
 name = "Blog"
