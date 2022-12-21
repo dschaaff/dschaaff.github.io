@@ -38,6 +38,11 @@ name = "About"
 weight = 2
 url = "about/"
 
+[[languages.en.menu.main]]
+name = "CV"
+weight = 2
+url = "cv/"
+
 [[params.social]]
 name = "Github"
 icon = "fa fa-2x fa-github"
