@@ -8,4 +8,7 @@ title: My school thinks its 1999.
 wordpress_id: 435
 ---
 
-I am going to a technical school and studying networking.  It kills me when I'm watching a tutorial and the guy says "let me pull out my smartphone and use the browser to look at the manufacturers website" and then starts using a stylus.  Really?!
+I am going to a technical school and studying networking.  It kills me when I'm
+watching a tutorial and the guy says "let me pull out my smartphone and use the
+browser to look at the manufacturers website" and then starts using a stylus.
+Really?!

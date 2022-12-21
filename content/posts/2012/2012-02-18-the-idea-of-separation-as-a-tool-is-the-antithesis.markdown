@@ -17,10 +17,6 @@ title: No Content Found
 wordpress_id: 290
 ---
 
-<blockquote>The idea of separation as a tool is the antithesis of rock and roll, which is a bunch of guys in a room making a sound and just capturing it.  It's the sound they make together, not separated.  This mythical bullshit about stereo and high tech and Dolby, it's just totally against the whole grain of what music should be.</blockquote>
-
-
-
-
+>The idea of separation as a tool is the antithesis of rock and roll, which is a bunch of guys in a room making a sound and just capturing it.  It's the sound they make together, not separated.  This mythical bullshit about stereo and high tech and Dolby, it's just totally against the whole grain of what music should be.
 
 Keith Richards

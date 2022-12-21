@@ -12,15 +12,15 @@ wordpress_id: 515
 
 My daily coffee routine is becoming quite scientific.
 
--boil filtered water  
--grind with burr grinder   
-- let water cool for 30 secs off boil  
--saturate all grounds in French press  
--stir after one minute  
--steep with lid off for maximum bloom  
--4 min steep  
--skim grounds off top at 3:50 mark  
--slowly plunge press top  
--enjoy in a pre heated mug. 
+- boil filtered water
+- grind with burr grinder
+- let water cool for 30 secs off boil
+- saturate all grounds in French press
+- stir after one minute
+- steep with lid off for maximum bloom
+- 4 min steep
+- skim grounds off top at 3:50 mark
+- slowly plunge press top
+- enjoy in a pre heated mug.
 
 Yes I'm a nerd. And yes that's an Oprah mug.

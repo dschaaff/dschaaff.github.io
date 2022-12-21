@@ -10,8 +10,4 @@ title: No Content Found
 wordpress_id: 345
 ---
 
-<blockquote>What Senators McCain, Levin and others cleverley realized is that since the terrorists are attacking America for its freedoms and "way of life", the only sure way to win the war is to eliminate all of those freedoms and way of life</blockquote>
-
-
-
-
+>What Senators McCain, Levin and others cleverley realized is that since the terrorists are attacking America for its freedoms and "way of life", the only sure way to win the war is to eliminate all of those freedoms and way of life

@@ -19,20 +19,5 @@ wordpress_id: 284
 
 I've been listening to lovedrug nonstop lately and I can't wait for the new album.  This song is pretty bodacious.
 
-
-
-
 [lovedrugmusic](http://lovedrugmusic.tumblr.com/post/18014908377/new-video-for-girl-wild-blood-available-march):
 
-
-
-
-<blockquote>
-
-> 
-> new video for “GIRL” - WILD BLOOD, available March 6th.
-> 
-> 
-</blockquote>
-
-(Source: [https://www.youtube.com/](https://www.youtube.com/))

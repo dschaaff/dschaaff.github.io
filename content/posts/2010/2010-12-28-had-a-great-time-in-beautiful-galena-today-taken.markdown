@@ -6,7 +6,7 @@ link: http://danielschaaff.com/2010/12/28/had-a-great-time-in-beautiful-galena-t
 post_format:
 - Image
 slug: had-a-great-time-in-beautiful-galena-today-taken
-title: No Content Found
+title: Frozen in Galena
 wordpress_id: 527
 ---
 

@@ -20,11 +20,6 @@ wordpress_id: 309
 
 Be careful what you search for.
 
-
-
-
-
 Another reason to use duckduckgo.
 
-  
 [Facebook Is Using You](http://www.nytimes.com/2012/02/05/opinion/sunday/facebook-is-using-you.html?_r=4&hp=&pagewanted=all)

@@ -17,11 +17,8 @@ wordpress_id: 379
 
 [http://media.mtvnservices.com/mgid:cms:video:thedailyshow.com:401363](http://media.mtvnservices.com/mgid:cms:video:thedailyshow.com:401363)
 
-**[The Daily Show with Jon Stewart](http://www.thedailyshow.com/watch/wed-november-2-2011/conservative-minorities-vs--liberal-minorities)**  
+**[The Daily Show with Jon Stewart](http://www.thedailyshow.com/watch/wed-november-2-2011/conservative-minorities-vs--liberal-minorities)**
 Get More: [Daily Show Full Episodes](http://www.thedailyshow.com/full-episodes/),[Political Humor & Satire Blog](http://www.indecisionforever.com/),[The Daily Show on Facebook](http://www.facebook.com/thedailyshow)
-
-
-
 
 This is painful, sad, yet hilarious.  She really said "our blacks are better than their blacks."
 

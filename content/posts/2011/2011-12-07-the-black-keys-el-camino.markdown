@@ -10,13 +10,7 @@ wordpress_id: 343
 
 The new Black Keys album was released today.  This band is legit and if they don't make you want to dance you have problems.
 
-
-
-
 [El Camino](http://itunes.apple.com/us/album/el-camino/id475545948)
-
-
-
 
 
 ![](http://cdn.stereogum.com/files/2011/11/The-Black-Keys-El-Camino1.jpg)

@@ -12,5 +12,4 @@ wordpress_id: 330
 
 A very interesting article on identical twins and the role of genetics in their similarities.
 
-  
 [Twins - Pictures, More From National Geographic Magazine](http://ngm.nationalgeographic.com/2012/01/twins/miller-text)

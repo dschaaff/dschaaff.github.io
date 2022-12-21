@@ -16,5 +16,4 @@ wordpress_id: 373
 
 This is bad for music and will be bad for a lot of bands on those labels.
 
-  
 [Universal Buys EMI](http://www.theverge.com/2011/11/11/2553947/universal-buying-emi-music-for-1-9-billion-says-wsj)

@@ -6,7 +6,7 @@ link: http://danielschaaff.com/2010/12/10/taken-with-instagram-2/
 post_format:
 - Image
 slug: taken-with-instagram-2
-title: No Content Found
+title: Cheeks!
 wordpress_id: 532
 ---
 

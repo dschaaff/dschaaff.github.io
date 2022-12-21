@@ -10,10 +10,7 @@ title: No Content Found
 wordpress_id: 315
 ---
 
-<blockquote>Having good character means settling for what little I have, and participating in life rather than trying to conquer life.</blockquote>
-
-
-
+>Having good character means settling for what little I have, and participating in life rather than trying to conquer life.
 
 
 Donald Miller [http://donmilleris.com/2012/01/23/work-on-your-character-and-a-good-life-will-come-to-you/](http://donmilleris.com/2012/01/23/work-on-your-character-and-a-good-life-will-come-to-you/)

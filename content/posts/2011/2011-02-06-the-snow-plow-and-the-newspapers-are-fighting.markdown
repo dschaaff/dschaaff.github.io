@@ -6,7 +6,7 @@ link: http://danielschaaff.com/2011/02/06/the-snow-plow-and-the-newspapers-are-f
 post_format:
 - Image
 slug: the-snow-plow-and-the-newspapers-are-fighting
-title: No Content Found
+title: Chicago Winters
 wordpress_id: 520
 ---
 
