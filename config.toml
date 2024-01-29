@@ -27,7 +27,9 @@ avatarURL = "images/avatar.jpg"
 # "light" (light background, dark foreground) (default)
 colorScheme = "auto"
 since = 2010
-
+[markup.highlight]
+style = "monokai"
+noClasses = false
 [[languages.en.menu.main]]
 name = "Blog"
 weight = 3

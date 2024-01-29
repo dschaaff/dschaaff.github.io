@@ -2,4 +2,4 @@ module github.com/dschaaff/dschaaff.github.io
 
 go 1.19
 
-require github.com/luizdepra/hugo-coder v0.0.0-20221216144924-57d7d5eb05d9 // indirect
+require github.com/luizdepra/hugo-coder v0.0.0-20240124143907-943d8597b5aa // indirect

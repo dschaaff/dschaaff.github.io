@@ -45,7 +45,7 @@ The first step is to setup the Ruby environment. This presumes you already have 
 if [ "$(ps -p "$$" -o comm=)" != "bash" ]; then
  /bin/bash "$0" "$@"
  exit "$?"
-fi 
+fi
 source /etc/profile.d/rvm.sh
 ruby="ruby-2.1.8"
 install_count=`rvm list | grep $ruby | wc -l`
