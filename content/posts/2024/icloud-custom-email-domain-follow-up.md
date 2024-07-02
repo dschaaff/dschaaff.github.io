@@ -1,18 +1,18 @@
 ---
 author: dschaaff
 categories:
-- email
-- icloud
-- google
-- gmail
+  - email
+  - icloud
+  - google
+  - gmail
 comments: true
 date: "2024-02-28"
 slug: update-on-icloud-custom-email-domain
 tags:
-- email
-- icloud
-- apple
-- gmail
+  - email
+  - icloud
+  - apple
+  - gmail
 title: Update on iCloud+ Custom Email Domain
 ---
 
@@ -24,3 +24,6 @@ issues and the only real difference I've noticed is the email size limit is
 calendar invites end up on my iCloud calendar, which is where I prefer them.
 
 Your mileage may vary, but its working out for me thus far.
+
+EDIT: The iCloud spam filters seem more aggressive and I get more legitimate
+email marked as spam.
