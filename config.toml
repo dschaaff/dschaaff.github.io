@@ -54,12 +54,6 @@ weight = 1
 url = "https://github.com/dschaaff/"
 
 [[params.social]]
-name = "Twitter"
-icon = "fa fa-2x fa-twitter"
-weight = 3
-url = "https://twitter.com/papaschaaff/"
-
-[[params.social]]
 name = "Mastodon"
 rel = "me"
 icon = "fa fa-2x fa-mastodon"
