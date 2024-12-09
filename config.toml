@@ -61,6 +61,12 @@ weight = 3
 url = "https://hachyderm.io/@papaschaaff"
 
 [[params.social]]
+name = "Bluesky"
+icon = "fa fa-2x fa-bluesky"
+weight = 4
+url = "https://bsky.app/profile/daniel.schaaff.me"
+
+[[params.social]]
 name = "LinkedIn"
 icon = "fa fa-2x fa-linkedin"
 weight = 4
