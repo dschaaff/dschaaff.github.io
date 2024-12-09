@@ -11,7 +11,7 @@ tags:
   - aws
   - kubernetes
   - eks
-title: Update on iCloud+ Custom Email Domain
+title: Think Twice Before Adopting EKS Auto Mode
 ---
 
 I've been using AWS' EKS service for many years. What began as a bare bones
