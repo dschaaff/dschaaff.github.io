@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Easy Integrations Tests for Java with the Maven Docker Plugin | Daniel Schaaff</title>
+<meta name="keywords" content="springboot, docker, devops">
+<meta name="description" content="Traditionally it has been a pain to manage the infrastructure necessary for running integration tests within a CI/CD pipeline. Several years ago I accomplished this with an RDS instance for the database in AWS dedicated solely to the test environment. The problem is that multiple tests running at the same time would cause conflicts as they inserted and removed data in the database. At the time I set a lock in Jenkins to only allow one service to utilize the test database at a time, but this was far from ideal. Thankfully there are a lot of good options for solving this problem. I’m particularly fond of using the Docker plugin for Maven to handle this when dealing with Java-based applications.">
+<meta name="author" content="dschaaff">
+<link rel="canonical" href="http://localhost:1313/posts/2019/easy-integrations-tests-for-java-with-the-maven-docker-plugin/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2019/easy-integrations-tests-for-java-with-the-maven-docker-plugin/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="http://localhost:1313/posts/2019/easy-integrations-tests-for-java-with-the-maven-docker-plugin/">
+  <meta property="og:site_name" content="Daniel Schaaff">
+  <meta property="og:title" content="Easy Integrations Tests for Java with the Maven Docker Plugin">
+  <meta property="og:description" content="Traditionally it has been a pain to manage the infrastructure necessary for running integration tests within a CI/CD pipeline. Several years ago I accomplished this with an RDS instance for the database in AWS dedicated solely to the test environment. The problem is that multiple tests running at the same time would cause conflicts as they inserted and removed data in the database. At the time I set a lock in Jenkins to only allow one service to utilize the test database at a time, but this was far from ideal. Thankfully there are a lot of good options for solving this problem. I’m particularly fond of using the Docker plugin for Maven to handle this when dealing with Java-based applications.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2019-01-19T00:00:00+00:00">
+    <meta property="article:modified_time" content="2019-01-19T00:00:00+00:00">
+    <meta property="article:tag" content="Springboot">
+    <meta property="article:tag" content="Docker">
+    <meta property="article:tag" content="Devops">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Easy Integrations Tests for Java with the Maven Docker Plugin">
+<meta name="twitter:description" content="Traditionally it has been a pain to manage the infrastructure necessary for running integration tests within a CI/CD pipeline. Several years ago I accomplished this with an RDS instance for the database in AWS dedicated solely to the test environment. The problem is that multiple tests running at the same time would cause conflicts as they inserted and removed data in the database. At the time I set a lock in Jenkins to only allow one service to utilize the test database at a time, but this was far from ideal. Thankfully there are a lot of good options for solving this problem. I’m particularly fond of using the Docker plugin for Maven to handle this when dealing with Java-based applications.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://localhost:1313/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Easy Integrations Tests for Java with the Maven Docker Plugin",
+      "item": "http://localhost:1313/posts/2019/easy-integrations-tests-for-java-with-the-maven-docker-plugin/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Easy Integrations Tests for Java with the Maven Docker Plugin",
+  "name": "Easy Integrations Tests for Java with the Maven Docker Plugin",
+  "description": "Traditionally it has been a pain to manage the infrastructure necessary for running integration tests within a CI/CD pipeline. Several years ago I accomplished this with an RDS instance for the database in AWS dedicated solely to the test environment. The problem is that multiple tests running at the same time would cause conflicts as they inserted and removed data in the database. At the time I set a lock in Jenkins to only allow one service to utilize the test database at a time, but this was far from ideal. Thankfully there are a lot of good options for solving this problem. I’m particularly fond of using the Docker plugin for Maven to handle this when dealing with Java-based applications.\n",
+  "keywords": [
+    "springboot", "docker", "devops"
+  ],
+  "articleBody": "Traditionally it has been a pain to manage the infrastructure necessary for running integration tests within a CI/CD pipeline. Several years ago I accomplished this with an RDS instance for the database in AWS dedicated solely to the test environment. The problem is that multiple tests running at the same time would cause conflicts as they inserted and removed data in the database. At the time I set a lock in Jenkins to only allow one service to utilize the test database at a time, but this was far from ideal. Thankfully there are a lot of good options for solving this problem. I’m particularly fond of using the Docker plugin for Maven to handle this when dealing with Java-based applications.\nI’m currently taking advantage of this plugin to accomplish two things.\nBuilding the Docker Image for the App This is how I got started with the Docker plugin for maven.\nio.fabric8 docker-maven-plugin 0.26.0 true registry/foo-bar:%l ${project.basedir} ${project.artifactId}-${project.version} This configuration adds the docker:build and docker:push goals to maven for handling the building and pushing of the app’s docker image. I’ll likely write more about some cool features this allows at a later time.\nIntegration Testing The best part of using this plugin is how it simplifies running integration tests.\nI create a Maven profile called build. Within that build profile, the Docker plugin is configured to bring up dependent services via Docker containers for the integration test phase of the Maven build pipeline.\nbuild io.fabric8 docker-maven-plugin 0.26.0 true mysql mysql:5.6 db_user password root test_db MySQL init process done. Ready for start up. 80000 mysql.port:3306 redis redis:5 Ready to accept connections redis.port:6379 start initialize start stop post-integration-test stop This configuration starts a MySQL container with the configured environment variables and waits till the log line MySQL init process done. Ready for start up. appears in stdout to continue. The ports section confgures the ports for the container. What this config does is dynamically bind 3306 in the container to an available host port and sets the host port number in the property mysql.port.\nmysql.port:3306 The app’s properties are configured to use that port for the jdbc connection.\nspring.datasource.url=jdbc:mysql://localhost:@mysql.port@/test_db The Redis container’s port is handled exactly the same way.\nredis.port:6379 redis.port=@redis.port@ The last part of the configuration bind’s the start of the containers to Maven’s initialization phase and the stop of the containers to Maven’s post-integration-test phase.\nstart initialize start stop post-integration-test stop Putting it All Together In the end, we can now run integrations tests in the build tool of choice by simply calling mvn verify -P build. All the build machines require is a proper JDK, Maven, and Docker. Tests will run with a clean database and Redis instance and then everything will be torn down at the end of the integration tests. Multiple builds can run the tests at the same time without stepping on each other.\n[INFO] --- docker-maven-plugin:0.26.0:start (start) @ foo-bar --- [INFO] DOCKER\u003e [mysql:5.6] \"mysql\": Start container bd5d25d42d37 [INFO] DOCKER\u003e Pattern 'MySQL init process done. Ready for start up.' matched for container bd5d25d42d37 [INFO] DOCKER\u003e [mysql:5.6] \"mysql\": Waited on log out 'MySQL init process done. Ready for start up.' 12697 ms [INFO] DOCKER\u003e [redis:5] \"redis\": Start container 8c8b49646958 [INFO] DOCKER\u003e Pattern 'Ready to accept connections' matched for container 8c8b49646958 [INFO] DOCKER\u003e [redis:5] \"redis\": Waited on log out 'Ready to accept connections' 512 ms ... [INFO] Results: [INFO] [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0 [INFO] [INFO] [INFO] --- maven-jar-plugin:3.1.0:jar (default-jar) @ foo-bar --- [INFO] Building jar: /Users/danielschaaff/development/foo-bar/foo-bar.jar [INFO] [INFO] --- spring-boot-maven-plugin:2.1.1.RELEASE:repackage (repackage) @ foo-bar --- [INFO] Replacing main artifact with repackaged archive [INFO] [INFO] --- docker-maven-plugin:0.26.0:stop (stop) @ foo-bar --- [INFO] DOCKER\u003e [redis:5] \"redis\": Stop and removed container 8c8b49646958 after 0 ms [INFO] DOCKER\u003e [mysql:5.6] \"mysql\": Stop and removed container bd5d25d42d37 after 0 ms [INFO] ------------------------------------------------------------------------ [INFO] BUILD SUCCESS [INFO] ------------------------------------------------------------------------ [INFO] Total time: 40.827 s [INFO] Finished at: 2019-01-19T08:40:56-08:00 [INFO] ------------------------------------------------------------------------ ",
+  "wordCount" : "715",
+  "inLanguage": "en",
+  "datePublished": "2019-01-19T00:00:00Z",
+  "dateModified": "2019-01-19T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "dschaaff"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/posts/2019/easy-integrations-tests-for-java-with-the-maven-docker-plugin/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Daniel Schaaff",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Daniel Schaaff (Alt + H)">Daniel Schaaff</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/cv/" title="CV">
+                    <span>CV</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Easy Integrations Tests for Java with the Maven Docker Plugin
+    </h1>
+    <div class="post-meta"><span title='2019-01-19 00:00:00 +0000 UTC'>January 19, 2019</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;dschaaff
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#building-the-docker-image-for-the-app" aria-label="Building the Docker Image for the App">Building the Docker Image for the App</a></li>
+                <li>
+                    <a href="#integration-testing" aria-label="Integration Testing">Integration Testing</a></li>
+                <li>
+                    <a href="#putting-it-all-together" aria-label="Putting it All Together">Putting it All Together</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>Traditionally it has been a pain to manage the infrastructure necessary for running integration tests within a CI/CD pipeline. Several years ago I accomplished this with an RDS instance for the database in AWS dedicated solely to the test environment. The problem is that multiple tests running at the same time would cause conflicts as they inserted and removed data in the database. At the time I set a lock in Jenkins to only allow one service to utilize the test database at a time, but this was far from ideal. Thankfully there are a lot of good options for solving this problem. I’m particularly fond of using the Docker plugin for Maven to handle this when dealing with Java-based applications.</p>
+<p>I&rsquo;m currently taking advantage of this plugin to accomplish two things.</p>
+<h2 id="building-the-docker-image-for-the-app">Building the Docker Image for the App<a hidden class="anchor" aria-hidden="true" href="#building-the-docker-image-for-the-app">#</a></h2>
+<p>This is how I got started with the Docker plugin for maven.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;plugin&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;groupId&gt;</span>io.fabric8<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;artifactId&gt;</span>docker-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;version&gt;</span>0.26.0<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;configuration&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;verbose&gt;</span>true<span class="nt">&lt;/verbose&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;images&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;image&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;name&gt;</span>registry/foo-bar:%l<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;build&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;dockerFileDir&gt;</span>${project.basedir}<span class="nt">&lt;/dockerFileDir&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;tags&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&lt;tag&gt;</span>${project.artifactId}-${project.version}<span class="nt">&lt;/tag&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/tags&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;/build&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/image&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/images&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/configuration&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/plugin&gt;</span>
+</span></span></code></pre></div><p>This configuration adds the <code>docker:build</code> and <code>docker:push</code> goals to maven for handling the building and pushing of the app&rsquo;s docker image.
+I&rsquo;ll likely write more about some cool features this allows at a later time.</p>
+<h2 id="integration-testing">Integration Testing<a hidden class="anchor" aria-hidden="true" href="#integration-testing">#</a></h2>
+<p>The best part of using this plugin is how it simplifies running integration tests.</p>
+<p>I create a <a href="https://maven.apache.org/guides/introduction/introduction-to-profiles.html">Maven profile</a> called build. Within that build profile, the Docker plugin is configured to
+bring up dependent services via Docker containers for the integration test phase of the Maven build pipeline.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;profiles&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;profile&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;id&gt;</span>build<span class="nt">&lt;/id&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;build&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;plugins&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;plugin&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&lt;groupId&gt;</span>io.fabric8<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&lt;artifactId&gt;</span>docker-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&lt;version&gt;</span>0.26.0<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&lt;configuration&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;verbose&gt;</span>true<span class="nt">&lt;/verbose&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;images&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="nt">&lt;image&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;alias&gt;</span>mysql<span class="nt">&lt;/alias&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;name&gt;</span>mysql:5.6<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;run&gt;</span>
+</span></span><span class="line"><span class="cl">                  <span class="nt">&lt;env&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;MYSQL_USER&gt;</span>db_user<span class="nt">&lt;/MYSQL_USER&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;MYSQL_PASSWORD&gt;</span>password<span class="nt">&lt;/MYSQL_PASSWORD&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;MYSQL_ROOT_PASSWORD&gt;</span>root<span class="nt">&lt;/MYSQL_ROOT_PASSWORD&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;MYSQL_DATABASE&gt;</span>test_db<span class="nt">&lt;/MYSQL_DATABASE&gt;</span>
+</span></span><span class="line"><span class="cl">                  <span class="nt">&lt;/env&gt;</span>
+</span></span><span class="line"><span class="cl">                  <span class="nt">&lt;wait&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;log&gt;</span>MySQL init process done. Ready for start up.<span class="nt">&lt;/log&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;time&gt;</span>80000<span class="nt">&lt;/time&gt;</span>
+</span></span><span class="line"><span class="cl">                  <span class="nt">&lt;/wait&gt;</span>
+</span></span><span class="line"><span class="cl">                  <span class="nt">&lt;ports&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;port&gt;</span>mysql.port:3306<span class="nt">&lt;/port&gt;</span>
+</span></span><span class="line"><span class="cl">                  <span class="nt">&lt;/ports&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;/run&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="nt">&lt;/image&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="nt">&lt;image&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;alias&gt;</span>redis<span class="nt">&lt;/alias&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;name&gt;</span>redis:5<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;run&gt;</span>
+</span></span><span class="line"><span class="cl">                  <span class="nt">&lt;wait&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&lt;log&gt;</span>Ready to accept connections<span class="nt">&lt;/log&gt;</span>
+</span></span><span class="line"><span class="cl">                  <span class="nt">&lt;/wait&gt;</span>
+</span></span><span class="line"><span class="cl">                  <span class="nt">&lt;ports&gt;&lt;port&gt;</span>redis.port:6379<span class="nt">&lt;/port&gt;&lt;/ports&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;/run&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="nt">&lt;/image&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;/images&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&lt;/configuration&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&lt;executions&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;execution&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="nt">&lt;id&gt;</span>start<span class="nt">&lt;/id&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="nt">&lt;phase&gt;</span>initialize<span class="nt">&lt;/phase&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="nt">&lt;goals&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;goal&gt;</span>start<span class="nt">&lt;/goal&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="nt">&lt;/goals&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;/execution&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;execution&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="nt">&lt;id&gt;</span>stop<span class="nt">&lt;/id&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="nt">&lt;phase&gt;</span>post-integration-test<span class="nt">&lt;/phase&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="nt">&lt;goals&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&lt;goal&gt;</span>stop<span class="nt">&lt;/goal&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="nt">&lt;/goals&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&lt;/execution&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&lt;/executions&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/plugin&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;/plugins&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/build&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/profile&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/profiles&gt;</span>
+</span></span></code></pre></div><p>This configuration starts a MySQL container with the configured environment variables and waits till the log line
+<code>MySQL init process done. Ready for start up.</code> appears in stdout to continue. The ports section confgures the ports
+for the container. What this config does is dynamically bind <code>3306</code> in the container to an available host port and sets the host port number
+in the property <code>mysql.port</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;ports&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;port&gt;</span>mysql.port:3306<span class="nt">&lt;/port&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/ports&gt;</span>
+</span></span></code></pre></div><p>The app&rsquo;s properties are configured to use that port for the jdbc connection.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">spring.datasource.url=jdbc:mysql://localhost:@mysql.port@/test_db
+</span></span></code></pre></div><p>The Redis container&rsquo;s port is handled exactly the same way.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;ports&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;port&gt;</span>redis.port:6379<span class="nt">&lt;/port&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/ports&gt;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">redis.port=@redis.port@
+</span></span></code></pre></div><p>The last part of the configuration bind&rsquo;s the start of the containers to Maven&rsquo;s initialization phase and
+the stop of the containers to Maven&rsquo;s post-integration-test phase.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"> <span class="nt">&lt;executions&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;execution&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;id&gt;</span>start<span class="nt">&lt;/id&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;phase&gt;</span>initialize<span class="nt">&lt;/phase&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;goals&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;goal&gt;</span>start<span class="nt">&lt;/goal&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/goals&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/execution&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;execution&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;id&gt;</span>stop<span class="nt">&lt;/id&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;phase&gt;</span>post-integration-test<span class="nt">&lt;/phase&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;goals&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;goal&gt;</span>stop<span class="nt">&lt;/goal&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/goals&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/execution&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/executions&gt;</span>
+</span></span></code></pre></div><h2 id="putting-it-all-together">Putting it All Together<a hidden class="anchor" aria-hidden="true" href="#putting-it-all-together">#</a></h2>
+<p>In the end, we can now run integrations tests in the build tool of choice by simply calling
+<code>mvn verify -P build</code>. All the build machines require is a proper JDK, Maven, and Docker.
+Tests will run with a clean database and Redis instance and then everything will be torn down at the end of the
+integration tests. Multiple builds can run the tests at the same time without stepping on each other.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> --- docker-maven-plugin:0.26.0:start <span class="o">(</span>start<span class="o">)</span> @ foo-bar ---
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> DOCKER&gt; <span class="o">[</span>mysql:5.6<span class="o">]</span> <span class="s2">&#34;mysql&#34;</span>: Start container bd5d25d42d37
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> DOCKER&gt; Pattern <span class="s1">&#39;MySQL init process done. Ready for start up.&#39;</span> matched <span class="k">for</span> container bd5d25d42d37
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> DOCKER&gt; <span class="o">[</span>mysql:5.6<span class="o">]</span> <span class="s2">&#34;mysql&#34;</span>: Waited on log out <span class="s1">&#39;MySQL init process done. Ready for start up.&#39;</span> <span class="m">12697</span> ms
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> DOCKER&gt; <span class="o">[</span>redis:5<span class="o">]</span> <span class="s2">&#34;redis&#34;</span>: Start container 8c8b49646958
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> DOCKER&gt; Pattern <span class="s1">&#39;Ready to accept connections&#39;</span> matched <span class="k">for</span> container 8c8b49646958
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> DOCKER&gt; <span class="o">[</span>redis:5<span class="o">]</span> <span class="s2">&#34;redis&#34;</span>: Waited on log out <span class="s1">&#39;Ready to accept connections&#39;</span> <span class="m">512</span> ms
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> Results:
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> Tests run: 4, Failures: 0, Errors: 0, Skipped: <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> --- maven-jar-plugin:3.1.0:jar <span class="o">(</span>default-jar<span class="o">)</span> @ foo-bar ---
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> Building jar: /Users/danielschaaff/development/foo-bar/foo-bar.jar
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> --- spring-boot-maven-plugin:2.1.1.RELEASE:repackage <span class="o">(</span>repackage<span class="o">)</span> @ foo-bar ---
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> Replacing main artifact with repackaged archive
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> --- docker-maven-plugin:0.26.0:stop <span class="o">(</span>stop<span class="o">)</span> @ foo-bar ---
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> DOCKER&gt; <span class="o">[</span>redis:5<span class="o">]</span> <span class="s2">&#34;redis&#34;</span>: Stop and removed container 8c8b49646958 after <span class="m">0</span> ms
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> DOCKER&gt; <span class="o">[</span>mysql:5.6<span class="o">]</span> <span class="s2">&#34;mysql&#34;</span>: Stop and removed container bd5d25d42d37 after <span class="m">0</span> ms
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> ------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> BUILD SUCCESS
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> ------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> Total time:  40.827 s
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> Finished at: 2019-01-19T08:40:56-08:00
+</span></span><span class="line"><span class="cl"><span class="o">[</span>INFO<span class="o">]</span> ------------------------------------------------------------------------
+</span></span></code></pre></div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/springboot/">Springboot</a></li>
+      <li><a href="http://localhost:1313/tags/docker/">Docker</a></li>
+      <li><a href="http://localhost:1313/tags/devops/">Devops</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/2019/in-praise-of-the-bat-command-line-tool/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>In Praise of the Bat Commandline Tool</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/2018/monitoring-creation-of-log-files-in-s3/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Monitoring Creation of Log Files in s3</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Daniel Schaaff</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

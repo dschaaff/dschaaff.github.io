@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.147.4"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Daniel Schaaff</title>
+<meta name="keywords" content="blog, developer, personal">
+<meta name="description" content="My humble home on the internet.">
+<meta name="author" content="Daniel Schaaff">
+<link rel="canonical" href="http://localhost:1313/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="http://localhost:1313/">
+  <meta property="og:site_name" content="Daniel Schaaff">
+  <meta property="og:title" content="Daniel Schaaff">
+  <meta property="og:description" content="My humble home on the internet.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Daniel Schaaff">
+<meta name="twitter:description" content="My humble home on the internet.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Daniel Schaaff",
+  "url": "http://localhost:1313/",
+  "description": "My humble home on the internet.",
+  "logo": "http://localhost:1313/favicon.ico",
+  "sameAs": [
+      
+  ]
+}
+</script>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Daniel Schaaff (Alt + H)">Daniel Schaaff</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/cv/" title="CV">
+                    <span>CV</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="Search">
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">what will the next SOPA be?
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>This is a great read from Marco Arment. Unfortunately our country’s problems will continue without some major campaign finance reform. Instead of trying to protest these laws each time they inevitably come knocking, we need to unite against the corrupt campaign financing that allows money and special interests to dictate policy.
+what will the next SOPA be?
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2012-01-20 19:19:32 +0000 UTC'>January 20, 2012</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to what will the next SOPA be?" href="http://localhost:1313/posts/2012/what-will-the-next-sopa-be/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Congress&#39; misplaced priorities
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>“But it actually paints a picture of industries that, far from being “killed” by piracy, are already weathering a harsh economic climate better than most, and have far outperformed the overall US economy through the current recession.”
+Congress’ misplaced priorities
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2012-01-18 22:56:30 +0000 UTC'>January 18, 2012</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to Congress&#39; misplaced priorities" href="http://localhost:1313/posts/2012/congress-misplaced-priorities/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Google may not be so great...
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>to work for after all. If this is representative of their culture then there goes my interest in working there. My family will always be my number one priority.
+Google may not be so great…
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2012-01-18 22:50:00 +0000 UTC'>January 18, 2012</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to Google may not be so great..." href="http://localhost:1313/posts/2012/google-may-not-be-so-great/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">SOPA outcry beginning to be heard
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>It’s encouraging to see that the protesting of SOPA is beginning to be heard with some congressional supporters now calling for the DNS provisions to be removed the bill.
+SOPA outcry beginning to be heard
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2012-01-14 15:44:59 +0000 UTC'>January 14, 2012</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to SOPA outcry beginning to be heard" href="http://localhost:1313/posts/2012/sopa-outcry-beginning-to-be-heard/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Twins - Pictures, More From National Geographic Magazine
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>A very interesting article on identical twins and the role of genetics in their similarities.
+Twins - Pictures, More From National Geographic Magazine
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-12-29 13:21:27 +0000 UTC'>December 29, 2011</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to Twins - Pictures, More From National Geographic Magazine" href="http://localhost:1313/posts/2011/twins-pictures-more-from-national-geographic/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Samsung doesn&#39;t care about you
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>This about sums up the feeling I got during my stint with my galaxy s.
+Samsung doesn’t care about you </p>
+  </div>
+  <footer class="entry-footer"><span title='2011-12-23 23:46:19 +0000 UTC'>December 23, 2011</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to Samsung doesn&#39;t care about you" href="http://localhost:1313/posts/2011/samsung-doesnt-care-about-you/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>[gallery]
+The Chicago Christkindl market with the fam. The bratwurst is delicious there.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-12-23 19:13:32 +0000 UTC'>December 23, 2011</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2011/the-chicago-christkindl-market-with-the-fam-the/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">The Black Keys &#34;El Camino&#34;
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The new Black Keys album was released today. This band is legit and if they don’t make you want to dance you have problems.
+El Camino
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-12-07 02:14:00 +0000 UTC'>December 7, 2011</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to The Black Keys &#34;El Camino&#34;" href="http://localhost:1313/posts/2011/the-black-keys-el-camino/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Apparently Alec Baldwin Loves Some Words with Friends
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Apparently Alec Baldwin Loves Some Words with Friends
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-12-07 01:41:03 +0000 UTC'>December 7, 2011</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to Apparently Alec Baldwin Loves Some Words with Friends" href="http://localhost:1313/posts/2011/apparently-alec-baldwin-loves-some-words-with/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> What Senators McCain, Levin and others cleverley realized is that since the terrorists are attacking America for its freedoms and “way of life”, the only sure way to win the war is to eliminate all of those freedoms and way of life
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-12-04 03:06:43 +0000 UTC'>December 4, 2011</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2011/what-senators-mccain-levin-and-others-cleverley/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/page/16/">
+      «&nbsp;Prev&nbsp;16/23
+    </a>
+    <a class="next" href="http://localhost:1313/page/18/">Next&nbsp;18/23&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Daniel Schaaff</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 module github.com/dschaaff/dschaaff.github.io
 
-go 1.19
+go 1.24.3
 
-require github.com/luizdepra/hugo-coder v0.0.0-20240124143907-943d8597b5aa // indirect
+require github.com/adityatelange/hugo-PaperMod v0.0.0-20250517180229-ee1e0f3aa3c3 // indirect

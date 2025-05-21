@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.147.4"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Daniel Schaaff</title>
+<meta name="keywords" content="blog, developer, personal">
+<meta name="description" content="My humble home on the internet.">
+<meta name="author" content="Daniel Schaaff">
+<link rel="canonical" href="http://localhost:1313/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="http://localhost:1313/">
+  <meta property="og:site_name" content="Daniel Schaaff">
+  <meta property="og:title" content="Daniel Schaaff">
+  <meta property="og:description" content="My humble home on the internet.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Daniel Schaaff">
+<meta name="twitter:description" content="My humble home on the internet.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Daniel Schaaff",
+  "url": "http://localhost:1313/",
+  "description": "My humble home on the internet.",
+  "logo": "http://localhost:1313/favicon.ico",
+  "sameAs": [
+      
+  ]
+}
+</script>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Daniel Schaaff (Alt + H)">Daniel Schaaff</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/cv/" title="CV">
+                    <span>CV</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="Search">
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Evernote is pretty Glorious
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I just started using Evernote a few days ago and its already one of my favorite pieces of software. (I know I’m a little late the party, its nothing new). The desktop app is great, but my favorite part so far is the iOS app. A thought hit me today and I was able to quickly jot it down on my phone. When I got home it was there waiting in the desktop app thanks to Evernote’s seamless syncing. I like this already…
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-05-24 00:52:37 +0000 UTC'>May 24, 2011</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to Evernote is pretty Glorious" href="http://localhost:1313/posts/2011/evernote-is-pretty-glorious/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Back in the journaling game
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>For years, I would run to a notebook everyday and write about anything and everything. Somedays I would write lyrics/poems, and other days I would simply hash out what was going through my brain. It was a great practice and it really meant a lot to me. Journaling allowed me to sort out my emotions and beliefs. It was also the most intimate time I ever had with my creator. I also felt like God was there when I would write, more so than when I would pray (though journaling can definitely BE prayer). In the past 4 years or so, however, I’ve maybe journaled a handful of times. I keep meaning to get back to it, but put off. Well today I’m back on the horse. ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-05-21 15:57:03 +0000 UTC'>May 21, 2011</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to Back in the journaling game" href="http://localhost:1313/posts/2011/back-in-the-journaling-game/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Learning the bash shell.  Fun times.  Though for the record I like Ubuntu way better than Fedora/Red hat.
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-05-16 18:28:20 +0000 UTC'>May 16, 2011</span>&nbsp;·&nbsp;0 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to Learning the bash shell.  Fun times.  Though for the record I like Ubuntu way better than Fedora/Red hat." href="http://localhost:1313/posts/2011/learning-the-bash-shell-fun-times-though-for/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Goodbye summer weather
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-05-14 00:03:19 +0000 UTC'>May 14, 2011</span>&nbsp;·&nbsp;0 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to Goodbye summer weather" href="http://localhost:1313/posts/2011/goodbye-summer-weather/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">They go all out for Buddha&#39;s birthday
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> See the full gallery on Posterous
+I was riding the bus down Irving Park on Wednesday and a whole city block was decorated for Buddha’s birthday. Then today We saw this on out walk. Buddhists don’t play around.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-05-13 17:58:33 +0000 UTC'>May 13, 2011</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to They go all out for Buddha&#39;s birthday" href="http://localhost:1313/posts/2011/they-go-all-out-for-buddhas-birthday/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">French Press Delicious
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+My daily coffee routine is becoming quite scientific.
+boil filtered water grind with burr grinder let water cool for 30 secs off boil saturate all grounds in French press stir after one minute steep with lid off for maximum bloom 4 min steep skim grounds off top at 3:50 mark slowly plunge press top enjoy in a pre heated mug. Yes I’m a nerd. And yes that’s an Oprah mug.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-05-02 17:55:45 +0000 UTC'>May 2, 2011</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to French Press Delicious" href="http://localhost:1313/posts/2011/french-press-delicious/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Chicago Winters
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+The snow plow and the newspapers are fighting. (Taken with instagram)
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-02-06 20:07:03 +0000 UTC'>February 6, 2011</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to Chicago Winters" href="http://localhost:1313/posts/2011/the-snow-plow-and-the-newspapers-are-fighting/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Jailbroken iPhone setup
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+Im trying to solve the iPhone announces I have with some jailbreak tweaks. I really dig this setup. The theme is mp2 HD and I’m using the perpagehtml tweak to allow placing a widget on a specific homescreen page.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-02-03 20:27:20 +0000 UTC'>February 3, 2011</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to Jailbroken iPhone setup" href="http://localhost:1313/posts/2011/jailbroken-iphone-setup/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">I got the untethered jailbreak working on iOS 4.2.1.
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Instructions are found here http://www.merriam-webster.com/dictionary/hunting and here http://www.redmondpie.com/redsn0w-0.9.7-beta-6-brings-skype-fix-next-version-will-use-4.1-shsh-blobs-instead-of-4.2b3-for-4.2.1-untether/.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-01-21 21:28:52 +0000 UTC'>January 21, 2011</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to I got the untethered jailbreak working on iOS 4.2.1." href="http://localhost:1313/posts/2011/i-got-the-untethered-jailbreak-working-on-ios/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Frozen in Galena
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+Had a great time in beautiful Galena today (Taken with Instagram at Galena, il)
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2010-12-28 00:58:19 +0000 UTC'>December 28, 2010</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to Frozen in Galena" href="http://localhost:1313/posts/2010/had-a-great-time-in-beautiful-galena-today-taken/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/page/21/">
+      «&nbsp;Prev&nbsp;21/23
+    </a>
+    <a class="next" href="http://localhost:1313/page/23/">Next&nbsp;23/23&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Daniel Schaaff</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

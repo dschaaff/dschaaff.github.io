@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Openvpn on Daniel Schaaff</title>
+    <link>http://localhost:1313/tags/openvpn/</link>
+    <description>Recent content in Openvpn on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 16 Aug 2016 02:29:44 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/openvpn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenVPN and ec2 Jumbo Frames</title>
+      <link>http://localhost:1313/posts/2016/openvpn-and-ec2-jumbo-frames/</link>
+      <pubDate>Tue, 16 Aug 2016 02:29:44 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2016/openvpn-and-ec2-jumbo-frames/</guid>
+      <description>&lt;p&gt;While troubleshooting site to site links running OpenVPN recently I ran into an issue with MTU sizing on the ec2 end. When we originally setup the links we followed the performance tuning advice found &lt;a href=&#34;https://community.openvpn.net/openvpn/wiki/Gigabit_Networks_Linux&#34;&gt;here&lt;/a&gt;. The relevant portion is that we set &lt;code&gt;tun-mtu 6000&lt;/code&gt; Why did we do this? Here&amp;rsquo;s OpenVPN&amp;rsquo;s explanation&lt;/p&gt;
+&lt;blockquote&gt;
+  By increasing the MTU size of the tun adapter and by disabling OpenVPN&#39;s internal fragmentation routines the throughput can be increased quite dramatically. The reason behind this is that by feeding larger packets to the OpenSSL encryption and decryption routines the performance will go up. The second advantage of not internally fragmenting packets is that this is left to the operating system and to the kernel network device drivers. For a LAN-based setup this can work, but when handling various types of remote users (road warriors, cable modem users, etc) this is not always a possibility.
+&lt;/blockquote&gt;
+&lt;p&gt;During later testing we discovered that we could easily push 40mb/s over the OpenVPN tunnel into the ec2 instance, but only 1mb/s or less going the opposite direction. Obviously not ideal.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Puppet3 on Daniel Schaaff</title>
+    <link>http://localhost:1313/tags/puppet3/</link>
+    <description>Recent content in Puppet3 on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 16 Nov 2016 00:20:42 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/puppet3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Puppet Catalog Preview with FOSS Puppet</title>
+      <link>http://localhost:1313/posts/2016/using-puppet-catalog-preview-with-foss-puppet/</link>
+      <pubDate>Wed, 16 Nov 2016 00:20:42 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2016/using-puppet-catalog-preview-with-foss-puppet/</guid>
+      <description>&lt;p&gt;We&amp;rsquo;re working to upgrade our infrastructure to Puppet 4 and are making use of the &lt;a href=&#34;https://forge.puppet.com/puppetlabs/catalog_preview#migrate4_empty_string_true&#34;&gt;catalog preview tool&lt;/a&gt; to help identify code that needs to be updated. The preview tool in and of itself is handy, but the output it produces can be a bit daunting. During the &lt;a href=&#34;http://www.slideshare.net/PuppetLabs/puppetconf-2016-getting-to-the-latest-puppet-nate-mccurdy-elizabeth-wittig-plumb-puppet&#34;&gt;&amp;ldquo;Getting to the Latest Puppet&amp;rdquo;&lt;/a&gt; talk at puppetconf they pointed out a tool that professional services uses to create a nice html version of the output. Naturally I got excited to use this, but discovered it doesn&amp;rsquo;t properly work with open source Puppet due to some hardcoded Puppet Enterprise paths. Fortunately it was only 3 lines to update! My fork is &lt;a href=&#34;https://github.com/dschaaff/prosvc-preview_report&#34;&gt;here&lt;/a&gt; if its useful to others.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

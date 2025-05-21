@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ecoute on Daniel Schaaff</title>
+    <link>http://localhost:1313/tags/ecoute/</link>
+    <description>Recent content in Ecoute on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 15 Feb 2013 23:10:39 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ecoute/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>iOS Music Players</title>
+      <link>http://localhost:1313/posts/2013/ios-music-players/</link>
+      <pubDate>Fri, 15 Feb 2013 23:10:39 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2013/ios-music-players/</guid>
+      <description>&lt;p&gt;Pro tip.&lt;/p&gt;
+&lt;p&gt;On the desktop we’re mostly limited to using iTunes for music playback (aside from streaming services). If you don’t like iTunes, good luck finding a better alternative.&lt;/p&gt;
+&lt;p&gt;Thankfully the situation is different on an iOS device. Don’t like apple’s music app? Simply fire up the AppStore and download a 3rd party music player. I recommend checking out &lt;a href=&#34;http://ecouteapp.com/ecouteios/&#34;&gt;Ecoute&lt;/a&gt;, &lt;a href=&#34;http://enderlabs.com/track-8&#34;&gt;Track 8&lt;/a&gt; , &lt;a href=&#34;http://www.zikeragroove.com/&#34;&gt;Groove 2&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

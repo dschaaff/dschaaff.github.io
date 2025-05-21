@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>News on Daniel Schaaff</title>
+    <link>http://localhost:1313/tags/news/</link>
+    <description>Recent content in News on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 17 Feb 2013 02:07:43 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/news/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>No Content Found</title>
+      <link>http://localhost:1313/posts/2013/pirate-bay-awesomely-aims-to-sue-anti-piracy-group/</link>
+      <pubDate>Sun, 17 Feb 2013 02:07:43 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2013/pirate-bay-awesomely-aims-to-sue-anti-piracy-group/</guid>
+      <description>&lt;h1 id=&#34;pirate-bay-awesomely-aims-to-sue-anti-piracy-group-for-copyright-infringement--spin--newswire&#34;&gt;&lt;a href=&#34;http://www.spin.com/articles/pirate-bay-logo-lawsuit-copyright-infringement-pirate-ship&#34;&gt;Pirate Bay Awesomely Aims to Sue Anti-Piracy Group for Copyright Infringement | SPIN | Newswire&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;This is more than a little bit ironic.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

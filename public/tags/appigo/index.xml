@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Appigo on Daniel Schaaff</title>
+    <link>http://localhost:1313/tags/appigo/</link>
+    <description>Recent content in Appigo on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 02 Jun 2012 14:23:32 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/appigo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Managing my crazy Life with a Sledgehammer</title>
+      <link>http://localhost:1313/posts/2012/managing-my-crazy-life-with-a-sledgehammer/</link>
+      <pubDate>Sat, 02 Jun 2012 14:23:32 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2012/managing-my-crazy-life-with-a-sledgehammer/</guid>
+      <description>&lt;p&gt;I started using task management software slowly as the need to keep track of things began increasing in life.  Starting college was the main catalyst.  At first I had a spiral notebook for each class and I would write any assignments at the top of a page in there.  When it came time to complete work I would search through the notebook until I found the proper list.  It was unorganized and it didn&amp;rsquo;t scale well.  &lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

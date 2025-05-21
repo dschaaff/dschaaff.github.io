@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Facebook on Daniel Schaaff</title>
+    <link>http://localhost:1313/tags/facebook/</link>
+    <description>Recent content in Facebook on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 05 Feb 2012 19:11:18 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/facebook/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Facebook Is Using You</title>
+      <link>http://localhost:1313/posts/2012/facebook-is-using-you/</link>
+      <pubDate>Sun, 05 Feb 2012 19:11:18 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2012/facebook-is-using-you/</guid>
+      <description>&lt;p&gt;Be careful what you search for.&lt;/p&gt;
+&lt;p&gt;Another reason to use duckduckgo.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.nytimes.com/2012/02/05/opinion/sunday/facebook-is-using-you.html?_r=4&amp;amp;hp=&amp;amp;pagewanted=all&#34;&gt;Facebook Is Using You&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Facebook Messenger</title>
+      <link>http://localhost:1313/posts/2011/facebook-messenger/</link>
+      <pubDate>Wed, 26 Oct 2011 17:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2011/facebook-messenger/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://65.media.tumblr.com/tumblr_ltom27WHLt1qbk10k.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;As much a I am prone to whine about Facebook, I really like
+the Facebook messenger app.  Now that I&amp;rsquo;m on iOS 5 I&amp;rsquo;m already seeing some
+benefit from using iMessage.  Mostly that its much faster at sending than
+standard text messages.  Facebook messengers offers more though.  It presents a
+unified communication stream between all devices.  If I&amp;rsquo;m texting someone
+through Facebook messenger that conversation is present when I hop onto my
+computer.  I can pick up right where I left off.  Maybe iMessage will get mac
+integration at some point, but it will never be as cross platform as Facebook.
+BUT, it is still Facebook I&amp;rsquo;m talking about.  Yuck.  Google+ has the potential
+to offer a similar system in the future, but right now its still a ghost town.
+Have you tried the facebook messenger app?&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

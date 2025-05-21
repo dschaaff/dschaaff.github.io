@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.147.4"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Daniel Schaaff</title>
+<meta name="keywords" content="blog, developer, personal">
+<meta name="description" content="My humble home on the internet.">
+<meta name="author" content="Daniel Schaaff">
+<link rel="canonical" href="http://localhost:1313/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="http://localhost:1313/">
+  <meta property="og:site_name" content="Daniel Schaaff">
+  <meta property="og:title" content="Daniel Schaaff">
+  <meta property="og:description" content="My humble home on the internet.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Daniel Schaaff">
+<meta name="twitter:description" content="My humble home on the internet.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Daniel Schaaff",
+  "url": "http://localhost:1313/",
+  "description": "My humble home on the internet.",
+  "logo": "http://localhost:1313/favicon.ico",
+  "sameAs": [
+      
+  ]
+}
+</script>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Daniel Schaaff (Alt + H)">Daniel Schaaff</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/cv/" title="CV">
+                    <span>CV</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="Search">
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>[audio https://open.spotify.com/album/3P7tKJN5tkkyFrvLRjir6t?plead=please-dont-download-this-or-our-lawyers-wont-let-us-host-audio] [spotify id=“spotify%3Aalbum%3A3P7tKJN5tkkyFrvLRjir6t&amp;view=coverart” width=“500” height=“580” /]
+Memphis Belle’s last ep, No One Gets Out Alive, is now available on Spotify. I have no idea why the artwork is sideways but life goes on. Check it out if you want to hear me playing guitar in a past life.
+You can also find it on iTunes if you’d like. </p>
+  </div>
+  <footer class="entry-footer"><span title='2012-10-13 17:38:00 +0000 UTC'>October 13, 2012</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2012/memphis-belles-last-ep-no-one-gets-out-alive-is/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The new Rolling Stones single is great [youtube https://www.youtube.com/watch?v=rPFGWVKXxm0]
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2012-10-13 16:12:06 +0000 UTC'>October 13, 2012</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2012/the-new-rolling-stones-single-is-great/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Sweet, Delicious Bacon I came across Dan Benjamin’s recommendation for cooking bacon in the oven and have finally gotten around to trying it. It sparked my interest since it calls for starting with a cold oven. It turns that Dan is a smart man and the bacon was indeed extremely delicous. You can find the recipe at baconmethod.com and enjoy some yourself.[1] I can only assume he purchased this domain from hover.com ↩
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2012-10-05 18:30:00 +0000 UTC'>October 5, 2012</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2012/bacon-method/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">iPhone 5 vs Samsung Galaxy S3 drop test
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>parislemon:
+Bogdan Petrovan of Android Authority: &gt; &gt; Well, as much as we hate to admit it, the iPhone 5 did amazingly well in our drop test, while the Samsung Galaxy S3 came out in pretty bad shape. It’s the cold hard truth that we can’t hide and we can’t ignore.
+&gt; &gt; Meanwhile, Arnold Kim also points to the iFixYouri drop test and notes:
+The iPhone 5 survived all the falls until they finally threw the device screen down. They describe the device as the “most durable iPhone” they’ve seen.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2012-09-21 21:40:44 +0000 UTC'>September 21, 2012</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to iPhone 5 vs Samsung Galaxy S3 drop test" href="http://localhost:1313/posts/2012/iphone-5-vs-samsung-galaxy-s3-drop-test/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Thought via Path
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Day one is my new favorite app. – Read on Path.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2012-08-19 03:22:05 +0000 UTC'>August 19, 2012</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to Thought via Path" href="http://localhost:1313/posts/2012/thought-via-path-4/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">who knew one person could have so many ugly guitars?
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>who knew one person could have so many ugly guitars?
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2012-08-08 02:25:54 +0000 UTC'>August 8, 2012</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to who knew one person could have so many ugly guitars?" href="http://localhost:1313/posts/2012/who-knew-one-person-could-have-so-many-ugly/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">The Finish Line is In Sight!
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The last 4 weeks have been a blur. I took on extra course in order to finish school at the end of this month. And by finish, I mean graduate!! My brain is tired all the time, and I’ve been working overtime on school, but its the first time I can feel the end being near. September=freedom. And hopefully a job.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2012-08-07 02:27:10 +0000 UTC'>August 7, 2012</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to The Finish Line is In Sight!" href="http://localhost:1313/posts/2012/the-finish-line-is-in-sight/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Parents Must Let Go of Their Desires for Their Time
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>In recent months Tif has said a few times how weird it is that I’ve been the one stressing out. While in reality we’ve both had our fair share of stress, I have been unusually stressed. Really, I just feel helplessly overwhelmed at times. I’ve been working to figure out why and restore my usual calm and peace. Thinking through this today, one issue in particular came to mind.
+Parenting requires us to divorce ourselves from a lot of our own desires. It is impossible to be selfish and a good parent. It takes time to let go of things and I still find myself wishing I was more often able to play guitar, read a book, or just have a moment of peace. This season of my life, however, is about moving my family to the forefront and placing those desires in second place. One day they will be bigger, and going to school. I can then play my guitar more to help me through the desperation of watching my children grow up faster then I’d like:) ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2012-06-30 19:25:16 +0000 UTC'>June 30, 2012</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to Parents Must Let Go of Their Desires for Their Time" href="http://localhost:1313/posts/2012/parents-must-let-go-of-their-desires-for-their/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Giving Away Music Makes Sense
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>A really good take on the state of the music business as it relates to Spotify, piracy, iTunes, and money from Derek Webb.
+I’ll go even further to say that I actually prefer illegal downloading over Spotify because when you get music illegally it’s at least implicit in the transaction that what you’re doing is potentially harmful to the artist. But with Spotify, your conscience is clear because you’re either enduring ads or paying to use the service and access the music. But from the blue-collar artist’s perspective, they’re not receiving any meaningful payment (there’s little discernible difference between $0.00029 and $0.00) and they are learning nothing about their fans, not to mention that music readily available on Spotify for little to no payment completely poaches the record sales upon which middle-class musicians are depending for survival (which is why I will withhold any new releases from Spotify in the future).
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2012-06-26 22:19:40 +0000 UTC'>June 26, 2012</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to Giving Away Music Makes Sense" href="http://localhost:1313/posts/2012/giving-away-music-makes-sense/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">16 Truths About Fatherhood I’ve Learned From My Kids : ✪ MATTHEW PAUL TURNER ✪
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>16 Truths About Fatherhood I’ve Learned From My Kids : ✪ MATTHEW PAUL TURNER ✪
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2012-06-20 00:41:55 +0000 UTC'>June 20, 2012</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to 16 Truths About Fatherhood I’ve Learned From My Kids : ✪ MATTHEW PAUL TURNER ✪" href="http://localhost:1313/posts/2012/16-truths-about-fatherhood-ive-learned-from-my/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/page/12/">
+      «&nbsp;Prev&nbsp;12/23
+    </a>
+    <a class="next" href="http://localhost:1313/page/14/">Next&nbsp;14/23&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Daniel Schaaff</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Springboot on Daniel Schaaff</title>
+    <link>http://localhost:1313/categories/springboot/</link>
+    <description>Recent content in Springboot on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 19 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/springboot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Easy Integrations Tests for Java with the Maven Docker Plugin</title>
+      <link>http://localhost:1313/posts/2019/easy-integrations-tests-for-java-with-the-maven-docker-plugin/</link>
+      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2019/easy-integrations-tests-for-java-with-the-maven-docker-plugin/</guid>
+      <description>&lt;p&gt;Traditionally it has been a pain to manage the infrastructure necessary for running integration tests within a CI/CD pipeline. Several years ago I accomplished this with an RDS instance for the database in AWS dedicated solely to the test environment. The problem is that multiple tests running at the same time would cause conflicts as they inserted and removed data in the database. At the time I set a lock in Jenkins to only allow one service to utilize the test database at a time, but this was far from ideal. Thankfully there are a lot of good options for solving this problem. I’m particularly fond of using the Docker plugin for Maven to handle this when dealing with Java-based applications.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

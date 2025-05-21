@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Google on Daniel Schaaff</title>
+    <link>http://localhost:1313/tags/google/</link>
+    <description>Recent content in Google on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 12 Feb 2012 03:18:13 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/google/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I Switched to Bing on my iPhone and I kind of liked it</title>
+      <link>http://localhost:1313/posts/2012/i-switched-to-bing-on-my-iphone-and-i-kind-of/</link>
+      <pubDate>Sun, 12 Feb 2012 03:18:13 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2012/i-switched-to-bing-on-my-iphone-and-i-kind-of/</guid>
+      <description>&lt;p&gt;I too have been fiddling around with Bing for the past few weeks and have found it surprisingly good experience.  The results seem just as good as Google&amp;rsquo;s and they look a lot more attractive and clutter free on the iPhone.  Though oddly enough the desktop results seem a lot more cluttered on Bing than Google.  &lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://thenextweb.com/apple/2012/02/03/i-switched-to-bing-on-my-iphone-and-i-kind-of-liked-it/&#34;&gt;I Switched to Bing on my iPhone and I kind of liked it&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Facebook Is Using You</title>
+      <link>http://localhost:1313/posts/2012/facebook-is-using-you/</link>
+      <pubDate>Sun, 05 Feb 2012 19:11:18 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2012/facebook-is-using-you/</guid>
+      <description>&lt;p&gt;Be careful what you search for.&lt;/p&gt;
+&lt;p&gt;Another reason to use duckduckgo.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.nytimes.com/2012/02/05/opinion/sunday/facebook-is-using-you.html?_r=4&amp;amp;hp=&amp;amp;pagewanted=all&#34;&gt;Facebook Is Using You&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Make Gmail play nice with Apple Mail</title>
+      <link>http://localhost:1313/posts/2011/make-gmail-play-nice-with-apple-mail/</link>
+      <pubDate>Sat, 29 Oct 2011 16:14:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2011/make-gmail-play-nice-with-apple-mail/</guid>
+      <description>&lt;p&gt;Yesterday I determined a compromise.  I&amp;rsquo;m going to keep using iCloud for
+contacts and calendars.  Google sync makes a mess of contacts, iCloud &amp;ldquo;just
+works.&amp;rdquo;  I&amp;rsquo;ll keep using Gmail for my main email.  I&amp;rsquo;ll access it through Apple
+Mail on the desktop and the iPhone&amp;rsquo;s built in mail app.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s how I set it up to avoid duplicate messages and other craziness.  Log
+into Gmail&amp;rsquo;s settings and navigate to the labels tab.  Here you can control
+which labels show up in IMAP.  What I did was hide all mail, starred, and
+important from IMAP.  &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Gmail to iCloud to Gmail again...</title>
+      <link>http://localhost:1313/posts/2011/gmail-to-icloud-to-gmail-again/</link>
+      <pubDate>Fri, 28 Oct 2011 20:38:21 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2011/gmail-to-icloud-to-gmail-again/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve used Gmail or several years and have really enjoyed the experience.  It&amp;rsquo;s
+not without its quirks however.  Anyone who has ever used Gmail with an IMAP
+client can attest to how wonky things can get.  The way Gmail&amp;rsquo;s All Mail folder
+functions causes lots of duplicate messages to show up.  If a message has a
+label it will appear in both a folder for that label as well as in the All Mail
+folder.  If you search for a message in the client multiple copies will pop up.
+The Gmail experience on the iPhone is also annoying.  You can setup up Gmail
+through IMAP just like a desktop client, with all of the duplicate messages, but
+you can&amp;rsquo;t get push.  That means I have to set my phone to poll the network at a
+certain interval.  This is bad for battery life at high settings and means that
+messages don&amp;rsquo;t show up right away.  The other option is to set up Gmail though
+Google sync as an exchange server.  You can get push with this option but
+deleting a message will always archive it.  I don&amp;rsquo;t want to archive all the junk
+newsletter messages I get.  To delete a message with this setup I have to select
+it and then manually move it to Gmail&amp;rsquo;s trash folder.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Office365 on Daniel Schaaff</title>
+    <link>http://localhost:1313/tags/office365/</link>
+    <description>Recent content in Office365 on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 27 Sep 2016 13:01:35 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/office365/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Saving Credentials for Office 365 PowerShell Scripts and Scheduled Tasks</title>
+      <link>http://localhost:1313/posts/2016/saving-credentials-for-office-365-powershell-scripts-and-scheduled-tasks/</link>
+      <pubDate>Tue, 27 Sep 2016 13:01:35 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2016/saving-credentials-for-office-365-powershell-scripts-and-scheduled-tasks/</guid>
+      <description>&lt;p&gt;This is immensely useful, and has been a huge time saver.&lt;/p&gt;
+&lt;p&gt;[gallery size=full columns=1]&lt;/p&gt;
+&lt;p&gt;—Practical 365&lt;/p&gt;
+&lt;p&gt;“PowerShell is an efficient way to perform management tasks for Office 365, and also allows a great deal of automation through the use of PowerShell scripts to perform routine and repetitive tasks.”&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://feeds.feedblitz.com/~/203571740/0/practical365~Saving-Credentials-for-Office-PowerShell-Scripts-and-Scheduled-Tasks/&#34;&gt;http://feeds.feedblitz.com/&lt;del&gt;/203571740/0/practical365&lt;/del&gt;Saving-Credentials-for-Office-PowerShell-Scripts-and-Scheduled-Tasks/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

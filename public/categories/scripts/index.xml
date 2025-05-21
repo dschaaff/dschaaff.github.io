@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Scripts on Daniel Schaaff</title>
+    <link>http://localhost:1313/categories/scripts/</link>
+    <description>Recent content in Scripts on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 03 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/scripts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lets Encrypt Bug Requires Reissue of Certificates by Cert-Manager in Kubernetes</title>
+      <link>http://localhost:1313/posts/2020/cert-manager-bug-lets-encrypt-k8s-renewal/</link>
+      <pubDate>Tue, 03 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2020/cert-manager-bug-lets-encrypt-k8s-renewal/</guid>
+      <description>&lt;p&gt;I received a fun email from Lets Encrypt today letting me know that they were revoking all of my certificates on March 4. The bug is described &lt;a href=&#34;https://community.letsencrypt.org/t/2020-02-29-caa-rechecking-bug/114591&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;All of my certificates are managed by &lt;a href=&#34;https://cert-manager.io/docs/&#34;&gt;cert-manager&lt;/a&gt; inside Kubernetes. This led to the fun challenge of figuring out how to force
+a reissue of every certificate. There were 2 approaches that came up in the Kubernetes community slack.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Delete all secrets containing cert-manager issued certificates.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

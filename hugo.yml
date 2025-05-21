@@ -1,0 +1,130 @@
+baseURL: "https://danielschaaff.com"
+languageCode: "en-us"
+title: "Daniel Schaaff"
+defaultContentLanguage: "en"
+pygmentsStyle: "bw"
+pygmentsCodeFences: true
+pygmentsCodeFencesGuessSyntax: true
+enableEmoji: true
+enableInlineShortcodes: true
+enableRobotsTXT: true
+
+pagination:
+  disableAliases: false
+  paginate: 10
+
+theme: [github.com/adityatelange/hugo-PaperMod]
+
+minify:
+  disableXML: true
+
+module:
+  imports:
+    - path: "github.com/adityatelange/hugo-PaperMod"
+
+params:
+  env: production
+  defaultTheme: auto
+  author: "Daniel Schaaff"
+  description: "My humble home on the internet."
+  ShowReadingTime: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+  ShowToc: true
+  profileMode:
+    enabled: true
+    title: Daniel Schaaff
+    subtitle: >
+      👋 Welcome to my slice of the internet!
+      <br>
+      I've been working in DevOps and software engineering for more than a decade. Apart from technology, I enjoy playing guitar, and traveling with my family.
+    # imageUrl: images/avatar.jpg
+    # imageWidth: 120
+    # imageHeight: 120
+    buttons:
+      - name: Blog
+        url: "/posts"
+      - name: Archive
+        url: "/archives"
+      - name: CV
+        url: "/cv"
+  homeInfoParams:
+    Title: "Daniel Schaaff"
+    Content: >
+      👋 Welcome to demo page of Hugo's theme PaperMod!
+
+      - **PaperMod**  is designed to be clean and simple but fast and responsive theme with useful feature-set that enhances UX.
+
+      - Feel free to show your support by giving us a star 🌟 on GitHub and sharing with your friends and social media .
+
+      - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper/tree/4330c8b12aa48bfdecbcad6ad66145f679a430b3).
+  socialIcons:
+    - name: "Github"
+      icon: "fa fa-2x fa-github"
+      weight: 1
+      url: "https://github.com/dschaaff/"
+    - name: "Mastodon"
+      rel: "me"
+      icon: "fa fa-2x fa-mastodon"
+      weight: 3
+      url: "https://hachyderm.io/@papaschaaff"
+    - name: "Bluesky"
+      icon: "fa fa-2x fa-bluesky"
+      weight: 4
+      url: "https://bsky.app/profile/daniel.schaaff.me"
+    - name: "LinkedIn"
+      icon: "fa fa-2x fa-linkedin"
+      weight: 4
+      url: "https://www.linkedin.com/in/danielschaaff/"
+    - name: "RSS"
+      icon: "fa fa-2x fa-rss"
+      weight: 6
+      url: "https://danielschaaff.com/index.xml"
+      rel: "alternate"
+      type: "application/rss+xml"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: "catppuccin-mocha"
+    noClasses: false
+
+languages:
+  en:
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: Archive
+          url: archives
+          weight: 5
+        - name: Search
+          url: search/
+          weight: 10
+        - name: Tags
+          url: tags/
+          weight: 10
+        - name: "Blog"
+          weight: 3
+          url: "posts/"
+        - name: "About"
+          weight: 2
+          url: "about/"
+        - name: "CV"
+          weight: 2
+          url: "cv/"
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mac on Daniel Schaaff</title>
+    <link>http://localhost:1313/tags/mac/</link>
+    <description>Recent content in Mac on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 08 Dec 2012 05:00:17 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>No Content Found</title>
+      <link>http://localhost:1313/posts/2012/streaming-vs-itunes/</link>
+      <pubDate>Sat, 08 Dec 2012 05:00:17 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2012/streaming-vs-itunes/</guid>
+      <description>&lt;h1 id=&#34;streaming-music-services-vs-an-itunes-addiction&#34;&gt;Streaming Music Services VS an iTunes Addiction&lt;/h1&gt;
+&lt;p&gt;Music has been a huge part of my life for many years. I’m no longer a touring musician but I still play music as much as I can. Music is always playing in our house and I can’t imagine living life without it.&lt;/p&gt;
+&lt;p&gt;Time has changed the way I listen to music a lot. I came of age in the era of the CD, but ever since I got my first iPod I’ve relied almost entirely on iTunes for my music consumption. At this point I’ve amassed a collection that would take 43 days to listen to.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Managing my crazy Life with a Sledgehammer</title>
+      <link>http://localhost:1313/posts/2012/managing-my-crazy-life-with-a-sledgehammer/</link>
+      <pubDate>Sat, 02 Jun 2012 14:23:32 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2012/managing-my-crazy-life-with-a-sledgehammer/</guid>
+      <description>&lt;p&gt;I started using task management software slowly as the need to keep track of things began increasing in life.  Starting college was the main catalyst.  At first I had a spiral notebook for each class and I would write any assignments at the top of a page in there.  When it came time to complete work I would search through the notebook until I found the proper list.  It was unorganized and it didn&amp;rsquo;t scale well.  &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Make Gmail play nice with Apple Mail</title>
+      <link>http://localhost:1313/posts/2011/make-gmail-play-nice-with-apple-mail/</link>
+      <pubDate>Sat, 29 Oct 2011 16:14:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2011/make-gmail-play-nice-with-apple-mail/</guid>
+      <description>&lt;p&gt;Yesterday I determined a compromise.  I&amp;rsquo;m going to keep using iCloud for
+contacts and calendars.  Google sync makes a mess of contacts, iCloud &amp;ldquo;just
+works.&amp;rdquo;  I&amp;rsquo;ll keep using Gmail for my main email.  I&amp;rsquo;ll access it through Apple
+Mail on the desktop and the iPhone&amp;rsquo;s built in mail app.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s how I set it up to avoid duplicate messages and other craziness.  Log
+into Gmail&amp;rsquo;s settings and navigate to the labels tab.  Here you can control
+which labels show up in IMAP.  What I did was hide all mail, starred, and
+important from IMAP.  &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Gmail to iCloud to Gmail again...</title>
+      <link>http://localhost:1313/posts/2011/gmail-to-icloud-to-gmail-again/</link>
+      <pubDate>Fri, 28 Oct 2011 20:38:21 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2011/gmail-to-icloud-to-gmail-again/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve used Gmail or several years and have really enjoyed the experience.  It&amp;rsquo;s
+not without its quirks however.  Anyone who has ever used Gmail with an IMAP
+client can attest to how wonky things can get.  The way Gmail&amp;rsquo;s All Mail folder
+functions causes lots of duplicate messages to show up.  If a message has a
+label it will appear in both a folder for that label as well as in the All Mail
+folder.  If you search for a message in the client multiple copies will pop up.
+The Gmail experience on the iPhone is also annoying.  You can setup up Gmail
+through IMAP just like a desktop client, with all of the duplicate messages, but
+you can&amp;rsquo;t get push.  That means I have to set my phone to poll the network at a
+certain interval.  This is bad for battery life at high settings and means that
+messages don&amp;rsquo;t show up right away.  The other option is to set up Gmail though
+Google sync as an exchange server.  You can get push with this option but
+deleting a message will always archive it.  I don&amp;rsquo;t want to archive all the junk
+newsletter messages I get.  To delete a message with this setup I have to select
+it and then manually move it to Gmail&amp;rsquo;s trash folder.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sync your Twitter timeline with Tweetmarker</title>
+      <link>http://localhost:1313/posts/2011/sync-your-twitter-timeline-with-tweetmarker/</link>
+      <pubDate>Sat, 17 Sep 2011 03:08:22 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2011/sync-your-twitter-timeline-with-tweetmarker/</guid>
+      <description>&lt;p&gt;For a long time I used Echofon as my main twitter app.  It was ugly as sin but
+it would sync my unread status between my iPhone and my mac.  Eventually I fell
+in love with Tweetbot too much to keep using Echofon.  I always missed the
+syncing though and I usually avoided using Twitter on my mac because I hated
+having to scroll to find where I left off, not to mention it telling me all of
+my direct messages were unread.  Thankfully a developer named Manton Reece
+created the &lt;a href=&#34;http://tweetmarker.net/&#34;&gt;Tweetmarker&lt;/a&gt; service.  This is an open
+service that can be implemented by any Twitter app and will sync your timeline
+position between multiple apps.  Now, when I open Twitterific on my mac it
+automatically scrolls the last tweet I read in Tweetbot on my iPhone.  Simply
+put, I love it!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

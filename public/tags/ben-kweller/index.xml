@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ben Kweller on Daniel Schaaff</title>
+    <link>http://localhost:1313/tags/ben-kweller/</link>
+    <description>Recent content in Ben Kweller on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 02 May 2012 14:45:58 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ben-kweller/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>No Content Found</title>
+      <link>http://localhost:1313/posts/2012/album-of-the-day-2/</link>
+      <pubDate>Wed, 02 May 2012 14:45:58 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2012/album-of-the-day-2/</guid>
+      <description>&lt;p&gt;[audio https://api.soundcloud.com/tracks/34617621/stream?client_id=3cQaPshpEeLqMsNFAUw1Q?plead=please-dont-download-this-or-our-lawyers-wont-let-us-host-audio]&lt;/p&gt;
+&lt;p&gt;[soundcloud url=&amp;ldquo;http://api.soundcloud.com/tracks/34617621&amp;rdquo; params=&amp;ldquo;visual=true&amp;amp;liking=false&amp;amp;sharing=false&amp;amp;auto_play=false&amp;amp;show_comments=false&amp;amp;continuous_play=false&amp;amp;origin=tumblr&amp;rdquo; width=&amp;ldquo;100%&amp;rdquo; height=&amp;ldquo;500&amp;rdquo; iframe=&amp;ldquo;true&amp;rdquo; /]&lt;/p&gt;
+&lt;p&gt;Album of the Day.&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://www.mainstreetmusicpa.com/wp-content/uploads/2012/01/Ben-Kweller-Go-Fly-A-Kite.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

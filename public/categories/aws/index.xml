@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Aws on Daniel Schaaff</title>
+    <link>http://localhost:1313/categories/aws/</link>
+    <description>Recent content in Aws on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 09 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Think Twice Before Adopting EKS Auto Mode</title>
+      <link>http://localhost:1313/posts/2024/eks-auto-mode/</link>
+      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2024/eks-auto-mode/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been using AWS&amp;rsquo; EKS service for many years. What began as a bare bones
+offering has slowly and steadily added more features over the years. Amazon
+recently announced &amp;ldquo;auto&amp;rdquo; mode for EKS clusters. In this new mode AWS manages a
+Karpenter installation, core addons such as coredns and vpc-cni, as well as the
+underlying ec2 nodes. On paper this sounds great, but as always the devil is in
+the details. In this instance, it is important to be aware of the ~ 10% price premium for
+this mode. In auto mode AWS will charge an hourly rate for the ec2 instances in
+addition to the standard instance charge. While some folks may find this a fair
+trade off, I would not choose this mode myself. I run clusters using Karpenter
+as the autoscaler and use
+&lt;a href=&#34;https://github.com/bottlerocket-os/bottlerocket&#34;&gt;bottlerocket-os&lt;/a&gt; for the
+underlying nodes. In this configuration the management overhead is extremely low. I even gave a &lt;a href=&#34;https://www.youtube.com/watch?v=ngFciGgJsbw&#34;&gt;short talk on this setup for AWS&lt;/a&gt; a while back. IMO, if you are already running an EKS cluster using Karpenter and Bottlerocket you have little to gain from auto mode relative to the price premium.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

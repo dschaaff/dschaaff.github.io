@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Kubernetes on Daniel Schaaff</title>
+    <link>http://localhost:1313/tags/kubernetes/</link>
+    <description>Recent content in Kubernetes on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 09 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Think Twice Before Adopting EKS Auto Mode</title>
+      <link>http://localhost:1313/posts/2024/eks-auto-mode/</link>
+      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2024/eks-auto-mode/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been using AWS&amp;rsquo; EKS service for many years. What began as a bare bones
+offering has slowly and steadily added more features over the years. Amazon
+recently announced &amp;ldquo;auto&amp;rdquo; mode for EKS clusters. In this new mode AWS manages a
+Karpenter installation, core addons such as coredns and vpc-cni, as well as the
+underlying ec2 nodes. On paper this sounds great, but as always the devil is in
+the details. In this instance, it is important to be aware of the ~ 10% price premium for
+this mode. In auto mode AWS will charge an hourly rate for the ec2 instances in
+addition to the standard instance charge. While some folks may find this a fair
+trade off, I would not choose this mode myself. I run clusters using Karpenter
+as the autoscaler and use
+&lt;a href=&#34;https://github.com/bottlerocket-os/bottlerocket&#34;&gt;bottlerocket-os&lt;/a&gt; for the
+underlying nodes. In this configuration the management overhead is extremely low. I even gave a &lt;a href=&#34;https://www.youtube.com/watch?v=ngFciGgJsbw&#34;&gt;short talk on this setup for AWS&lt;/a&gt; a while back. IMO, if you are already running an EKS cluster using Karpenter and Bottlerocket you have little to gain from auto mode relative to the price premium.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lets Encrypt Bug Requires Reissue of Certificates by Cert-Manager in Kubernetes</title>
+      <link>http://localhost:1313/posts/2020/cert-manager-bug-lets-encrypt-k8s-renewal/</link>
+      <pubDate>Tue, 03 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2020/cert-manager-bug-lets-encrypt-k8s-renewal/</guid>
+      <description>&lt;p&gt;I received a fun email from Lets Encrypt today letting me know that they were revoking all of my certificates on March 4. The bug is described &lt;a href=&#34;https://community.letsencrypt.org/t/2020-02-29-caa-rechecking-bug/114591&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;All of my certificates are managed by &lt;a href=&#34;https://cert-manager.io/docs/&#34;&gt;cert-manager&lt;/a&gt; inside Kubernetes. This led to the fun challenge of figuring out how to force
+a reissue of every certificate. There were 2 approaches that came up in the Kubernetes community slack.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Delete all secrets containing cert-manager issued certificates.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

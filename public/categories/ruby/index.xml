@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ruby on Daniel Schaaff</title>
+    <link>http://localhost:1313/categories/ruby/</link>
+    <description>Recent content in Ruby on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 21 Mar 2017 02:24:20 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/ruby/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Update to lita-activedirectory</title>
+      <link>http://localhost:1313/posts/2017/update-to-lita-activedirectory/</link>
+      <pubDate>Tue, 21 Mar 2017 02:24:20 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2017/update-to-lita-activedirectory/</guid>
+      <description>&lt;p&gt;I updated our Active Directory lita plugin today with support for querying the members of a given group. See &lt;a href=&#34;https://github.com/knuedge/lita-activedirectory&#34;&gt;https://github.com/knuedge/lita-activedirectory&lt;/a&gt;. It still needs some work to properly present errors when a user or group doesn&amp;rsquo;t actually exist in the directory. Right now it returns nothing rather then a helpful error. It works splendidly with legit users and groups however.&lt;/p&gt;
+&lt;p&gt;ChatOps ftw!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

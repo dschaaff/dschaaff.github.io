@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Icloud on Daniel Schaaff</title>
+    <link>http://localhost:1313/tags/icloud/</link>
+    <description>Recent content in Icloud on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 28 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/icloud/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Update on iCloud&#43; Custom Email Domain</title>
+      <link>http://localhost:1313/posts/2024/update-on-icloud-custom-email-domain/</link>
+      <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2024/update-on-icloud-custom-email-domain/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been using my custom domain with iCloud email for a couple weeks. Truth be
+told I hardly notice any difference from when I used Gmail. That&amp;rsquo;s largely due
+to using Apple Mail app as my primary interface. I haven&amp;rsquo;t had any reliability
+issues and the only real difference I&amp;rsquo;ve noticed is the email size limit is
+20MB as opposed to Gmail&amp;rsquo;s 25MB. The primary benefit I&amp;rsquo;ve seen is that
+calendar invites end up on my iCloud calendar, which is where I prefer them.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Migrating My Email From Google Workspace To iCloud&#43;</title>
+      <link>http://localhost:1313/posts/2024/migrating-from-google-workspace-to-icloud-plus/</link>
+      <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2024/migrating-from-google-workspace-to-icloud-plus/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m in the process of migrating my email from Google Workspace to iCloud+. I&amp;rsquo;ve
+been using Google Workspace (aka gsuite, aka whatever name Google switches to
+next week) for my email for a long time. For ages it was free and made perfect
+sense as a service. Those free accounts have gone away, and the service&amp;rsquo;s focus
+is clearly aimed at the enterprise and not individuals like me. The price per
+user is also about to increase on me, so this felt like a good time to try
+something else. I&amp;rsquo;m only really interested in hosting email for a few custom
+domains and have no needs for any features beyond that. Our family already uses
+iCloud for everything so I figured why not give it a try.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Squaretrade Iphone 4 replacement and iCloud restore</title>
+      <link>http://localhost:1313/posts/2011/squaretrade-iphone-4-replacement-and-icloud/</link>
+      <pubDate>Sat, 03 Dec 2011 19:29:16 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2011/squaretrade-iphone-4-replacement-and-icloud/</guid>
+      <description>&lt;p&gt;A couple weeks ago my iPhone developed a permanent vertical line down the right side of the screen.&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://66.media.tumblr.com/tumblr_lvn6yvpwtQ1qbk10k.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I have a Squaretrade extended warranty on the phone so I filed a claim.
+Squaretrade responded less than 12 hours later to request pictures.  It is
+difficult to capture with a camera, but I did the best I could.  I emailed
+Squaretrade these pictures at 9pm.  The next morning I already had a response in
+my inbox saying my claim was approved and they would be overnighting a
+(refurbished) replacement phone.  It was an incredibly easy process and
+Squaretrade was a pleasure to deal with.  I also did not have to pay any form of
+deductible since it wasn&amp;rsquo;t considered accidental damage (i.e. cracked screen,
+phone in toilet).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Make Gmail play nice with Apple Mail</title>
+      <link>http://localhost:1313/posts/2011/make-gmail-play-nice-with-apple-mail/</link>
+      <pubDate>Sat, 29 Oct 2011 16:14:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2011/make-gmail-play-nice-with-apple-mail/</guid>
+      <description>&lt;p&gt;Yesterday I determined a compromise.  I&amp;rsquo;m going to keep using iCloud for
+contacts and calendars.  Google sync makes a mess of contacts, iCloud &amp;ldquo;just
+works.&amp;rdquo;  I&amp;rsquo;ll keep using Gmail for my main email.  I&amp;rsquo;ll access it through Apple
+Mail on the desktop and the iPhone&amp;rsquo;s built in mail app.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s how I set it up to avoid duplicate messages and other craziness.  Log
+into Gmail&amp;rsquo;s settings and navigate to the labels tab.  Here you can control
+which labels show up in IMAP.  What I did was hide all mail, starred, and
+important from IMAP.  &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Gmail to iCloud to Gmail again...</title>
+      <link>http://localhost:1313/posts/2011/gmail-to-icloud-to-gmail-again/</link>
+      <pubDate>Fri, 28 Oct 2011 20:38:21 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2011/gmail-to-icloud-to-gmail-again/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve used Gmail or several years and have really enjoyed the experience.  It&amp;rsquo;s
+not without its quirks however.  Anyone who has ever used Gmail with an IMAP
+client can attest to how wonky things can get.  The way Gmail&amp;rsquo;s All Mail folder
+functions causes lots of duplicate messages to show up.  If a message has a
+label it will appear in both a folder for that label as well as in the All Mail
+folder.  If you search for a message in the client multiple copies will pop up.
+The Gmail experience on the iPhone is also annoying.  You can setup up Gmail
+through IMAP just like a desktop client, with all of the duplicate messages, but
+you can&amp;rsquo;t get push.  That means I have to set my phone to poll the network at a
+certain interval.  This is bad for battery life at high settings and means that
+messages don&amp;rsquo;t show up right away.  The other option is to set up Gmail though
+Google sync as an exchange server.  You can get push with this option but
+deleting a message will always archive it.  I don&amp;rsquo;t want to archive all the junk
+newsletter messages I get.  To delete a message with this setup I have to select
+it and then manually move it to Gmail&amp;rsquo;s trash folder.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

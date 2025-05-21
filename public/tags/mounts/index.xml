@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mounts on Daniel Schaaff</title>
+    <link>http://localhost:1313/tags/mounts/</link>
+    <description>Recent content in Mounts on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 27 Aug 2016 16:27:39 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mounts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to get to files that have been mounted over</title>
+      <link>http://localhost:1313/posts/2016/how-to-get-to-files-that-have-been-mounted-over/</link>
+      <pubDate>Sat, 27 Aug 2016 16:27:39 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2016/how-to-get-to-files-that-have-been-mounted-over/</guid>
+      <description>&lt;p&gt;You have a directory with data, and now you&amp;rsquo;ve mounted a volume over it. How do you get to the data in the underlying directory without interrupting the mounted volume? Bind mount to the rescue!
+Bind mount the directory to another path and you can manipulate the files in underlying directory without disturbing the volume mounted atop of it.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

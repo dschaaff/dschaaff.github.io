@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Gmail to iCloud to Gmail again... | Daniel Schaaff</title>
+<meta name="keywords" content="apple, gmail, Google, icloud, iphone, mac, tech">
+<meta name="description" content="I&rsquo;ve used Gmail or several years and have really enjoyed the experience.  It&rsquo;s
+not without its quirks however.  Anyone who has ever used Gmail with an IMAP
+client can attest to how wonky things can get.  The way Gmail&rsquo;s All Mail folder
+functions causes lots of duplicate messages to show up.  If a message has a
+label it will appear in both a folder for that label as well as in the All Mail
+folder.  If you search for a message in the client multiple copies will pop up.
+The Gmail experience on the iPhone is also annoying.  You can setup up Gmail
+through IMAP just like a desktop client, with all of the duplicate messages, but
+you can&rsquo;t get push.  That means I have to set my phone to poll the network at a
+certain interval.  This is bad for battery life at high settings and means that
+messages don&rsquo;t show up right away.  The other option is to set up Gmail though
+Google sync as an exchange server.  You can get push with this option but
+deleting a message will always archive it.  I don&rsquo;t want to archive all the junk
+newsletter messages I get.  To delete a message with this setup I have to select
+it and then manually move it to Gmail&rsquo;s trash folder.">
+<meta name="author" content="dschaaff">
+<link rel="canonical" href="http://localhost:1313/posts/2011/gmail-to-icloud-to-gmail-again/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2011/gmail-to-icloud-to-gmail-again/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="http://localhost:1313/posts/2011/gmail-to-icloud-to-gmail-again/">
+  <meta property="og:site_name" content="Daniel Schaaff">
+  <meta property="og:title" content="Gmail to iCloud to Gmail again...">
+  <meta property="og:description" content="I’ve used Gmail or several years and have really enjoyed the experience. It’s not without its quirks however. Anyone who has ever used Gmail with an IMAP client can attest to how wonky things can get. The way Gmail’s All Mail folder functions causes lots of duplicate messages to show up. If a message has a label it will appear in both a folder for that label as well as in the All Mail folder. If you search for a message in the client multiple copies will pop up. The Gmail experience on the iPhone is also annoying. You can setup up Gmail through IMAP just like a desktop client, with all of the duplicate messages, but you can’t get push. That means I have to set my phone to poll the network at a certain interval. This is bad for battery life at high settings and means that messages don’t show up right away. The other option is to set up Gmail though Google sync as an exchange server. You can get push with this option but deleting a message will always archive it. I don’t want to archive all the junk newsletter messages I get. To delete a message with this setup I have to select it and then manually move it to Gmail’s trash folder.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2011-10-28T20:38:21+00:00">
+    <meta property="article:modified_time" content="2011-10-28T20:38:21+00:00">
+    <meta property="article:tag" content="Apple">
+    <meta property="article:tag" content="Gmail">
+    <meta property="article:tag" content="Google">
+    <meta property="article:tag" content="Icloud">
+    <meta property="article:tag" content="Iphone">
+    <meta property="article:tag" content="Mac">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Gmail to iCloud to Gmail again...">
+<meta name="twitter:description" content="I&rsquo;ve used Gmail or several years and have really enjoyed the experience.  It&rsquo;s
+not without its quirks however.  Anyone who has ever used Gmail with an IMAP
+client can attest to how wonky things can get.  The way Gmail&rsquo;s All Mail folder
+functions causes lots of duplicate messages to show up.  If a message has a
+label it will appear in both a folder for that label as well as in the All Mail
+folder.  If you search for a message in the client multiple copies will pop up.
+The Gmail experience on the iPhone is also annoying.  You can setup up Gmail
+through IMAP just like a desktop client, with all of the duplicate messages, but
+you can&rsquo;t get push.  That means I have to set my phone to poll the network at a
+certain interval.  This is bad for battery life at high settings and means that
+messages don&rsquo;t show up right away.  The other option is to set up Gmail though
+Google sync as an exchange server.  You can get push with this option but
+deleting a message will always archive it.  I don&rsquo;t want to archive all the junk
+newsletter messages I get.  To delete a message with this setup I have to select
+it and then manually move it to Gmail&rsquo;s trash folder.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://localhost:1313/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Gmail to iCloud to Gmail again...",
+      "item": "http://localhost:1313/posts/2011/gmail-to-icloud-to-gmail-again/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Gmail to iCloud to Gmail again...",
+  "name": "Gmail to iCloud to Gmail again...",
+  "description": "I\u0026rsquo;ve used Gmail or several years and have really enjoyed the experience. It\u0026rsquo;s not without its quirks however. Anyone who has ever used Gmail with an IMAP client can attest to how wonky things can get. The way Gmail\u0026rsquo;s All Mail folder functions causes lots of duplicate messages to show up. If a message has a label it will appear in both a folder for that label as well as in the All Mail folder. If you search for a message in the client multiple copies will pop up. The Gmail experience on the iPhone is also annoying. You can setup up Gmail through IMAP just like a desktop client, with all of the duplicate messages, but you can\u0026rsquo;t get push. That means I have to set my phone to poll the network at a certain interval. This is bad for battery life at high settings and means that messages don\u0026rsquo;t show up right away. The other option is to set up Gmail though Google sync as an exchange server. You can get push with this option but deleting a message will always archive it. I don\u0026rsquo;t want to archive all the junk newsletter messages I get. To delete a message with this setup I have to select it and then manually move it to Gmail\u0026rsquo;s trash folder.\n",
+  "keywords": [
+    "apple", "gmail", "Google", "icloud", "iphone", "mac", "tech"
+  ],
+  "articleBody": "I’ve used Gmail or several years and have really enjoyed the experience. It’s not without its quirks however. Anyone who has ever used Gmail with an IMAP client can attest to how wonky things can get. The way Gmail’s All Mail folder functions causes lots of duplicate messages to show up. If a message has a label it will appear in both a folder for that label as well as in the All Mail folder. If you search for a message in the client multiple copies will pop up. The Gmail experience on the iPhone is also annoying. You can setup up Gmail through IMAP just like a desktop client, with all of the duplicate messages, but you can’t get push. That means I have to set my phone to poll the network at a certain interval. This is bad for battery life at high settings and means that messages don’t show up right away. The other option is to set up Gmail though Google sync as an exchange server. You can get push with this option but deleting a message will always archive it. I don’t want to archive all the junk newsletter messages I get. To delete a message with this setup I have to select it and then manually move it to Gmail’s trash folder.\nI’ve also used Google sync to keep my contacts and calendars in sync between all my devices. This also has some annoying limitations, particularly for contacts. The different fields you can sync for each contact are very limited. Google will also take any contact pictures you sync and turn them into a grainy thumbnail. Calendar syncing, for me at least, has usually worked fine.\nEnter iCloud. It is an Apple service designed to be integrated with their products. Great! I immediately switched to iCloud for the syncing of my contacts and calendars. Contacts syncing is much more seamless than it was with Gmail, with much less setup and maintenance required. Calendars worked equally as well. I also signed up for an iCloud mail account back during the beta period but never used it. I was considering making the switch to that as well. When iOS 5 was released I became a little uneasy about this move. Apple’s servers buckled under all the initial sign up traffic and mail was down for several hours. That was already more downtime than I’ve ever experienced with Gmail. I kept thinking about how nice complete integration would be though. Finally I decided to go for it. Using Apple Mail I moved all of my messages from Gmail into iCloud. That first night I was happy with the move. The next day I had to pull up an email to print something at work. Like most stupid IT departments Starbucks locks down their computers to only using Internet Explorer. When I tried to pull up iCloud.com to get the message it wouldn’t load. Apple doesn’t support Internet Explorer, and the site won’t even load. Then I got home and tried to send an email to someone on our worship team, but kept getting an error. Turns out that the SMTP server was down. Down again! It was that experience that prompted my “screw this, back to Gmail” tweet. . Simply put, email should be reliable. iCloud also uses a custom authentication method and I can’t get it work with Sparrow mail at the moment. Not only that, I logged into iCloud.com today and realized that the web client doesn’t have threaded messaging! Apple mail and the iPhone have had threaded conversations for quite some time, and so did Mobile Me. These products don’t just simply work, and aren’t all that unified in their experience, which is very un-Apple.\nI’m still not sure what I’ll do. I like iCloud contact syncing much better, but if I’m using Gmail it makes sense to keep my contacts synced there. I like using a mail client as well. Sparrow integrates with all of Gmail’s features like labels natively, but I’m favoring Apple Mail these days. On my iPhone I can use another app like Boxcar to get push notifications and then pull up the Gmail site in mobile safari. That still isn’t ideal though. I want my email to work seamlessly with my iPhone since it is what I use for probably 75% of my email, and as good as the Gmail mobile web app, is its still not as smooth as a native application. Hopefully iCloud will get more reliable and gain some features over time, but right now I’m stuck in undecided mode.\nHas anyone had better luck than me?\n",
+  "wordCount" : "771",
+  "inLanguage": "en",
+  "datePublished": "2011-10-28T20:38:21Z",
+  "dateModified": "2011-10-28T20:38:21Z",
+  "author":{
+    "@type": "Person",
+    "name": "dschaaff"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/posts/2011/gmail-to-icloud-to-gmail-again/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Daniel Schaaff",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Daniel Schaaff (Alt + H)">Daniel Schaaff</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/cv/" title="CV">
+                    <span>CV</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Gmail to iCloud to Gmail again...
+    </h1>
+    <div class="post-meta"><span title='2011-10-28 20:38:21 +0000 UTC'>October 28, 2011</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;dschaaff
+
+</div>
+  </header> 
+
+  <div class="post-content"><p>I&rsquo;ve used Gmail or several years and have really enjoyed the experience.  It&rsquo;s
+not without its quirks however.  Anyone who has ever used Gmail with an IMAP
+client can attest to how wonky things can get.  The way Gmail&rsquo;s All Mail folder
+functions causes lots of duplicate messages to show up.  If a message has a
+label it will appear in both a folder for that label as well as in the All Mail
+folder.  If you search for a message in the client multiple copies will pop up.
+The Gmail experience on the iPhone is also annoying.  You can setup up Gmail
+through IMAP just like a desktop client, with all of the duplicate messages, but
+you can&rsquo;t get push.  That means I have to set my phone to poll the network at a
+certain interval.  This is bad for battery life at high settings and means that
+messages don&rsquo;t show up right away.  The other option is to set up Gmail though
+Google sync as an exchange server.  You can get push with this option but
+deleting a message will always archive it.  I don&rsquo;t want to archive all the junk
+newsletter messages I get.  To delete a message with this setup I have to select
+it and then manually move it to Gmail&rsquo;s trash folder.</p>
+<p>I&rsquo;ve also used Google sync to keep my contacts and calendars in sync between all
+my devices.  This also has some annoying limitations, particularly for contacts.
+The different fields you can sync for each contact are very limited.  Google
+will also take any contact pictures you sync and turn them into a grainy
+thumbnail.  Calendar syncing, for me at least, has usually worked fine.</p>
+<p>Enter iCloud.  It is an Apple service designed to be integrated with their
+products.  Great!  I immediately switched to iCloud for the syncing of my
+contacts and calendars.  Contacts syncing is much more seamless than it was with
+Gmail, with much less setup and maintenance required.  Calendars worked equally
+as well.  I also signed up for an iCloud mail account back during the beta
+period but never used it.  I was considering making the switch to that as well.
+When iOS 5 was released I became a little uneasy about this move.  Apple&rsquo;s
+servers buckled under all the initial sign up traffic and mail was down for
+several hours.  That was already more downtime than I&rsquo;ve ever experienced with
+Gmail.  I kept thinking about how nice complete integration would be though. </p>
+<p>Finally I decided to go for it.  Using Apple Mail I moved all of my messages
+from Gmail into iCloud.  That first night I was happy with the move.  The next
+day I had to pull up an email to print something at work.  Like most stupid IT
+departments Starbucks locks down their computers to only using Internet
+Explorer.  When I tried to pull up iCloud.com to get the message it wouldn&rsquo;t
+load.  Apple doesn&rsquo;t support Internet Explorer, and the site won&rsquo;t even load.
+Then I got home and tried to send an email to someone on our worship team, but
+kept getting an error.  Turns out that the SMTP server was down.  Down again!
+It was that experience that prompted my &ldquo;screw this, back to Gmail&rdquo; tweet.
+.  Simply put, email should be reliable.  iCloud also uses a custom
+authentication method and I can&rsquo;t get it work with Sparrow mail at the moment.
+Not only that, I logged into iCloud.com today and realized that the web client
+doesn&rsquo;t have threaded messaging!  Apple mail and the iPhone have had threaded
+conversations for quite some time, and so did Mobile Me.  These products don&rsquo;t
+just simply work, and aren&rsquo;t all that unified in their experience, which is very
+un-Apple.</p>
+<p>I&rsquo;m still not sure what I&rsquo;ll do.  I like iCloud contact syncing much better, but
+if I&rsquo;m using Gmail it makes sense to keep my contacts synced there.  I like
+using a mail client as well.  Sparrow integrates with all of Gmail&rsquo;s features
+like labels natively, but I&rsquo;m favoring Apple Mail these days.  On my iPhone I
+can use another app like Boxcar to get push notifications and then pull up the
+Gmail site in mobile safari.  That still isn&rsquo;t ideal though.  I want my email to
+work seamlessly with my iPhone since it is what I use for probably 75% of my
+email, and as good as the Gmail mobile web app, is its still not as smooth as a
+native application.  Hopefully iCloud will get more reliable and gain some
+features over time, but right now I&rsquo;m stuck in undecided mode.</p>
+<p>Has anyone had better luck than me?</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/apple/">Apple</a></li>
+      <li><a href="http://localhost:1313/tags/gmail/">Gmail</a></li>
+      <li><a href="http://localhost:1313/tags/google/">Google</a></li>
+      <li><a href="http://localhost:1313/tags/icloud/">Icloud</a></li>
+      <li><a href="http://localhost:1313/tags/iphone/">Iphone</a></li>
+      <li><a href="http://localhost:1313/tags/mac/">Mac</a></li>
+      <li><a href="http://localhost:1313/tags/tech/">Tech</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/2011/make-gmail-play-nice-with-apple-mail/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Make Gmail play nice with Apple Mail</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/2011/twins-ultrasound-102811/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Twins Ultrasound 10/28/11</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Daniel Schaaff</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

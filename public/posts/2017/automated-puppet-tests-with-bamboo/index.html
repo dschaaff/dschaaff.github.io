@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Automated Puppet Tests with Bamboo | Daniel Schaaff</title>
+<meta name="keywords" content="bamboo, puppet, rspec, technology">
+<meta name="description" content="rnelson0 is walking through automated Puppet testing with Jenkins on his blog. I thought I&rsquo;d highlight how you can use a similar workflow in Atlassian&rsquo;s Bamboo application. This assumes you already have a working Bamboo setup and are familiar with the general process for testing Puppet modules with rspec.
+Create a new plan
+The first step is to set up a new plan to use for the testing. Click &ldquo;Create&rdquo; and then &ldquo;Create a new plan&rdquo; in the top menu bar.![Pasted_Image_1_13_17__3_08_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_08_pm.png)">
+<meta name="author" content="dschaaff">
+<link rel="canonical" href="http://localhost:1313/posts/2017/automated-puppet-tests-with-bamboo/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2017/automated-puppet-tests-with-bamboo/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="http://localhost:1313/posts/2017/automated-puppet-tests-with-bamboo/">
+  <meta property="og:site_name" content="Daniel Schaaff">
+  <meta property="og:title" content="Automated Puppet Tests with Bamboo">
+  <meta property="og:description" content="rnelson0 is walking through automated Puppet testing with Jenkins on his blog. I thought I’d highlight how you can use a similar workflow in Atlassian’s Bamboo application. This assumes you already have a working Bamboo setup and are familiar with the general process for testing Puppet modules with rspec.
+Create a new plan The first step is to set up a new plan to use for the testing. Click “Create” and then “Create a new plan” in the top menu bar.![Pasted_Image_1_13_17__3_08_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_08_pm.png)">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2017-01-14T00:07:47+00:00">
+    <meta property="article:modified_time" content="2017-01-14T00:07:47+00:00">
+    <meta property="article:tag" content="Bamboo">
+    <meta property="article:tag" content="Puppet">
+    <meta property="article:tag" content="Rspec">
+    <meta property="article:tag" content="Technology">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Automated Puppet Tests with Bamboo">
+<meta name="twitter:description" content="rnelson0 is walking through automated Puppet testing with Jenkins on his blog. I thought I&rsquo;d highlight how you can use a similar workflow in Atlassian&rsquo;s Bamboo application. This assumes you already have a working Bamboo setup and are familiar with the general process for testing Puppet modules with rspec.
+Create a new plan
+The first step is to set up a new plan to use for the testing. Click &ldquo;Create&rdquo; and then &ldquo;Create a new plan&rdquo; in the top menu bar.![Pasted_Image_1_13_17__3_08_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_08_pm.png)">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://localhost:1313/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Automated Puppet Tests with Bamboo",
+      "item": "http://localhost:1313/posts/2017/automated-puppet-tests-with-bamboo/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Automated Puppet Tests with Bamboo",
+  "name": "Automated Puppet Tests with Bamboo",
+  "description": "rnelson0 is walking through automated Puppet testing with Jenkins on his blog. I thought I\u0026rsquo;d highlight how you can use a similar workflow in Atlassian\u0026rsquo;s Bamboo application. This assumes you already have a working Bamboo setup and are familiar with the general process for testing Puppet modules with rspec.\nCreate a new plan The first step is to set up a new plan to use for the testing. Click \u0026ldquo;Create\u0026rdquo; and then \u0026ldquo;Create a new plan\u0026rdquo; in the top menu bar.![Pasted_Image_1_13_17__3_08_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_08_pm.png)\n",
+  "keywords": [
+    "bamboo", "puppet", "rspec", "technology"
+  ],
+  "articleBody": "rnelson0 is walking through automated Puppet testing with Jenkins on his blog. I thought I’d highlight how you can use a similar workflow in Atlassian’s Bamboo application. This assumes you already have a working Bamboo setup and are familiar with the general process for testing Puppet modules with rspec.\nCreate a new plan The first step is to set up a new plan to use for the testing. Click “Create” and then “Create a new plan” in the top menu bar.![Pasted_Image_1_13_17__3_08_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_08_pm.png)\nBamboo organizes related jobs, builds, etc. into projects. On the next screen either create a new Puppet project or select an existing project if you’ve already set that up.![Pasted_Image_1_13_17__3_10_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_10_pm.png)\nFill in the details and select the repository you’d like to start testing. Bamboo can read from a large number of version control systems. I happen to use Bitbucket so this is simple. Once your happy with the selections click “Configure plan”.\n![Pasted_Image_1_13_17__3_15_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_15_pm.png)\nAt the next screen we setup our tasks. The first task, Source Code Checkout, is added by default and checks out the repo configured in the previous step. I like to break things down into small script tasks so they are easier to troubleshoot and duplicate between jobs.\nClick add task and select script.\n![Pasted_Image_1_13_17__3_17_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_17_pm.png)\nThe first step is to setup the Ruby environment. This presumes you already have Bamboo build agents up and running and that rvm is installed. This script below is what I use. It performs some checks to ensure ruby is properly setup.\n#!/bin/bash if [ \"$(ps -p \"$$\" -o comm=)\" != \"bash\" ]; then /bin/bash \"$0\" \"$@\" exit \"$?\" fi source /etc/profile.d/rvm.sh ruby=\"ruby-2.1.8\" install_count=`rvm list | grep $ruby | wc -l` if [ $install_count -lt 1 ]; then rvm install $ruby fi rvm use $ruby rvm user gemsets Now click “Add task” and add another script task. We will use this script step to create a new gemset and install the gems listed in the Gemfile using bundler. If you use environment variables to specify the version of puppet to install enter that in the environment variables field.![Pasted_Image_1_13_17__3_55_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_55_pm.png)\n#!/bin/bash if [ \"$(ps -p \"$$\" -o comm=)\" != \"bash\" ]; then /bin/bash \"$0\" \"$@\" exit \"$?\" fi source /etc/profile.d/rvm.sh ruby=\"ruby-2.1.8\" gemset=\"puppet-4.8.0-validate\" rvm use $ruby rvm user gemsets rvm gemset create $gemset rvm gemset use $gemset gem install bundler rm Gemfile.lock bundle install Now lets add another script step and use it to run the actual tests. At the end of the test this removes the Gemset to ensure a clean environment for each new run. You can also add other options here using environment variables such as STRICT_VARIABLES=no.![Pasted_Image_1_13_17__3_30_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_30_pm.png)\n#!/bin/bash if [ \"$(ps -p \"$$\" -o comm=)\" != \"bash\" ]; then /bin/bash \"$0\" \"$@\" exit \"$?\" fi source /etc/profile.d/rvm.sh ruby=\"ruby-2.1.8\" gemset=\"puppet-4.8.0-validate\" rvm use $ruby rvm user gemsets rvm gemset use $gemset bundle exec rake validate bundle exec rake spec rvm gemset delete --force $gemset We’ve now covered the basics needed to get started and can click create at the bottom to finalize the plan. After doing so we’ll be looking at the job configuration page. The script tasks we just created are in the “Default Job”.\n![Pasted_Image_1_13_17__3_33_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_33_pm.png)That name isn’t very clear so lets update it. Click “Default Job” and then select the “Job details” tab. Here we’ll enter a more descriptive name such as “Puppet 4.8 rspec” and click save. A descriptive name is handy because you can clone stages across plans to avoid repeating the script setup.\nRepository Triggers If you’re using the built in Bitbucket Server integration like my setup then Bamboo will automatically run the plan whenever a new commit is pushed to the repo. You can customize the type of trigger to use polling, scheduling, or other options as well. Simply select the “Triggers” tab under plan configuration and set appropriately.![Pasted_Image_1_13_17__3_37_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_37_pm.png)\nTracking Results If you were to run this plan now you would get a pass or fail in Bamboo but would have to look at the logs for the job to see the actual details of the results. We can use JUnit to get an better view of the test in Bamboo. To set this up create a .rspec file in the root of the Puppet module you’re testing with the following content\n--format RspecJunitFormatter --out results.xml This will write the results of the test in JUnit format to the results.xml file. You’ll also want to add this file to .gitignore. Now we can add a step to our plan to parse this file. Go back to the plan configuration and select the stage we setup previously. Click add task and select “JUnit Parser.”![Pasted_Image_1_13_17__3_41_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_41_pm.png)\nConfigure the JUnit parser so it finds our results file.![Pasted_Image_1_13_17__3_42_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_42_pm.png)\nClick save and run the plan again. You’ll now see your test results nicely formatted in the plan history. Here’s an example of what that looks like for failed tests.![Pasted_Image_1_13_17__3_44_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_44_pm.png)![Pasted_Image_1_13_17__3_45_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_45_pm.png)\nYou don’t need to redo this work for each repo. When setting up a plan for a new module start by removing the default stage. Then click add job and select clone an existing job. ![Pasted_Image_1_13_17__4_01_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__4_01_pm.png)\nYou can then select which plan to clone from.![Pasted_Image_1_13_17__4_02_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__4_02_pm.png)\nIt takes a bit more setup then using Travis CI but its not difficult to get rspec testing up and running in Bamboo.\n",
+  "wordCount" : "901",
+  "inLanguage": "en",
+  "datePublished": "2017-01-14T00:07:47Z",
+  "dateModified": "2017-01-14T00:07:47Z",
+  "author":{
+    "@type": "Person",
+    "name": "dschaaff"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/posts/2017/automated-puppet-tests-with-bamboo/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Daniel Schaaff",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Daniel Schaaff (Alt + H)">Daniel Schaaff</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/cv/" title="CV">
+                    <span>CV</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Automated Puppet Tests with Bamboo
+    </h1>
+    <div class="post-meta"><span title='2017-01-14 00:07:47 +0000 UTC'>January 14, 2017</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;dschaaff
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#create-a-new-plan" aria-label="Create a new plan">Create a new plan</a></li>
+                <li>
+                    <a href="#repository-triggers" aria-label="Repository Triggers">Repository Triggers</a></li>
+                <li>
+                    <a href="#tracking-results" aria-label="Tracking Results">Tracking Results</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p><a href="https://twitter.com/rnelson0?lang=en">rnelson0</a> is walking through <a href="https://rnelson0.com/2017/01/12/automating-puppet-tests-with-a-jenkins-job-version-1-0/">automated Puppet testing with Jenkins </a>on his blog. I thought I&rsquo;d highlight how you can use a similar workflow in Atlassian&rsquo;s Bamboo application. This assumes you already have a working Bamboo setup and are familiar with the general process for testing Puppet modules with rspec.</p>
+<h2 id="create-a-new-plan">Create a new plan<a hidden class="anchor" aria-hidden="true" href="#create-a-new-plan">#</a></h2>
+<p>The first step is to set up a new plan to use for the testing. Click &ldquo;Create&rdquo; and then &ldquo;Create a new plan&rdquo; in the top menu bar.![Pasted_Image_1_13_17__3_08_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_08_pm.png)</p>
+<p>Bamboo organizes related jobs, builds, etc. into projects. On the next screen either create a new Puppet project or select an existing project if you&rsquo;ve already set that up.![Pasted_Image_1_13_17__3_10_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_10_pm.png)</p>
+<p>Fill in the details and select the repository you&rsquo;d like to start testing. Bamboo can read from a large number of version control systems. I happen to use Bitbucket so this is simple.  Once your happy with the selections click &ldquo;Configure plan&rdquo;.</p>
+<p>![Pasted_Image_1_13_17__3_15_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_15_pm.png)</p>
+<p>At the next screen we setup our tasks. The first task, Source Code Checkout, is added by default and checks out the repo configured in the previous step. I like to break things down into small script tasks so they are easier to troubleshoot and duplicate between jobs.</p>
+<p>Click add task and select script.</p>
+<p>![Pasted_Image_1_13_17__3_17_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_17_pm.png)</p>
+<p>The first step is to setup the Ruby environment. This presumes you already have Bamboo build agents up and running and that rvm is installed. This script below is what I use. It performs some checks to ensure ruby is properly setup.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="k">$(</span>ps -p <span class="s2">&#34;</span><span class="nv">$$</span><span class="s2">&#34;</span> -o <span class="nv">comm</span><span class="o">=</span><span class="k">)</span><span class="s2">&#34;</span> !<span class="o">=</span> <span class="s2">&#34;bash&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl"> /bin/bash <span class="s2">&#34;</span><span class="nv">$0</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="nb">exit</span> <span class="s2">&#34;</span><span class="nv">$?</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> /etc/profile.d/rvm.sh
+</span></span><span class="line"><span class="cl"><span class="nv">ruby</span><span class="o">=</span><span class="s2">&#34;ruby-2.1.8&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">install_count</span><span class="o">=</span><span class="sb">`</span>rvm list <span class="p">|</span> grep <span class="nv">$ruby</span> <span class="p">|</span> wc -l<span class="sb">`</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="nv">$install_count</span> -lt <span class="m">1</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  rvm install <span class="nv">$ruby</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">rvm use <span class="nv">$ruby</span>
+</span></span><span class="line"><span class="cl">rvm user gemsets
+</span></span></code></pre></div><p>Now click &ldquo;Add task&rdquo; and add another script task. We will use this script step to create a new gemset and install the gems listed in the Gemfile using bundler. If you use environment variables to specify the version of puppet to install enter that in the environment variables field.![Pasted_Image_1_13_17__3_55_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_55_pm.png)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="k">$(</span>ps -p <span class="s2">&#34;</span><span class="nv">$$</span><span class="s2">&#34;</span> -o <span class="nv">comm</span><span class="o">=</span><span class="k">)</span><span class="s2">&#34;</span> !<span class="o">=</span> <span class="s2">&#34;bash&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">/bin/bash <span class="s2">&#34;</span><span class="nv">$0</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">exit</span> <span class="s2">&#34;</span><span class="nv">$?</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> /etc/profile.d/rvm.sh
+</span></span><span class="line"><span class="cl"><span class="nv">ruby</span><span class="o">=</span><span class="s2">&#34;ruby-2.1.8&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">gemset</span><span class="o">=</span><span class="s2">&#34;puppet-4.8.0-validate&#34;</span>
+</span></span><span class="line"><span class="cl">rvm use <span class="nv">$ruby</span>
+</span></span><span class="line"><span class="cl">rvm user gemsets
+</span></span><span class="line"><span class="cl">rvm gemset create <span class="nv">$gemset</span>
+</span></span><span class="line"><span class="cl">rvm gemset use <span class="nv">$gemset</span>
+</span></span><span class="line"><span class="cl">gem install bundler
+</span></span><span class="line"><span class="cl">rm Gemfile.lock
+</span></span><span class="line"><span class="cl">bundle install
+</span></span></code></pre></div><p>Now lets add another script step and use it to run the actual tests. At the end of the test this removes the Gemset to ensure a clean environment for each new run.  You can also add other options here using environment variables such as <code>STRICT_VARIABLES=no</code>.![Pasted_Image_1_13_17__3_30_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_30_pm.png)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="k">$(</span>ps -p <span class="s2">&#34;</span><span class="nv">$$</span><span class="s2">&#34;</span> -o <span class="nv">comm</span><span class="o">=</span><span class="k">)</span><span class="s2">&#34;</span> !<span class="o">=</span> <span class="s2">&#34;bash&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">/bin/bash <span class="s2">&#34;</span><span class="nv">$0</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">exit</span> <span class="s2">&#34;</span><span class="nv">$?</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> /etc/profile.d/rvm.sh
+</span></span><span class="line"><span class="cl"><span class="nv">ruby</span><span class="o">=</span><span class="s2">&#34;ruby-2.1.8&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">gemset</span><span class="o">=</span><span class="s2">&#34;puppet-4.8.0-validate&#34;</span>
+</span></span><span class="line"><span class="cl">rvm use <span class="nv">$ruby</span>
+</span></span><span class="line"><span class="cl">rvm user gemsets
+</span></span><span class="line"><span class="cl">rvm gemset use <span class="nv">$gemset</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">bundle <span class="nb">exec</span> rake validate
+</span></span><span class="line"><span class="cl">bundle <span class="nb">exec</span> rake spec
+</span></span><span class="line"><span class="cl">rvm gemset delete --force <span class="nv">$gemset</span>
+</span></span></code></pre></div><p>We&rsquo;ve now covered the basics needed to get started and can click create at the bottom to finalize the plan. After doing so we&rsquo;ll be looking  at the job configuration page. The script tasks we just created are in the &ldquo;Default Job&rdquo;.</p>
+<p>![Pasted_Image_1_13_17__3_33_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_33_pm.png)That name isn&rsquo;t very clear so lets update it. Click &ldquo;Default Job&rdquo; and then select the &ldquo;Job details&rdquo; tab. Here we&rsquo;ll enter a more descriptive name such as &ldquo;Puppet 4.8 rspec&rdquo; and click save. A descriptive name is handy because you can clone stages across plans to avoid repeating the script setup.</p>
+<h2 id="repository-triggers">Repository Triggers<a hidden class="anchor" aria-hidden="true" href="#repository-triggers">#</a></h2>
+<p>If you&rsquo;re using the built in Bitbucket Server integration like my setup then Bamboo will automatically run the plan whenever a new commit is pushed to the repo. You can customize the type of trigger to use polling, scheduling, or other options as well. Simply select the &ldquo;Triggers&rdquo; tab under plan configuration and set appropriately.![Pasted_Image_1_13_17__3_37_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_37_pm.png)</p>
+<h2 id="tracking-results">Tracking Results<a hidden class="anchor" aria-hidden="true" href="#tracking-results">#</a></h2>
+<p>If you were to run this plan now you would get a pass or fail in Bamboo  but would have to look at the logs for the job to see the actual details of the results. We can use JUnit to get an better view of the test in Bamboo. To set this up create a <code>.rspec</code> file in the root of the Puppet module you&rsquo;re testing with the following content</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">--format RspecJunitFormatter
+</span></span><span class="line"><span class="cl">--out results.xml
+</span></span></code></pre></div><p>This will write the results of the test in JUnit format to the results.xml file. You&rsquo;ll also want to add this file to <code>.gitignore</code>. Now we can add a step to our plan to parse this file. Go back to the plan configuration and select the stage we setup previously. Click add task and select &ldquo;JUnit Parser.&rdquo;![Pasted_Image_1_13_17__3_41_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_41_pm.png)</p>
+<p>Configure the JUnit parser so it finds our results file.![Pasted_Image_1_13_17__3_42_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_42_pm.png)</p>
+<p>Click save and run the plan again. You&rsquo;ll now see your test results nicely formatted in the plan history. Here&rsquo;s an example of what that looks like for failed tests.![Pasted_Image_1_13_17__3_44_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_44_pm.png)![Pasted_Image_1_13_17__3_45_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_45_pm.png)</p>
+<p>You don&rsquo;t need to redo this work for each repo. When setting up a plan for a new module start by removing the default stage. Then click add job and select clone an existing job. ![Pasted_Image_1_13_17__4_01_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__4_01_pm.png)</p>
+<p>You can then select which plan to clone from.![Pasted_Image_1_13_17__4_02_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__4_02_pm.png)</p>
+<p>It takes a bit more setup then using Travis CI but its not difficult to get rspec testing up and running in Bamboo.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/bamboo/">Bamboo</a></li>
+      <li><a href="http://localhost:1313/tags/puppet/">Puppet</a></li>
+      <li><a href="http://localhost:1313/tags/rspec/">Rspec</a></li>
+      <li><a href="http://localhost:1313/tags/technology/">Technology</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/2017/update-to-lita-activedirectory/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Update to lita-activedirectory</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/2016/finishing-the-puppet-4-migration/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Finishing the Puppet 4 Migration</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Daniel Schaaff</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

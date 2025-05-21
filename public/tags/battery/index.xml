@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Battery on Daniel Schaaff</title>
+    <link>http://localhost:1313/tags/battery/</link>
+    <description>Recent content in Battery on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 11 Nov 2012 01:44:34 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/battery/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>iOS 6.0.1 Battery Life</title>
+      <link>http://localhost:1313/posts/2012/ios-601-battery-life/</link>
+      <pubDate>Sun, 11 Nov 2012 01:44:34 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2012/ios-601-battery-life/</guid>
+      <description>&lt;p&gt;My battery life has been absolutely terrible ever since I updated my iPhone 5 to iOS 6.0.1.  Tonight I discovered it was because the brightness setting was set to the maximum after  the update.  Thinking this might&amp;rsquo;ve been some sort of fluke I checked my wife&amp;rsquo;s iPhone 4.  Sure enough the brightness setting was maxed on hers too.  If you&amp;rsquo;ve been having battery issues since the update you might want to double check this setting.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Puppet on Daniel Schaaff</title>
+    <link>http://localhost:1313/tags/puppet/</link>
+    <description>Recent content in Puppet on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 29 Mar 2017 18:18:23 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/puppet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Speeding up RSpec Tests in Bamboo</title>
+      <link>http://localhost:1313/posts/2017/speeding-up-rspec-tests-in-bamboo/</link>
+      <pubDate>Wed, 29 Mar 2017 18:18:23 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2017/speeding-up-rspec-tests-in-bamboo/</guid>
+      <description>&lt;p&gt;Now that &lt;a href=&#34;http://danielschaaff.com/2017/03/29/tackling-tech-debt-in-puppet/&#34;&gt;roles and profiles are in my control repo&lt;/a&gt; my RSpec tests are taking longer then ever. As of this writing the control repo contains 938 tests and I&amp;rsquo;m still a long way from 100% coverage. This really slows down the feedback loop when running tests. When running locally I often just run RSpec against a specific spec file rather then run the whole test suite, but I still wanted a way to speed things up in Bamboo.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tackling Tech Debt in Puppet</title>
+      <link>http://localhost:1313/posts/2017/tackling-tech-debt-in-puppet/</link>
+      <pubDate>Wed, 29 Mar 2017 18:02:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2017/tackling-tech-debt-in-puppet/</guid>
+      <description>&lt;p&gt;I spent some time tackling technical debt in our Puppet code this week. The biggest outstanding item was implementing eyaml for protecting secrets in Hiera. I&amp;rsquo;d also been encouraging developers to contribute to the Puppet code base  for some time, but they were restricted from the control repo due to some secrets kept in Hiera. This put a big damper on collaboration as Hiera is the data engine for our roles and profiles. Separate git repos were also used for the profile and role modules due to this workflow.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Automated Puppet Tests with Bamboo</title>
+      <link>http://localhost:1313/posts/2017/automated-puppet-tests-with-bamboo/</link>
+      <pubDate>Sat, 14 Jan 2017 00:07:47 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2017/automated-puppet-tests-with-bamboo/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://twitter.com/rnelson0?lang=en&#34;&gt;rnelson0&lt;/a&gt; is walking through &lt;a href=&#34;https://rnelson0.com/2017/01/12/automating-puppet-tests-with-a-jenkins-job-version-1-0/&#34;&gt;automated Puppet testing with Jenkins &lt;/a&gt;on his blog. I thought I&amp;rsquo;d highlight how you can use a similar workflow in Atlassian&amp;rsquo;s Bamboo application. This assumes you already have a working Bamboo setup and are familiar with the general process for testing Puppet modules with rspec.&lt;/p&gt;
+&lt;h2 id=&#34;create-a-new-plan&#34;&gt;Create a new plan&lt;/h2&gt;
+&lt;p&gt;The first step is to set up a new plan to use for the testing. Click &amp;ldquo;Create&amp;rdquo; and then &amp;ldquo;Create a new plan&amp;rdquo; in the top menu bar.![Pasted_Image_1_13_17__3_08_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_08_pm.png)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Finishing the Puppet 4 Migration</title>
+      <link>http://localhost:1313/posts/2016/finishing-the-puppet-4-migration/</link>
+      <pubDate>Fri, 23 Dec 2016 23:19:07 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2016/finishing-the-puppet-4-migration/</guid>
+      <description>&lt;p&gt;Two days ago I finished our migration to Puppet 4. Overall I&amp;rsquo;d say the process was pretty painless. The gist of what I did&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;start running rspec tests against Puppet 4&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;fix issues found in tests&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;run the &lt;a href=&#34;https://github.com/dschaaff/prosvc-preview_report&#34;&gt;catalog preview tool&lt;/a&gt; and fix any issues found&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;turn on the future parser on the existing master&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;turn off stringify facts&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;create new master and PuppeDB server&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;migrate agents to new master&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thankfully our code wasn&amp;rsquo;t too difficult to update and most of the forge modules we use had also been updated.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Adventures in Ruby</title>
+      <link>http://localhost:1313/posts/2016/adventures-in-ruby/</link>
+      <pubDate>Wed, 30 Nov 2016 19:28:38 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2016/adventures-in-ruby/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m learning ruby. Finding time to work towards this goal is proving difficult but I&amp;rsquo;m forcing myself to use ruby wherever possible to aid in my learning. I&amp;rsquo;ll be putting some of my lame code on here to chronicle my learning and &lt;em&gt;hopefully&lt;/em&gt; get some feedback on how I can improve things. I recently came across a good opportunity when I needed to generate a list of nodes to use with the &lt;a href=&#34;https://github.com/puppetlabs/puppetlabs-catalog_preview&#34;&gt;puppet catalog preview tool&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using Puppet Catalog Preview with FOSS Puppet</title>
+      <link>http://localhost:1313/posts/2016/using-puppet-catalog-preview-with-foss-puppet/</link>
+      <pubDate>Wed, 16 Nov 2016 00:20:42 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2016/using-puppet-catalog-preview-with-foss-puppet/</guid>
+      <description>&lt;p&gt;We&amp;rsquo;re working to upgrade our infrastructure to Puppet 4 and are making use of the &lt;a href=&#34;https://forge.puppet.com/puppetlabs/catalog_preview#migrate4_empty_string_true&#34;&gt;catalog preview tool&lt;/a&gt; to help identify code that needs to be updated. The preview tool in and of itself is handy, but the output it produces can be a bit daunting. During the &lt;a href=&#34;http://www.slideshare.net/PuppetLabs/puppetconf-2016-getting-to-the-latest-puppet-nate-mccurdy-elizabeth-wittig-plumb-puppet&#34;&gt;&amp;ldquo;Getting to the Latest Puppet&amp;rdquo;&lt;/a&gt; talk at puppetconf they pointed out a tool that professional services uses to create a nice html version of the output. Naturally I got excited to use this, but discovered it doesn&amp;rsquo;t properly work with open source Puppet due to some hardcoded Puppet Enterprise paths. Fortunately it was only 3 lines to update! My fork is &lt;a href=&#34;https://github.com/dschaaff/prosvc-preview_report&#34;&gt;here&lt;/a&gt; if its useful to others.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>No Longer Barfing at the Mention of ChatOps</title>
+      <link>http://localhost:1313/posts/2016/no-longer-barfing-at-the-mention-of-chatops/</link>
+      <pubDate>Fri, 11 Nov 2016 01:58:29 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2016/no-longer-barfing-at-the-mention-of-chatops/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve poked a lot of fun at chatops but I have found some value in portions of the practice. Let me state upfront that I do not believe paying attention to the chat room all day and having your attention interrupted non-stop is a productive or healthy practice. I have found some big benefits to &amp;ldquo;chatops&amp;rdquo; however.&lt;/p&gt;
+&lt;h2 id=&#34;visibility&#34;&gt;Visibility&lt;/h2&gt;
+&lt;p&gt;Work that is done in the chatroom, or filtered into the chatroom, is visible to the whole team. This helps the team be aware of what others are doing and stay up to date. I&amp;rsquo;ve picked up on quite a few things from this that I wouldn&amp;rsquo;t have learned other wise. This is also why we choose to route a fair amount of notifications into chat. For example we have Jira connected to HipChat and it makes it really easy to stay on top of issues. We also push commit notifications, build notifications, etc in the chatroom. The downside to this is that the rooms get noisy and make it harder to follow actual conversations between humans. One strategy we use to combat that is creating multiple rooms and focusing them around a subject.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

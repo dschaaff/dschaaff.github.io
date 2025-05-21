@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Lita on Daniel Schaaff</title>
+    <link>http://localhost:1313/tags/lita/</link>
+    <description>Recent content in Lita on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 21 Mar 2017 02:24:20 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/lita/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Update to lita-activedirectory</title>
+      <link>http://localhost:1313/posts/2017/update-to-lita-activedirectory/</link>
+      <pubDate>Tue, 21 Mar 2017 02:24:20 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2017/update-to-lita-activedirectory/</guid>
+      <description>&lt;p&gt;I updated our Active Directory lita plugin today with support for querying the members of a given group. See &lt;a href=&#34;https://github.com/knuedge/lita-activedirectory&#34;&gt;https://github.com/knuedge/lita-activedirectory&lt;/a&gt;. It still needs some work to properly present errors when a user or group doesn&amp;rsquo;t actually exist in the directory. Right now it returns nothing rather then a helpful error. It works splendidly with legit users and groups however.&lt;/p&gt;
+&lt;p&gt;ChatOps ftw!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>No Longer Barfing at the Mention of ChatOps</title>
+      <link>http://localhost:1313/posts/2016/no-longer-barfing-at-the-mention-of-chatops/</link>
+      <pubDate>Fri, 11 Nov 2016 01:58:29 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2016/no-longer-barfing-at-the-mention-of-chatops/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve poked a lot of fun at chatops but I have found some value in portions of the practice. Let me state upfront that I do not believe paying attention to the chat room all day and having your attention interrupted non-stop is a productive or healthy practice. I have found some big benefits to &amp;ldquo;chatops&amp;rdquo; however.&lt;/p&gt;
+&lt;h2 id=&#34;visibility&#34;&gt;Visibility&lt;/h2&gt;
+&lt;p&gt;Work that is done in the chatroom, or filtered into the chatroom, is visible to the whole team. This helps the team be aware of what others are doing and stay up to date. I&amp;rsquo;ve picked up on quite a few things from this that I wouldn&amp;rsquo;t have learned other wise. This is also why we choose to route a fair amount of notifications into chat. For example we have Jira connected to HipChat and it makes it really easy to stay on top of issues. We also push commit notifications, build notifications, etc in the chatroom. The downside to this is that the rooms get noisy and make it harder to follow actual conversations between humans. One strategy we use to combat that is creating multiple rooms and focusing them around a subject.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

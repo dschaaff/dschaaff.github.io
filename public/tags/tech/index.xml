@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tech on Daniel Schaaff</title>
+    <link>http://localhost:1313/tags/tech/</link>
+    <description>Recent content in Tech on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 25 Jul 2017 22:50:10 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jenkins Dynamic EC2 Executors</title>
+      <link>http://localhost:1313/posts/2017/844/</link>
+      <pubDate>Tue, 25 Jul 2017 22:50:10 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2017/844/</guid>
+      <description>&lt;p&gt;There is a nice plugin for Jenkins that lets you dynamically add capacity by spinning up EC2 instances on demand and then terminating them when the job queue expires. This is a great way to save money on an AWS based build infrastructure.&lt;/p&gt;
+&lt;p&gt;Unfortunately, the plugin documentation is really light and there are a few gotchas to look out for.&lt;/p&gt;
+&lt;h2 id=&#34;security-groups&#34;&gt;Security Groups&lt;/h2&gt;
+&lt;p&gt;This field only accepts comma separated security group IDs, not names. This is frustrating because other fields in the plugin take a space separated list (e.g. labels)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Facebook Is Using You</title>
+      <link>http://localhost:1313/posts/2012/facebook-is-using-you/</link>
+      <pubDate>Sun, 05 Feb 2012 19:11:18 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2012/facebook-is-using-you/</guid>
+      <description>&lt;p&gt;Be careful what you search for.&lt;/p&gt;
+&lt;p&gt;Another reason to use duckduckgo.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.nytimes.com/2012/02/05/opinion/sunday/facebook-is-using-you.html?_r=4&amp;amp;hp=&amp;amp;pagewanted=all&#34;&gt;Facebook Is Using You&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>High Tech Prison Break</title>
+      <link>http://localhost:1313/posts/2011/high-tech-prison-break/</link>
+      <pubDate>Mon, 07 Nov 2011 14:51:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2011/high-tech-prison-break/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://feeds.arstechnica.com/~r/arstechnica/everything/~3/bqvmh7bThis/vulnerabilities-give-hackers-ability-to-open-prison-cells-from-afar.ars&#34;&gt;High Tech Prison Break&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>google sure loves to disappoint</title>
+      <link>http://localhost:1313/posts/2011/google-sure-loves-to-disappoint/</link>
+      <pubDate>Wed, 02 Nov 2011 16:59:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2011/google-sure-loves-to-disappoint/</guid>
+      <description>&lt;p&gt;Sure enough Gmail is live in the app store.  Unfortunately its not an entirely
+native application.  Most of it is a native wrapper for a web view of the mobile
+site.  We get push notifications(except that their broken right now), address
+book integration, and the ability to attach photos, but the interface is a bit
+laggy and still won&amp;rsquo;t format an html email to fit the screen.&lt;/p&gt;
+&lt;p&gt;I guess I shouldn&amp;rsquo;t be surprised.  Google usually releases products publicly before they&amp;rsquo;re ready and then slowly improves them.  Link to the app store below.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Native gmail app for iPhone!!!</title>
+      <link>http://localhost:1313/posts/2011/native-gmail-app-for-iphone/</link>
+      <pubDate>Tue, 01 Nov 2011 02:03:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2011/native-gmail-app-for-iphone/</guid>
+      <description>&lt;p&gt;This would make me quite happy if it&amp;rsquo;s true.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://parislemon.com/post/12181169812/incoming-a-native-gmail-iphone-app-finally&#34;&gt;Native gmail app for iPhone!!!&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Make Gmail play nice with Apple Mail</title>
+      <link>http://localhost:1313/posts/2011/make-gmail-play-nice-with-apple-mail/</link>
+      <pubDate>Sat, 29 Oct 2011 16:14:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2011/make-gmail-play-nice-with-apple-mail/</guid>
+      <description>&lt;p&gt;Yesterday I determined a compromise.  I&amp;rsquo;m going to keep using iCloud for
+contacts and calendars.  Google sync makes a mess of contacts, iCloud &amp;ldquo;just
+works.&amp;rdquo;  I&amp;rsquo;ll keep using Gmail for my main email.  I&amp;rsquo;ll access it through Apple
+Mail on the desktop and the iPhone&amp;rsquo;s built in mail app.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s how I set it up to avoid duplicate messages and other craziness.  Log
+into Gmail&amp;rsquo;s settings and navigate to the labels tab.  Here you can control
+which labels show up in IMAP.  What I did was hide all mail, starred, and
+important from IMAP.  &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Gmail to iCloud to Gmail again...</title>
+      <link>http://localhost:1313/posts/2011/gmail-to-icloud-to-gmail-again/</link>
+      <pubDate>Fri, 28 Oct 2011 20:38:21 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2011/gmail-to-icloud-to-gmail-again/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve used Gmail or several years and have really enjoyed the experience.  It&amp;rsquo;s
+not without its quirks however.  Anyone who has ever used Gmail with an IMAP
+client can attest to how wonky things can get.  The way Gmail&amp;rsquo;s All Mail folder
+functions causes lots of duplicate messages to show up.  If a message has a
+label it will appear in both a folder for that label as well as in the All Mail
+folder.  If you search for a message in the client multiple copies will pop up.
+The Gmail experience on the iPhone is also annoying.  You can setup up Gmail
+through IMAP just like a desktop client, with all of the duplicate messages, but
+you can&amp;rsquo;t get push.  That means I have to set my phone to poll the network at a
+certain interval.  This is bad for battery life at high settings and means that
+messages don&amp;rsquo;t show up right away.  The other option is to set up Gmail though
+Google sync as an exchange server.  You can get push with this option but
+deleting a message will always archive it.  I don&amp;rsquo;t want to archive all the junk
+newsletter messages I get.  To delete a message with this setup I have to select
+it and then manually move it to Gmail&amp;rsquo;s trash folder.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Facebook Messenger</title>
+      <link>http://localhost:1313/posts/2011/facebook-messenger/</link>
+      <pubDate>Wed, 26 Oct 2011 17:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2011/facebook-messenger/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://65.media.tumblr.com/tumblr_ltom27WHLt1qbk10k.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;As much a I am prone to whine about Facebook, I really like
+the Facebook messenger app.  Now that I&amp;rsquo;m on iOS 5 I&amp;rsquo;m already seeing some
+benefit from using iMessage.  Mostly that its much faster at sending than
+standard text messages.  Facebook messengers offers more though.  It presents a
+unified communication stream between all devices.  If I&amp;rsquo;m texting someone
+through Facebook messenger that conversation is present when I hop onto my
+computer.  I can pick up right where I left off.  Maybe iMessage will get mac
+integration at some point, but it will never be as cross platform as Facebook.
+BUT, it is still Facebook I&amp;rsquo;m talking about.  Yuck.  Google+ has the potential
+to offer a similar system in the future, but right now its still a ghost town.
+Have you tried the facebook messenger app?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Different Tragedy in Steve Jobs&#39; Death</title>
+      <link>http://localhost:1313/posts/2011/a-different-tragedy-in-steve-jobs-death/</link>
+      <pubDate>Fri, 07 Oct 2011 21:02:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2011/a-different-tragedy-in-steve-jobs-death/</guid>
+      <description>&lt;p&gt;I love Apple and the products they create.  I always had an interest in gadgets
+but was too busy playing guitar and trying to keep an old Dell laptop working to
+take it much further than that.  It wasn&amp;rsquo;t until I moved to Chicago and bought
+my first Macbook Pro that I fell in love technology. There is something in the
+design of Apple products that makes them a pleasure to use, and that is thanks
+to the vision and genius of Steve Jobs.  &lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

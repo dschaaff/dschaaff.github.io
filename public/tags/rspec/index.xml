@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Rspec on Daniel Schaaff</title>
+    <link>http://localhost:1313/tags/rspec/</link>
+    <description>Recent content in Rspec on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 29 Mar 2017 18:18:23 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/rspec/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Speeding up RSpec Tests in Bamboo</title>
+      <link>http://localhost:1313/posts/2017/speeding-up-rspec-tests-in-bamboo/</link>
+      <pubDate>Wed, 29 Mar 2017 18:18:23 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2017/speeding-up-rspec-tests-in-bamboo/</guid>
+      <description>&lt;p&gt;Now that &lt;a href=&#34;http://danielschaaff.com/2017/03/29/tackling-tech-debt-in-puppet/&#34;&gt;roles and profiles are in my control repo&lt;/a&gt; my RSpec tests are taking longer then ever. As of this writing the control repo contains 938 tests and I&amp;rsquo;m still a long way from 100% coverage. This really slows down the feedback loop when running tests. When running locally I often just run RSpec against a specific spec file rather then run the whole test suite, but I still wanted a way to speed things up in Bamboo.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Automated Puppet Tests with Bamboo</title>
+      <link>http://localhost:1313/posts/2017/automated-puppet-tests-with-bamboo/</link>
+      <pubDate>Sat, 14 Jan 2017 00:07:47 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2017/automated-puppet-tests-with-bamboo/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://twitter.com/rnelson0?lang=en&#34;&gt;rnelson0&lt;/a&gt; is walking through &lt;a href=&#34;https://rnelson0.com/2017/01/12/automating-puppet-tests-with-a-jenkins-job-version-1-0/&#34;&gt;automated Puppet testing with Jenkins &lt;/a&gt;on his blog. I thought I&amp;rsquo;d highlight how you can use a similar workflow in Atlassian&amp;rsquo;s Bamboo application. This assumes you already have a working Bamboo setup and are familiar with the general process for testing Puppet modules with rspec.&lt;/p&gt;
+&lt;h2 id=&#34;create-a-new-plan&#34;&gt;Create a new plan&lt;/h2&gt;
+&lt;p&gt;The first step is to set up a new plan to use for the testing. Click &amp;ldquo;Create&amp;rdquo; and then &amp;ldquo;Create a new plan&amp;rdquo; in the top menu bar.![Pasted_Image_1_13_17__3_08_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_08_pm.png)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.147.4"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Daniel Schaaff</title>
+<meta name="keywords" content="blog, developer, personal">
+<meta name="description" content="My humble home on the internet.">
+<meta name="author" content="Daniel Schaaff">
+<link rel="canonical" href="http://localhost:1313/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="http://localhost:1313/">
+  <meta property="og:site_name" content="Daniel Schaaff">
+  <meta property="og:title" content="Daniel Schaaff">
+  <meta property="og:description" content="My humble home on the internet.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Daniel Schaaff">
+<meta name="twitter:description" content="My humble home on the internet.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Daniel Schaaff",
+  "url": "http://localhost:1313/",
+  "description": "My humble home on the internet.",
+  "logo": "http://localhost:1313/favicon.ico",
+  "sameAs": [
+      
+  ]
+}
+</script>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Daniel Schaaff (Alt + H)">Daniel Schaaff</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/cv/" title="CV">
+                    <span>CV</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="Search">
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>[youtube https://www.youtube.com/watch?v=ixo-MQ0u6SA?feature=oembed&amp;enablejsapi=1&amp;origin=http://safe.txmblr.com&amp;wmode=opaque&amp;w;=500&amp;h;=281]
+merlin:
+(via [Dave Grohl Proves You Don’t Need Lessons to Rock - YouTube](https://www.youtube.com/watch?v=ixo-MQ0u6SA)) &gt; &gt; I will never get sick of hearing every version of “Everlong.”
+Especially when Dave Grohl explains how he actually plays the guitar like drums.
+(Source: https://www.youtube.com/)
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-01-06 05:49:03 +0000 UTC'>January 6, 2016</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2016/merlin-via-dave-grohl-proves-you-dont-need/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-11-08 23:30:02 +0000 UTC'>November 8, 2015</span>&nbsp;·&nbsp;0 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2015/25/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+I rearranged the homescreen this morning.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-09-27 01:10:26 +0000 UTC'>September 27, 2015</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2015/i-rearranged-the-homescreen-this-morning/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>1 year ago today I hopped on a plane to move to San Diego. After having had enough with Chicago winters I started looking for work in sunny California. What was incredible is that only 3 weeks passed between putting my resume online and my first day at Intellisis. I left my wife and girls behind to pack up the apartment and move across the country. My saint of a wife somehow kept it together watching all 3 girls, working, packing up our lives, and finally driving across the country.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-09-09 04:09:40 +0000 UTC'>September 9, 2015</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2015/1-year-ago-today-i-hopped-on-a-plane-to-move-to/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Gmail to iCloud to Gmail again…
+I posted several years ago now. I’ve been using gmail ever since despite a brief transition to fastmail. It’s far from perfect but I’m still pretty happy with it. The inbox app by Google is especially great when I’m traveling.
+I’ve used Gmail or several years and have really enjoyed the experience. It’s not without its quirks however. Anyone who has ever used Gmail with an IMAP client can attest to how wonky things can get. The way Gmail’s All Mail folder functions causes lots of duplicate messages to show up. If a message has a label it will appear in both a folder for that label as well as in the All Mail folder. If you search for a message in the client multiple copies will pop up. The Gmail experience on the iPhone is also annoying. You can setup up Gmail through IMAP just like a desktop client, with all of the duplicate messages, but you can’t get push. That means I have to set my phone to poll the network at a certain interval. This is bad for battery life at high settings and means that messages don’t show up right away. The other option is to set up Gmail though Google sync as an exchange server. You can get push with this option but deleting a message will always archive it. I don’t want to archive all the junk newsletter messages I get. To delete a message with this setup I have to select it and then manually move it to Gmail’s trash folder.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-09-07 00:28:47 +0000 UTC'>September 7, 2015</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2015/gmail-to-icloud-to-gmail-again-i-posted/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+On the plus side my daughter’s school got a responsive web design….but they forgot a few things.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-08-30 17:43:12 +0000 UTC'>August 30, 2015</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2015/on-the-plus-side-my-daughters-school-got-a/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>For decades, Americans have been losing their ability, even their right, to walk. There are places in the United States – New York City, for example – where people walk as a matter of habit and lifestyle, commuting in ways familiar to residents of London or Paris. But there are vast blankets and folds of the country where the ability to walk – to open a door and step outside and go somewhere or nowhere without getting behind the wheel of a car – is a struggle, a fight. A risk. We are sacrificing the right to walk – Antonia Malchick – Aeon (via merlin)
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-08-28 19:50:21 +0000 UTC'>August 28, 2015</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2015/for-decades-americans-have-been-losing-their/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>[gallery]
+morelala:
+They Came Together &amp; Wet Hot American Summer &gt; &gt; </p>
+  </div>
+  <footer class="entry-footer"><span title='2015-08-01 19:50:43 +0000 UTC'>August 1, 2015</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2015/morelala-they-came-together-wet-hot-american/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>[gallery]
+Looking good San Diego.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-12-29 04:47:38 +0000 UTC'>December 29, 2014</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2014/looking-good-san-diego/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+Creeper in the corner
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-12-29 04:46:34 +0000 UTC'>December 29, 2014</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2014/creeper-in-the-corner/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/page/3/">
+      «&nbsp;Prev&nbsp;3/23
+    </a>
+    <a class="next" href="http://localhost:1313/page/5/">Next&nbsp;5/23&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Daniel Schaaff</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

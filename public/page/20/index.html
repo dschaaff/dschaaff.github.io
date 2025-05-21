@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.147.4"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Daniel Schaaff</title>
+<meta name="keywords" content="blog, developer, personal">
+<meta name="description" content="My humble home on the internet.">
+<meta name="author" content="Daniel Schaaff">
+<link rel="canonical" href="http://localhost:1313/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="http://localhost:1313/">
+  <meta property="og:site_name" content="Daniel Schaaff">
+  <meta property="og:title" content="Daniel Schaaff">
+  <meta property="og:description" content="My humble home on the internet.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Daniel Schaaff">
+<meta name="twitter:description" content="My humble home on the internet.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Daniel Schaaff",
+  "url": "http://localhost:1313/",
+  "description": "My humble home on the internet.",
+  "logo": "http://localhost:1313/favicon.ico",
+  "sameAs": [
+      
+  ]
+}
+</script>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Daniel Schaaff (Alt + H)">Daniel Schaaff</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/cv/" title="CV">
+                    <span>CV</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="Search">
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Facebook Messenger
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+As much a I am prone to whine about Facebook, I really like the Facebook messenger app. Now that I’m on iOS 5 I’m already seeing some benefit from using iMessage. Mostly that its much faster at sending than standard text messages. Facebook messengers offers more though. It presents a unified communication stream between all devices. If I’m texting someone through Facebook messenger that conversation is present when I hop onto my computer. I can pick up right where I left off. Maybe iMessage will get mac integration at some point, but it will never be as cross platform as Facebook. BUT, it is still Facebook I’m talking about. Yuck. Google&#43; has the potential to offer a similar system in the future, but right now its still a ghost town. Have you tried the facebook messenger app?
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-10-26 17:00:00 +0000 UTC'>October 26, 2011</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to Facebook Messenger" href="http://localhost:1313/posts/2011/facebook-messenger/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> If our world were random—if resources combined together haphazardly, as if a giant took them all into his hands and tossed them down like so many [cards]—it’s a virtual certainty that the resulting combination of resources would be useless. Unless this chance arrangement were quickly rearranged according to some productive logic, nothing worthwhile would be produced. We would all starve to death. Because only a tiny fraction of possible arrangements serves human ends, any arrangement will be useless if it is chosen randomly or with inadequate knowledge of how each and every resource might be productively combined with each other.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-10-26 15:53:58 +0000 UTC'>October 26, 2011</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2011/if-our-world-were-randomif-resources-combined/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+My favorite homework spot.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-10-26 15:12:32 +0000 UTC'>October 26, 2011</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2011/my-favorite-homework-spot/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+Taken with instagram
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-10-25 01:58:49 +0000 UTC'>October 25, 2011</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2011/taken-with-instagram/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">We are the 99%
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Great article.
+http://www.washingtonpost.com/blogs/ezra-klein/post/who-are-the-99-percent/20…
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-10-23 13:09:20 +0000 UTC'>October 23, 2011</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to We are the 99%" href="http://localhost:1313/posts/2011/we-are-the-99/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">The Twins&#39; Ultrasound 10.21.11
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>We got to go see the twins again today. It is amazing how much they are already moving around. I could see their little arms and legs now! The little tikes are healthy and everything is going well. We were happy to hear that they each have their own placenta and sac, which is the most optimal condition for twins! In the upper left hand corner of each picture is an A or a B. A is one twin and B is the other.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-10-21 16:29:51 +0000 UTC'>October 21, 2011</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to The Twins&#39; Ultrasound 10.21.11" href="http://localhost:1313/posts/2011/the-twins-ultrasound-102111/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Fall in Galena
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> See the full gallery on Posterous
+Every fall we make the (soon to be much larger) family trip to Galena, IL. It’s a beautiful little historic town with its own charm. One of my highlights is always grabbing a beer from the Galena Brewing Company. This year I also added climbing the massive staircase to my list. The reward is an amazing view from the top.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-10-18 02:04:25 +0000 UTC'>October 18, 2011</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to Fall in Galena" href="http://localhost:1313/posts/2011/fall-in-galena/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">A Different Tragedy in Steve Jobs&#39; Death
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I love Apple and the products they create. I always had an interest in gadgets but was too busy playing guitar and trying to keep an old Dell laptop working to take it much further than that. It wasn’t until I moved to Chicago and bought my first Macbook Pro that I fell in love technology. There is something in the design of Apple products that makes them a pleasure to use, and that is thanks to the vision and genius of Steve Jobs. ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-10-07 21:02:00 +0000 UTC'>October 7, 2011</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to A Different Tragedy in Steve Jobs&#39; Death" href="http://localhost:1313/posts/2011/a-different-tragedy-in-steve-jobs-death/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">A Worthy Chronicle by Randy Baranosky
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I first met Randy during a spanish class in my freshmen year of high school. Later I started going to the same Church he did. I spent a couple years playing guitar on the worship team while he played drums. Later he would join Memphis Belle (unfortunately near the bands end) and we would tour the country together. Randy is extremely creative and talented and I have the utmost respect for him. ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-10-06 21:07:00 +0000 UTC'>October 6, 2011</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to A Worthy Chronicle by Randy Baranosky" href="http://localhost:1313/posts/2011/a-worthy-chronicle-by-randy-baranosky/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[bitter]sweet home Chicago
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+I love my city. Let’s get that out of way now.
+I love weather like we’re currently having.
+That’s why it sucks so bad when the tribune runs an article about how Chicago is projected to have one of its worst winters on record this year. Crap.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-10-05 20:38:05 +0000 UTC'>October 5, 2011</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to [bitter]sweet home Chicago" href="http://localhost:1313/posts/2011/bittersweet-home-chicago/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/page/19/">
+      «&nbsp;Prev&nbsp;19/23
+    </a>
+    <a class="next" href="http://localhost:1313/page/21/">Next&nbsp;21/23&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Daniel Schaaff</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

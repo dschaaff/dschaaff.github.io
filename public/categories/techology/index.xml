@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Techology on Daniel Schaaff</title>
+    <link>http://localhost:1313/categories/techology/</link>
+    <description>Recent content in Techology on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 03 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/techology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Renew Consul Root CA Certificate</title>
+      <link>http://localhost:1313/posts/2021/renew-consul-root-ca-certificate/</link>
+      <pubDate>Wed, 03 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2021/renew-consul-root-ca-certificate/</guid>
+      <description>&lt;p&gt;The Consul root CA is generated using the &lt;code&gt;consul tls ca create &lt;/code&gt; command. If created with the original options the root CA is only valid for a few years. After running production for a while you inevitably need to extend this certificate. To do so we need to generate and sign a new certificate using the existing private key. Consul does not provide any commands for doing so but it can be done using OpenSSL.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lets Encrypt Bug Requires Reissue of Certificates by Cert-Manager in Kubernetes</title>
+      <link>http://localhost:1313/posts/2020/cert-manager-bug-lets-encrypt-k8s-renewal/</link>
+      <pubDate>Tue, 03 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2020/cert-manager-bug-lets-encrypt-k8s-renewal/</guid>
+      <description>&lt;p&gt;I received a fun email from Lets Encrypt today letting me know that they were revoking all of my certificates on March 4. The bug is described &lt;a href=&#34;https://community.letsencrypt.org/t/2020-02-29-caa-rechecking-bug/114591&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;All of my certificates are managed by &lt;a href=&#34;https://cert-manager.io/docs/&#34;&gt;cert-manager&lt;/a&gt; inside Kubernetes. This led to the fun challenge of figuring out how to force
+a reissue of every certificate. There were 2 approaches that came up in the Kubernetes community slack.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Delete all secrets containing cert-manager issued certificates.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>In Praise of the Bat Commandline Tool</title>
+      <link>http://localhost:1313/posts/2019/in-praise-of-the-bat-command-line-tool/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2019/in-praise-of-the-bat-command-line-tool/</guid>
+      <description>&lt;p&gt;I’ve been working on helm charts a lot lately. For better or worse that has involved running &lt;code&gt;helm install —debug —dry-run…&lt;/code&gt; a lot to ensure things render correctly. It is much easier to parse that output when there is syntax highlighting. Enter [bat](&lt;a href=&#34;https://github.com/sharkdp/bat&#34;&gt;GitHub - sharkdp/bat: A cat(1) clone with wings.&lt;/a&gt;). I can &lt;code&gt;helm install —debug —dry-run… | bat -l yaml&lt;/code&gt; to get full syntax highlighting.  It’s a small thing but it makes a big difference.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Easy Integrations Tests for Java with the Maven Docker Plugin</title>
+      <link>http://localhost:1313/posts/2019/easy-integrations-tests-for-java-with-the-maven-docker-plugin/</link>
+      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2019/easy-integrations-tests-for-java-with-the-maven-docker-plugin/</guid>
+      <description>&lt;p&gt;Traditionally it has been a pain to manage the infrastructure necessary for running integration tests within a CI/CD pipeline. Several years ago I accomplished this with an RDS instance for the database in AWS dedicated solely to the test environment. The problem is that multiple tests running at the same time would cause conflicts as they inserted and removed data in the database. At the time I set a lock in Jenkins to only allow one service to utilize the test database at a time, but this was far from ideal. Thankfully there are a lot of good options for solving this problem. I’m particularly fond of using the Docker plugin for Maven to handle this when dealing with Java-based applications.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitoring Creation of Log Files in s3</title>
+      <link>http://localhost:1313/posts/2018/monitoring-creation-of-log-files-in-s3/</link>
+      <pubDate>Wed, 29 Aug 2018 03:45:14 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2018/monitoring-creation-of-log-files-in-s3/</guid>
+      <description>&lt;p&gt;I manage several apps that write various pieces of data to the local file system and rely on Fluentd to ship them to s3. There is solid monitoring around the fluentd aggregator process, but I wanted better visibility and alerting when things aren’t written to s3 as expected.&lt;/p&gt;
+&lt;p&gt;The solution I came up with was a &lt;a href=&#34;https://github.com/dschaaff/datadog-checks&#34;&gt;custom Datadog check&lt;/a&gt;. The files I am monitoring are written into a bucket named something like &lt;code&gt;example-logs/data/event-files/year/month/day&lt;/code&gt;. A new path is set up in the s3 bucket for the current day’s date, e.g. &lt;code&gt;logs/data/example-log/2018/08/15&lt;/code&gt; each day. The Datadog check sends the count of objects in the current date’s directory as a gauge. You can then monitor that objects are created each day as expected and at a normal rate.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Quick Tip: Using [skip-ci] in Jenkins’ Declarative Pipelines</title>
+      <link>http://localhost:1313/posts/2018/quick-tip-using-skip-ci-in-jenkins-declarative-pipelines/</link>
+      <pubDate>Mon, 27 Aug 2018 22:57:53 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2018/quick-tip-using-skip-ci-in-jenkins-declarative-pipelines/</guid>
+      <description>&lt;p&gt;You’ve spent the past hour meticulously crafting a Readme update and its time to commit. Great, but what if you don’t want that commit to trigger automated testing, deploys, and other actions? If you’re using Jenkins declarative pipelines there’s a pretty simple solution.&lt;/p&gt;
+&lt;p&gt;Add the below when block to each stage you wish to skip in your Jenkinsfile.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-groovy&#34; data-lang=&#34;groovy&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;when&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;changelog&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;\\[skip-ci\\]&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We can also expand upon this for other actions if desired. For example, use the following around a deploy stage to avoid deploying pull requests, anything not on the master branch, and to respect the &lt;code&gt;[skip-ci]&lt;/code&gt; param in a commit message.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Better Jenkins Notifications in Declarative Pipelines</title>
+      <link>http://localhost:1313/posts/2018/better-jenkins-notifications-in-declarative-pipelines/</link>
+      <pubDate>Fri, 09 Feb 2018 18:42:27 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2018/better-jenkins-notifications-in-declarative-pipelines/</guid>
+      <description>&lt;p&gt;I’ve been using declarative pipelines in Jenkins for a while with the Slack &lt;a href=&#34;https://github.com/jenkinsci/slack-plugin&#34;&gt;plugin&lt;/a&gt; to send build notifications to Slack. The plugin does what it says on the tin but gives you a pretty boring message by default.&lt;/p&gt;
+&lt;p&gt;![E8F315D1-04A6-4DC4-B0D8-1E1E7ED42D08.png]({{ site.url }}/assets/img/e8f315d1-04a6-4dc4-b0d8-1e1e7ed42d08.png)&lt;/p&gt;
+&lt;p&gt;I used the environment variables available in the pipeline to make things a little bit better and link back to the job.&lt;/p&gt;
+&lt;p&gt;![08A97422-A7E2-4AB5-A65B-68EF7B5AE196.png]({{ site.url }}/assets/img/08a97422-a7e2-4ab5-a65b-68ef7b5ae196.png)&lt;/p&gt;
+&lt;p&gt;But I was still always disappointed the notifications didn’t contain more information. Thankfully version 2.3 of the &lt;a href=&#34;https://github.com/jenkinsci/slack-plugin&#34;&gt;plugin&lt;/a&gt; added support for the attachments portion of the &lt;a href=&#34;https://api.slack.com/docs/message-formatting&#34;&gt;Slack message API&lt;/a&gt;. I was able to leverage the attachments feature to get better message formatting. Meanwhile, I took some inspiration from &lt;a href=&#34;https://stackoverflow.com/questions/39920437/how-to-access-junit-test-counts-in-jenkins-pipeline-project&#34;&gt;this thread&lt;/a&gt; to incorporate test result summaries.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Exporting Pagerduty Incident Data</title>
+      <link>http://localhost:1313/posts/2017/exporting-pagerduty-incident-data/</link>
+      <pubDate>Tue, 21 Nov 2017 16:37:54 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2017/exporting-pagerduty-incident-data/</guid>
+      <description>&lt;p&gt;Pagerduty provides a built-in way to export your incident data but only a limited number of data fields are available on the basic plan. Rather than upgrade you can use the API to export the data to a CSV. I found this &lt;a href=&#34;https://gist.github.com/ryanhoskin/b9c305274627c783f0d7&#34;&gt;gist&lt;/a&gt; listed &lt;a href=&#34;https://community.pagerduty.com/t/reporting-using-our-api-to-create-custom-reports/464&#34;&gt;here&lt;/a&gt;. The python script works great but some of my incident messages contained JSON data that threw off Excel when opening the CSV. I slightly modified the script with character escaping to work around this (lines 98- 107).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Escaping Characters in Jenkins Declarative Pipelines</title>
+      <link>http://localhost:1313/posts/2017/escaping-characters-in-jenkins-declarative-pipelines/</link>
+      <pubDate>Fri, 06 Oct 2017 23:19:08 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2017/escaping-characters-in-jenkins-declarative-pipelines/</guid>
+      <description>&lt;p&gt;I spent way too long troubleshooting a script step in a Jenkins declarative pipeline this week. After lots of frustration I stumbled upon this &lt;a href=&#34;https://gist.github.com/cyrille-leclerc/8cad9d1b35ea553820a1&#34;&gt;gist&lt;/a&gt; that was a life saver. Long story short you need &lt;code&gt;\\&lt;/code&gt; to escape literal quotes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bash Function to SSH into ec2 Instances</title>
+      <link>http://localhost:1313/posts/2017/bash-function-to-ssh-into-ec2-instances/</link>
+      <pubDate>Thu, 17 Aug 2017 21:15:40 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2017/bash-function-to-ssh-into-ec2-instances/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve often found myself with an instance id that I want to login to look at something. It sucks looking up the IP when you don&amp;rsquo;t know the DNS name. I&amp;rsquo;m sure there are other ways to do this but here is what I came up with.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;getec2ip&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; aws ec2 describe-instances --instance-ids &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;.Reservations&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;0&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;.Instances&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;0&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;.PrivateIpAddress&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq --raw-output .&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;assh&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;nv&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;getec2ip &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; ssh user@&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This relies on the aws cli and jq to parse out the ip and has made it much easier for me to quickly hop on an instance.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Jenkins Dynamic EC2 Executors</title>
+      <link>http://localhost:1313/posts/2017/844/</link>
+      <pubDate>Tue, 25 Jul 2017 22:50:10 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2017/844/</guid>
+      <description>&lt;p&gt;There is a nice plugin for Jenkins that lets you dynamically add capacity by spinning up EC2 instances on demand and then terminating them when the job queue expires. This is a great way to save money on an AWS based build infrastructure.&lt;/p&gt;
+&lt;p&gt;Unfortunately, the plugin documentation is really light and there are a few gotchas to look out for.&lt;/p&gt;
+&lt;h2 id=&#34;security-groups&#34;&gt;Security Groups&lt;/h2&gt;
+&lt;p&gt;This field only accepts comma separated security group IDs, not names. This is frustrating because other fields in the plugin take a space separated list (e.g. labels)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Speeding up RSpec Tests in Bamboo</title>
+      <link>http://localhost:1313/posts/2017/speeding-up-rspec-tests-in-bamboo/</link>
+      <pubDate>Wed, 29 Mar 2017 18:18:23 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2017/speeding-up-rspec-tests-in-bamboo/</guid>
+      <description>&lt;p&gt;Now that &lt;a href=&#34;http://danielschaaff.com/2017/03/29/tackling-tech-debt-in-puppet/&#34;&gt;roles and profiles are in my control repo&lt;/a&gt; my RSpec tests are taking longer then ever. As of this writing the control repo contains 938 tests and I&amp;rsquo;m still a long way from 100% coverage. This really slows down the feedback loop when running tests. When running locally I often just run RSpec against a specific spec file rather then run the whole test suite, but I still wanted a way to speed things up in Bamboo.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tackling Tech Debt in Puppet</title>
+      <link>http://localhost:1313/posts/2017/tackling-tech-debt-in-puppet/</link>
+      <pubDate>Wed, 29 Mar 2017 18:02:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2017/tackling-tech-debt-in-puppet/</guid>
+      <description>&lt;p&gt;I spent some time tackling technical debt in our Puppet code this week. The biggest outstanding item was implementing eyaml for protecting secrets in Hiera. I&amp;rsquo;d also been encouraging developers to contribute to the Puppet code base  for some time, but they were restricted from the control repo due to some secrets kept in Hiera. This put a big damper on collaboration as Hiera is the data engine for our roles and profiles. Separate git repos were also used for the profile and role modules due to this workflow.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Update to lita-activedirectory</title>
+      <link>http://localhost:1313/posts/2017/update-to-lita-activedirectory/</link>
+      <pubDate>Tue, 21 Mar 2017 02:24:20 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2017/update-to-lita-activedirectory/</guid>
+      <description>&lt;p&gt;I updated our Active Directory lita plugin today with support for querying the members of a given group. See &lt;a href=&#34;https://github.com/knuedge/lita-activedirectory&#34;&gt;https://github.com/knuedge/lita-activedirectory&lt;/a&gt;. It still needs some work to properly present errors when a user or group doesn&amp;rsquo;t actually exist in the directory. Right now it returns nothing rather then a helpful error. It works splendidly with legit users and groups however.&lt;/p&gt;
+&lt;p&gt;ChatOps ftw!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Automated Puppet Tests with Bamboo</title>
+      <link>http://localhost:1313/posts/2017/automated-puppet-tests-with-bamboo/</link>
+      <pubDate>Sat, 14 Jan 2017 00:07:47 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2017/automated-puppet-tests-with-bamboo/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://twitter.com/rnelson0?lang=en&#34;&gt;rnelson0&lt;/a&gt; is walking through &lt;a href=&#34;https://rnelson0.com/2017/01/12/automating-puppet-tests-with-a-jenkins-job-version-1-0/&#34;&gt;automated Puppet testing with Jenkins &lt;/a&gt;on his blog. I thought I&amp;rsquo;d highlight how you can use a similar workflow in Atlassian&amp;rsquo;s Bamboo application. This assumes you already have a working Bamboo setup and are familiar with the general process for testing Puppet modules with rspec.&lt;/p&gt;
+&lt;h2 id=&#34;create-a-new-plan&#34;&gt;Create a new plan&lt;/h2&gt;
+&lt;p&gt;The first step is to set up a new plan to use for the testing. Click &amp;ldquo;Create&amp;rdquo; and then &amp;ldquo;Create a new plan&amp;rdquo; in the top menu bar.![Pasted_Image_1_13_17__3_08_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_08_pm.png)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Finishing the Puppet 4 Migration</title>
+      <link>http://localhost:1313/posts/2016/finishing-the-puppet-4-migration/</link>
+      <pubDate>Fri, 23 Dec 2016 23:19:07 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2016/finishing-the-puppet-4-migration/</guid>
+      <description>&lt;p&gt;Two days ago I finished our migration to Puppet 4. Overall I&amp;rsquo;d say the process was pretty painless. The gist of what I did&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;start running rspec tests against Puppet 4&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;fix issues found in tests&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;run the &lt;a href=&#34;https://github.com/dschaaff/prosvc-preview_report&#34;&gt;catalog preview tool&lt;/a&gt; and fix any issues found&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;turn on the future parser on the existing master&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;turn off stringify facts&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;create new master and PuppeDB server&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;migrate agents to new master&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thankfully our code wasn&amp;rsquo;t too difficult to update and most of the forge modules we use had also been updated.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Code Keyboard Tenkeyless - Massdrop</title>
+      <link>http://localhost:1313/posts/2016/code-keyboard-tenkeyless-massdrop/</link>
+      <pubDate>Fri, 23 Dec 2016 15:13:24 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2016/code-keyboard-tenkeyless-massdrop/</guid>
+      <description>&lt;p&gt;My favorite keyboard is up on Massdrop again. I highly recommend it.&lt;/p&gt;
+&lt;p&gt;For the nerds keeping score I waffle between brown and blue switches(the clears made my fingers tired).&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.massdrop.com/buy/code-keyboard-tenkeyless?referer=FNWB57&#34;&gt;https://www.massdrop.com/buy/code-keyboard-tenkeyless?referer=FNWB57&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>This is great.</title>
+      <link>http://localhost:1313/posts/2016/this-is-great/</link>
+      <pubDate>Thu, 15 Dec 2016 18:10:47 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2016/this-is-great/</guid>
+      <description>&lt;p&gt;My Priorities for the Next Four Years
+—Schneier on Security&lt;/p&gt;
+&lt;p&gt;“Like many, I was surprised and shocked by the election of Donald Trump as president. I believe his ideas, temperament, and inexperience represent a grave threat to our country and world.”&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.schneier.com/blog/archives/2016/12/my_priorities_f.html&#34;&gt;https://www.schneier.com/blog/archives/2016/12/my_priorities_f.html&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Terraform AMI Maps</title>
+      <link>http://localhost:1313/posts/2016/terraform-ami-maps/</link>
+      <pubDate>Fri, 02 Dec 2016 03:44:51 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2016/terraform-ami-maps/</guid>
+      <description>&lt;p&gt;Up until today we had been using a map variable in terraform to choose our ubuntu 14 ami based on region.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;variable&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ubuntu_amis&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;description&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Mapping of Ubuntu 14.04 AMIs.&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;default&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;ap&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;northeast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-a25cffa2&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;ap&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;southeast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-967879c4&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;ap&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;southeast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-21ce8b1b&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;cn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;north&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;     &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-d44fd2ed&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;eu&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;central&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;   &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-9cf9c281&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;eu&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;west&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;      &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-664b0a11&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;sa&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;east&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;      &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-c99518d4&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;us&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;east&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;      &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-c135f3aa&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;us&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gov&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;west&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-91cfafb2&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;us&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;west&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;      &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-bf3dccfb&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;us&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;west&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;      &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-f15b5dc1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We would then set the ami id like so when creating an ec2 instance.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ami&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;${lookup(var.ubuntu_amis, var.region)}&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The problem we ran into is that we now use Ubuntu 16 by default and wanted to expand the ami map to contain its ID&amp;rsquo;s as well. I quickly discovered that nested maps like the one below work.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Adventures in Ruby</title>
+      <link>http://localhost:1313/posts/2016/adventures-in-ruby/</link>
+      <pubDate>Wed, 30 Nov 2016 19:28:38 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2016/adventures-in-ruby/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m learning ruby. Finding time to work towards this goal is proving difficult but I&amp;rsquo;m forcing myself to use ruby wherever possible to aid in my learning. I&amp;rsquo;ll be putting some of my lame code on here to chronicle my learning and &lt;em&gt;hopefully&lt;/em&gt; get some feedback on how I can improve things. I recently came across a good opportunity when I needed to generate a list of nodes to use with the &lt;a href=&#34;https://github.com/puppetlabs/puppetlabs-catalog_preview&#34;&gt;puppet catalog preview tool&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using Puppet Catalog Preview with FOSS Puppet</title>
+      <link>http://localhost:1313/posts/2016/using-puppet-catalog-preview-with-foss-puppet/</link>
+      <pubDate>Wed, 16 Nov 2016 00:20:42 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2016/using-puppet-catalog-preview-with-foss-puppet/</guid>
+      <description>&lt;p&gt;We&amp;rsquo;re working to upgrade our infrastructure to Puppet 4 and are making use of the &lt;a href=&#34;https://forge.puppet.com/puppetlabs/catalog_preview#migrate4_empty_string_true&#34;&gt;catalog preview tool&lt;/a&gt; to help identify code that needs to be updated. The preview tool in and of itself is handy, but the output it produces can be a bit daunting. During the &lt;a href=&#34;http://www.slideshare.net/PuppetLabs/puppetconf-2016-getting-to-the-latest-puppet-nate-mccurdy-elizabeth-wittig-plumb-puppet&#34;&gt;&amp;ldquo;Getting to the Latest Puppet&amp;rdquo;&lt;/a&gt; talk at puppetconf they pointed out a tool that professional services uses to create a nice html version of the output. Naturally I got excited to use this, but discovered it doesn&amp;rsquo;t properly work with open source Puppet due to some hardcoded Puppet Enterprise paths. Fortunately it was only 3 lines to update! My fork is &lt;a href=&#34;https://github.com/dschaaff/prosvc-preview_report&#34;&gt;here&lt;/a&gt; if its useful to others.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>No Longer Barfing at the Mention of ChatOps</title>
+      <link>http://localhost:1313/posts/2016/no-longer-barfing-at-the-mention-of-chatops/</link>
+      <pubDate>Fri, 11 Nov 2016 01:58:29 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2016/no-longer-barfing-at-the-mention-of-chatops/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve poked a lot of fun at chatops but I have found some value in portions of the practice. Let me state upfront that I do not believe paying attention to the chat room all day and having your attention interrupted non-stop is a productive or healthy practice. I have found some big benefits to &amp;ldquo;chatops&amp;rdquo; however.&lt;/p&gt;
+&lt;h2 id=&#34;visibility&#34;&gt;Visibility&lt;/h2&gt;
+&lt;p&gt;Work that is done in the chatroom, or filtered into the chatroom, is visible to the whole team. This helps the team be aware of what others are doing and stay up to date. I&amp;rsquo;ve picked up on quite a few things from this that I wouldn&amp;rsquo;t have learned other wise. This is also why we choose to route a fair amount of notifications into chat. For example we have Jira connected to HipChat and it makes it really easy to stay on top of issues. We also push commit notifications, build notifications, etc in the chatroom. The downside to this is that the rooms get noisy and make it harder to follow actual conversations between humans. One strategy we use to combat that is creating multiple rooms and focusing them around a subject.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Saving Credentials for Office 365 PowerShell Scripts and Scheduled Tasks</title>
+      <link>http://localhost:1313/posts/2016/saving-credentials-for-office-365-powershell-scripts-and-scheduled-tasks/</link>
+      <pubDate>Tue, 27 Sep 2016 13:01:35 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2016/saving-credentials-for-office-365-powershell-scripts-and-scheduled-tasks/</guid>
+      <description>&lt;p&gt;This is immensely useful, and has been a huge time saver.&lt;/p&gt;
+&lt;p&gt;[gallery size=full columns=1]&lt;/p&gt;
+&lt;p&gt;—Practical 365&lt;/p&gt;
+&lt;p&gt;“PowerShell is an efficient way to perform management tasks for Office 365, and also allows a great deal of automation through the use of PowerShell scripts to perform routine and repetitive tasks.”&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://feeds.feedblitz.com/~/203571740/0/practical365~Saving-Credentials-for-Office-PowerShell-Scripts-and-Scheduled-Tasks/&#34;&gt;http://feeds.feedblitz.com/&lt;del&gt;/203571740/0/practical365&lt;/del&gt;Saving-Credentials-for-Office-PowerShell-Scripts-and-Scheduled-Tasks/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to get to files that have been mounted over</title>
+      <link>http://localhost:1313/posts/2016/how-to-get-to-files-that-have-been-mounted-over/</link>
+      <pubDate>Sat, 27 Aug 2016 16:27:39 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2016/how-to-get-to-files-that-have-been-mounted-over/</guid>
+      <description>&lt;p&gt;You have a directory with data, and now you&amp;rsquo;ve mounted a volume over it. How do you get to the data in the underlying directory without interrupting the mounted volume? Bind mount to the rescue!
+Bind mount the directory to another path and you can manipulate the files in underlying directory without disturbing the volume mounted atop of it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenVPN and ec2 Jumbo Frames</title>
+      <link>http://localhost:1313/posts/2016/openvpn-and-ec2-jumbo-frames/</link>
+      <pubDate>Tue, 16 Aug 2016 02:29:44 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2016/openvpn-and-ec2-jumbo-frames/</guid>
+      <description>&lt;p&gt;While troubleshooting site to site links running OpenVPN recently I ran into an issue with MTU sizing on the ec2 end. When we originally setup the links we followed the performance tuning advice found &lt;a href=&#34;https://community.openvpn.net/openvpn/wiki/Gigabit_Networks_Linux&#34;&gt;here&lt;/a&gt;. The relevant portion is that we set &lt;code&gt;tun-mtu 6000&lt;/code&gt; Why did we do this? Here&amp;rsquo;s OpenVPN&amp;rsquo;s explanation&lt;/p&gt;
+&lt;blockquote&gt;
+  By increasing the MTU size of the tun adapter and by disabling OpenVPN&#39;s internal fragmentation routines the throughput can be increased quite dramatically. The reason behind this is that by feeding larger packets to the OpenSSL encryption and decryption routines the performance will go up. The second advantage of not internally fragmenting packets is that this is left to the operating system and to the kernel network device drivers. For a LAN-based setup this can work, but when handling various types of remote users (road warriors, cable modem users, etc) this is not always a possibility.
+&lt;/blockquote&gt;
+&lt;p&gt;During later testing we discovered that we could easily push 40mb/s over the OpenVPN tunnel into the ec2 instance, but only 1mb/s or less going the opposite direction. Obviously not ideal.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

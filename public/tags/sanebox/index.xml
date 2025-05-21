@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sanebox on Daniel Schaaff</title>
+    <link>http://localhost:1313/tags/sanebox/</link>
+    <description>Recent content in Sanebox on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 20 Feb 2014 22:27:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/sanebox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sanebox Spammed Me</title>
+      <link>http://localhost:1313/posts/2014/sanebox-spammed-me/</link>
+      <pubDate>Thu, 20 Feb 2014 22:27:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2014/sanebox-spammed-me/</guid>
+      <description>&lt;h1 id=&#34;sanebox-spammed-me&#34;&gt;Sanebox Spammed Me&lt;/h1&gt;
+&lt;p&gt;A few days ago I signed up for a &lt;a href=&#34;http://www.sanebox.com&#34;&gt;Sanebox&lt;/a&gt; account after having my curiosity piqued from hearing &lt;a href=&#34;http://www.macpowerusers.com/2013/11/17/mac-power-users-164-tackling-email/&#34;&gt;David Sparks&lt;/a&gt; talk about it. I really enjoyed the service in the first few days. It learns from your email habits and moves unimportant messages into a folder called +sanelater. At 4pm each day I would receive an email listing eveything in the +sanelater folder in my inbox.This was great, the mail showing up in my inbox was email from people that I actually wanted to read. Everything else I could review in one swoop at the end of the day without it distracting me…&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

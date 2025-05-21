@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.147.4"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Daniel Schaaff</title>
+<meta name="keywords" content="blog, developer, personal">
+<meta name="description" content="My humble home on the internet.">
+<meta name="author" content="Daniel Schaaff">
+<link rel="canonical" href="http://localhost:1313/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="http://localhost:1313/">
+  <meta property="og:site_name" content="Daniel Schaaff">
+  <meta property="og:title" content="Daniel Schaaff">
+  <meta property="og:description" content="My humble home on the internet.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Daniel Schaaff">
+<meta name="twitter:description" content="My humble home on the internet.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Daniel Schaaff",
+  "url": "http://localhost:1313/",
+  "description": "My humble home on the internet.",
+  "logo": "http://localhost:1313/favicon.ico",
+  "sameAs": [
+      
+  ]
+}
+</script>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Daniel Schaaff (Alt + H)">Daniel Schaaff</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/cv/" title="CV">
+                    <span>CV</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="Search">
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>What makes me content are small things…like getting a good nights sleep, or a good cup of coffee, or a great conversation, or really having a worshipful moment with the Lord, or high-fiving my two-year-old daughter. When those things come around, it doesn’t matter what job I am doing, or where I live, or what my prospects for the future are. God will take care of that stuff. a-conversation-with-reese-roper-from-five-iron-frenzy
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-03-31 12:50:07 +0000 UTC'>March 31, 2013</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2013/what-makes-me-content-are-small-thingslike/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Extreme week in Moscow
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>There are no words.
+Extreme week in Moscow </p>
+  </div>
+  <footer class="entry-footer"><span title='2013-03-30 20:42:59 +0000 UTC'>March 30, 2013</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to Extreme week in Moscow" href="http://localhost:1313/posts/2013/extreme-week-in-moscow/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>[youtube https://www.youtube.com/watch?v=N7wqGfxIGEo?feature=oembed&amp;enablejsapi=1&amp;origin=http://safe.txmblr.com&amp;wmode=opaque&amp;w;=500&amp;h;=281]
+mikemainsandthebranches:
+A sneak peek of our instudio video we did for “Noises”, the first single off our upcoming release: “Calm Down, Everything Is Fine”. &gt; &gt; 3 days left to pledge. To help go HERE. (Source: https://www.youtube.com/)
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-03-29 01:21:49 +0000 UTC'>March 29, 2013</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2013/mikemainsandthebranches-a-sneak-peek-of-our/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">ETHAN LUCK: Rebel Youth: 15 Years Of &#39;Armageddon Massive&#39;
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>ethanjohnluck:
+Oh man, I’m getting old. As an 18 year old, I never thought I would have recorded an album and would write about it 15 years later. For those that don’t know, The Dingees was the first touring band I was in. My first band to record an album. My first band on a label. My first band that did…
+I love this band and played this record hundreds of times.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-03-25 02:04:01 +0000 UTC'>March 25, 2013</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to ETHAN LUCK: Rebel Youth: 15 Years Of &#39;Armageddon Massive&#39;" href="http://localhost:1313/posts/2013/ethan-luck-rebel-youth-15-years-of-armageddon/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Hypercritical: Self-Reliance
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I like when John Siracusa writes. Great takedown of the mobile landscape.
+Hypercritical: Self-Reliance
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-03-21 15:57:54 +0000 UTC'>March 21, 2013</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to Hypercritical: Self-Reliance" href="http://localhost:1313/posts/2013/hypercritical-self-reliance/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+merlin:
+# My New Minimalist iOS Weather App &gt; &gt; Coming soon to the App Store.
+Only $3.99.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-02-26 16:31:45 +0000 UTC'>February 26, 2013</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2013/minimal-weather/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Pirate Bay Awesomely Aims to Sue Anti-Piracy Group for Copyright Infringement | SPIN | Newswire This is more than a little bit ironic.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-02-17 02:07:43 +0000 UTC'>February 17, 2013</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2013/pirate-bay-awesomely-aims-to-sue-anti-piracy-group/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">iOS Music Players
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Pro tip.
+On the desktop we’re mostly limited to using iTunes for music playback (aside from streaming services). If you don’t like iTunes, good luck finding a better alternative.
+Thankfully the situation is different on an iOS device. Don’t like apple’s music app? Simply fire up the AppStore and download a 3rd party music player. I recommend checking out Ecoute, Track 8 , Groove 2.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-02-15 23:10:39 +0000 UTC'>February 15, 2013</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to iOS Music Players" href="http://localhost:1313/posts/2013/ios-music-players/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>In my 20s, I was positive I was not going to get married and have kids. My reasoning for this was because as a teacher I saw so many clueless parents, and I didn’t want to be part of the problem. I had a teacher, a good friend and mother of two, take me to task for such thinking. You don’t go into parenting thinking about how many bad things you could do, she explained; you become a parent to make the world better, through making a better world for your child. My retort to my friend was a whine: “But what if your kid is a fuckup?” My friend looked right at me. “But it’s your fuckup.” On being a parent in tragedy | Slay All Dragons
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-02-12 20:37:42 +0000 UTC'>February 12, 2013</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2013/in-my-20s-i-was-positive-i-was-not-going-to-get/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">No Content Found
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>[gallery]
+I saw the Menzingers, La Dispute, and Hot Water Music tonight. I loved every minute of it.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-02-01 04:43:18 +0000 UTC'>February 1, 2013</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;dschaaff</footer>
+  <a class="entry-link" aria-label="post link to No Content Found" href="http://localhost:1313/posts/2013/i-saw-the-menzingers-la-dispute-and-hot-water/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/page/9/">
+      «&nbsp;Prev&nbsp;9/23
+    </a>
+    <a class="next" href="http://localhost:1313/page/11/">Next&nbsp;11/23&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Daniel Schaaff</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

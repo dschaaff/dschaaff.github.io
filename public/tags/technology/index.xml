@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Technology on Daniel Schaaff</title>
+    <link>http://localhost:1313/tags/technology/</link>
+    <description>Recent content in Technology on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 09 Feb 2018 18:42:27 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/technology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Better Jenkins Notifications in Declarative Pipelines</title>
+      <link>http://localhost:1313/posts/2018/better-jenkins-notifications-in-declarative-pipelines/</link>
+      <pubDate>Fri, 09 Feb 2018 18:42:27 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2018/better-jenkins-notifications-in-declarative-pipelines/</guid>
+      <description>&lt;p&gt;I’ve been using declarative pipelines in Jenkins for a while with the Slack &lt;a href=&#34;https://github.com/jenkinsci/slack-plugin&#34;&gt;plugin&lt;/a&gt; to send build notifications to Slack. The plugin does what it says on the tin but gives you a pretty boring message by default.&lt;/p&gt;
+&lt;p&gt;![E8F315D1-04A6-4DC4-B0D8-1E1E7ED42D08.png]({{ site.url }}/assets/img/e8f315d1-04a6-4dc4-b0d8-1e1e7ed42d08.png)&lt;/p&gt;
+&lt;p&gt;I used the environment variables available in the pipeline to make things a little bit better and link back to the job.&lt;/p&gt;
+&lt;p&gt;![08A97422-A7E2-4AB5-A65B-68EF7B5AE196.png]({{ site.url }}/assets/img/08a97422-a7e2-4ab5-a65b-68ef7b5ae196.png)&lt;/p&gt;
+&lt;p&gt;But I was still always disappointed the notifications didn’t contain more information. Thankfully version 2.3 of the &lt;a href=&#34;https://github.com/jenkinsci/slack-plugin&#34;&gt;plugin&lt;/a&gt; added support for the attachments portion of the &lt;a href=&#34;https://api.slack.com/docs/message-formatting&#34;&gt;Slack message API&lt;/a&gt;. I was able to leverage the attachments feature to get better message formatting. Meanwhile, I took some inspiration from &lt;a href=&#34;https://stackoverflow.com/questions/39920437/how-to-access-junit-test-counts-in-jenkins-pipeline-project&#34;&gt;this thread&lt;/a&gt; to incorporate test result summaries.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Exporting Pagerduty Incident Data</title>
+      <link>http://localhost:1313/posts/2017/exporting-pagerduty-incident-data/</link>
+      <pubDate>Tue, 21 Nov 2017 16:37:54 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2017/exporting-pagerduty-incident-data/</guid>
+      <description>&lt;p&gt;Pagerduty provides a built-in way to export your incident data but only a limited number of data fields are available on the basic plan. Rather than upgrade you can use the API to export the data to a CSV. I found this &lt;a href=&#34;https://gist.github.com/ryanhoskin/b9c305274627c783f0d7&#34;&gt;gist&lt;/a&gt; listed &lt;a href=&#34;https://community.pagerduty.com/t/reporting-using-our-api-to-create-custom-reports/464&#34;&gt;here&lt;/a&gt;. The python script works great but some of my incident messages contained JSON data that threw off Excel when opening the CSV. I slightly modified the script with character escaping to work around this (lines 98- 107).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Escaping Characters in Jenkins Declarative Pipelines</title>
+      <link>http://localhost:1313/posts/2017/escaping-characters-in-jenkins-declarative-pipelines/</link>
+      <pubDate>Fri, 06 Oct 2017 23:19:08 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2017/escaping-characters-in-jenkins-declarative-pipelines/</guid>
+      <description>&lt;p&gt;I spent way too long troubleshooting a script step in a Jenkins declarative pipeline this week. After lots of frustration I stumbled upon this &lt;a href=&#34;https://gist.github.com/cyrille-leclerc/8cad9d1b35ea553820a1&#34;&gt;gist&lt;/a&gt; that was a life saver. Long story short you need &lt;code&gt;\\&lt;/code&gt; to escape literal quotes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Jenkins Dynamic EC2 Executors</title>
+      <link>http://localhost:1313/posts/2017/844/</link>
+      <pubDate>Tue, 25 Jul 2017 22:50:10 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2017/844/</guid>
+      <description>&lt;p&gt;There is a nice plugin for Jenkins that lets you dynamically add capacity by spinning up EC2 instances on demand and then terminating them when the job queue expires. This is a great way to save money on an AWS based build infrastructure.&lt;/p&gt;
+&lt;p&gt;Unfortunately, the plugin documentation is really light and there are a few gotchas to look out for.&lt;/p&gt;
+&lt;h2 id=&#34;security-groups&#34;&gt;Security Groups&lt;/h2&gt;
+&lt;p&gt;This field only accepts comma separated security group IDs, not names. This is frustrating because other fields in the plugin take a space separated list (e.g. labels)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Speeding up RSpec Tests in Bamboo</title>
+      <link>http://localhost:1313/posts/2017/speeding-up-rspec-tests-in-bamboo/</link>
+      <pubDate>Wed, 29 Mar 2017 18:18:23 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2017/speeding-up-rspec-tests-in-bamboo/</guid>
+      <description>&lt;p&gt;Now that &lt;a href=&#34;http://danielschaaff.com/2017/03/29/tackling-tech-debt-in-puppet/&#34;&gt;roles and profiles are in my control repo&lt;/a&gt; my RSpec tests are taking longer then ever. As of this writing the control repo contains 938 tests and I&amp;rsquo;m still a long way from 100% coverage. This really slows down the feedback loop when running tests. When running locally I often just run RSpec against a specific spec file rather then run the whole test suite, but I still wanted a way to speed things up in Bamboo.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tackling Tech Debt in Puppet</title>
+      <link>http://localhost:1313/posts/2017/tackling-tech-debt-in-puppet/</link>
+      <pubDate>Wed, 29 Mar 2017 18:02:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2017/tackling-tech-debt-in-puppet/</guid>
+      <description>&lt;p&gt;I spent some time tackling technical debt in our Puppet code this week. The biggest outstanding item was implementing eyaml for protecting secrets in Hiera. I&amp;rsquo;d also been encouraging developers to contribute to the Puppet code base  for some time, but they were restricted from the control repo due to some secrets kept in Hiera. This put a big damper on collaboration as Hiera is the data engine for our roles and profiles. Separate git repos were also used for the profile and role modules due to this workflow.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Automated Puppet Tests with Bamboo</title>
+      <link>http://localhost:1313/posts/2017/automated-puppet-tests-with-bamboo/</link>
+      <pubDate>Sat, 14 Jan 2017 00:07:47 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2017/automated-puppet-tests-with-bamboo/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://twitter.com/rnelson0?lang=en&#34;&gt;rnelson0&lt;/a&gt; is walking through &lt;a href=&#34;https://rnelson0.com/2017/01/12/automating-puppet-tests-with-a-jenkins-job-version-1-0/&#34;&gt;automated Puppet testing with Jenkins &lt;/a&gt;on his blog. I thought I&amp;rsquo;d highlight how you can use a similar workflow in Atlassian&amp;rsquo;s Bamboo application. This assumes you already have a working Bamboo setup and are familiar with the general process for testing Puppet modules with rspec.&lt;/p&gt;
+&lt;h2 id=&#34;create-a-new-plan&#34;&gt;Create a new plan&lt;/h2&gt;
+&lt;p&gt;The first step is to set up a new plan to use for the testing. Click &amp;ldquo;Create&amp;rdquo; and then &amp;ldquo;Create a new plan&amp;rdquo; in the top menu bar.![Pasted_Image_1_13_17__3_08_PM.png]({{ site.url }}/assets/img/pasted_image_1_13_17__3_08_pm.png)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Finishing the Puppet 4 Migration</title>
+      <link>http://localhost:1313/posts/2016/finishing-the-puppet-4-migration/</link>
+      <pubDate>Fri, 23 Dec 2016 23:19:07 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2016/finishing-the-puppet-4-migration/</guid>
+      <description>&lt;p&gt;Two days ago I finished our migration to Puppet 4. Overall I&amp;rsquo;d say the process was pretty painless. The gist of what I did&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;start running rspec tests against Puppet 4&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;fix issues found in tests&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;run the &lt;a href=&#34;https://github.com/dschaaff/prosvc-preview_report&#34;&gt;catalog preview tool&lt;/a&gt; and fix any issues found&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;turn on the future parser on the existing master&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;turn off stringify facts&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;create new master and PuppeDB server&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;migrate agents to new master&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thankfully our code wasn&amp;rsquo;t too difficult to update and most of the forge modules we use had also been updated.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Terraform AMI Maps</title>
+      <link>http://localhost:1313/posts/2016/terraform-ami-maps/</link>
+      <pubDate>Fri, 02 Dec 2016 03:44:51 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2016/terraform-ami-maps/</guid>
+      <description>&lt;p&gt;Up until today we had been using a map variable in terraform to choose our ubuntu 14 ami based on region.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;variable&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ubuntu_amis&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;description&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Mapping of Ubuntu 14.04 AMIs.&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;default&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;ap&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;northeast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-a25cffa2&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;ap&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;southeast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-967879c4&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;ap&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;southeast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-21ce8b1b&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;cn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;north&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;     &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-d44fd2ed&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;eu&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;central&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;   &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-9cf9c281&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;eu&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;west&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;      &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-664b0a11&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;sa&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;east&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;      &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-c99518d4&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;us&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;east&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;      &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-c135f3aa&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;us&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gov&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;west&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-91cfafb2&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;us&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;west&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;      &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-bf3dccfb&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;us&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;west&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;      &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-f15b5dc1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We would then set the ami id like so when creating an ec2 instance.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ami&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;${lookup(var.ubuntu_amis, var.region)}&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The problem we ran into is that we now use Ubuntu 16 by default and wanted to expand the ami map to contain its ID&amp;rsquo;s as well. I quickly discovered that nested maps like the one below work.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>No Longer Barfing at the Mention of ChatOps</title>
+      <link>http://localhost:1313/posts/2016/no-longer-barfing-at-the-mention-of-chatops/</link>
+      <pubDate>Fri, 11 Nov 2016 01:58:29 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2016/no-longer-barfing-at-the-mention-of-chatops/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve poked a lot of fun at chatops but I have found some value in portions of the practice. Let me state upfront that I do not believe paying attention to the chat room all day and having your attention interrupted non-stop is a productive or healthy practice. I have found some big benefits to &amp;ldquo;chatops&amp;rdquo; however.&lt;/p&gt;
+&lt;h2 id=&#34;visibility&#34;&gt;Visibility&lt;/h2&gt;
+&lt;p&gt;Work that is done in the chatroom, or filtered into the chatroom, is visible to the whole team. This helps the team be aware of what others are doing and stay up to date. I&amp;rsquo;ve picked up on quite a few things from this that I wouldn&amp;rsquo;t have learned other wise. This is also why we choose to route a fair amount of notifications into chat. For example we have Jira connected to HipChat and it makes it really easy to stay on top of issues. We also push commit notifications, build notifications, etc in the chatroom. The downside to this is that the rooms get noisy and make it harder to follow actual conversations between humans. One strategy we use to combat that is creating multiple rooms and focusing them around a subject.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sync your Twitter timeline with Tweetmarker</title>
+      <link>http://localhost:1313/posts/2011/sync-your-twitter-timeline-with-tweetmarker/</link>
+      <pubDate>Sat, 17 Sep 2011 03:08:22 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2011/sync-your-twitter-timeline-with-tweetmarker/</guid>
+      <description>&lt;p&gt;For a long time I used Echofon as my main twitter app.  It was ugly as sin but
+it would sync my unread status between my iPhone and my mac.  Eventually I fell
+in love with Tweetbot too much to keep using Echofon.  I always missed the
+syncing though and I usually avoided using Twitter on my mac because I hated
+having to scroll to find where I left off, not to mention it telling me all of
+my direct messages were unread.  Thankfully a developer named Manton Reece
+created the &lt;a href=&#34;http://tweetmarker.net/&#34;&gt;Tweetmarker&lt;/a&gt; service.  This is an open
+service that can be implemented by any Twitter app and will sync your timeline
+position between multiple apps.  Now, when I open Twitterific on my mac it
+automatically scrolls the last tweet I read in Tweetbot on my iPhone.  Simply
+put, I love it!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

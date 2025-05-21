@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Album of the Day on Daniel Schaaff</title>
+    <link>http://localhost:1313/tags/album-of-the-day/</link>
+    <description>Recent content in Album of the Day on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 04 May 2012 16:59:13 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/album-of-the-day/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>No Content Found</title>
+      <link>http://localhost:1313/posts/2012/album-of-the-day/</link>
+      <pubDate>Fri, 04 May 2012 16:59:13 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2012/album-of-the-day/</guid>
+      <description>&lt;p&gt;[youtube https://www.youtube.com/watch?v=NSnmxe7yRQ0&amp;amp;w;=500&amp;amp;h;=375]&lt;/p&gt;
+&lt;p&gt;Album of the day.&lt;/p&gt;
+&lt;p&gt;(Source: &lt;a href=&#34;http://www.youtube.com/&#34;&gt;http://www.youtube.com/&lt;/a&gt;)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

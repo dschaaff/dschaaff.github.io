@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Eyaml on Daniel Schaaff</title>
+    <link>http://localhost:1313/tags/eyaml/</link>
+    <description>Recent content in Eyaml on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 29 Mar 2017 18:02:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/eyaml/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tackling Tech Debt in Puppet</title>
+      <link>http://localhost:1313/posts/2017/tackling-tech-debt-in-puppet/</link>
+      <pubDate>Wed, 29 Mar 2017 18:02:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2017/tackling-tech-debt-in-puppet/</guid>
+      <description>&lt;p&gt;I spent some time tackling technical debt in our Puppet code this week. The biggest outstanding item was implementing eyaml for protecting secrets in Hiera. I&amp;rsquo;d also been encouraging developers to contribute to the Puppet code base  for some time, but they were restricted from the control repo due to some secrets kept in Hiera. This put a big damper on collaboration as Hiera is the data engine for our roles and profiles. Separate git repos were also used for the profile and role modules due to this workflow.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

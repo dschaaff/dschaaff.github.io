@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Email on Daniel Schaaff</title>
+    <link>http://localhost:1313/tags/email/</link>
+    <description>Recent content in Email on Daniel Schaaff</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 28 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/email/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Update on iCloud&#43; Custom Email Domain</title>
+      <link>http://localhost:1313/posts/2024/update-on-icloud-custom-email-domain/</link>
+      <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2024/update-on-icloud-custom-email-domain/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been using my custom domain with iCloud email for a couple weeks. Truth be
+told I hardly notice any difference from when I used Gmail. That&amp;rsquo;s largely due
+to using Apple Mail app as my primary interface. I haven&amp;rsquo;t had any reliability
+issues and the only real difference I&amp;rsquo;ve noticed is the email size limit is
+20MB as opposed to Gmail&amp;rsquo;s 25MB. The primary benefit I&amp;rsquo;ve seen is that
+calendar invites end up on my iCloud calendar, which is where I prefer them.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Migrating My Email From Google Workspace To iCloud&#43;</title>
+      <link>http://localhost:1313/posts/2024/migrating-from-google-workspace-to-icloud-plus/</link>
+      <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2024/migrating-from-google-workspace-to-icloud-plus/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m in the process of migrating my email from Google Workspace to iCloud+. I&amp;rsquo;ve
+been using Google Workspace (aka gsuite, aka whatever name Google switches to
+next week) for my email for a long time. For ages it was free and made perfect
+sense as a service. Those free accounts have gone away, and the service&amp;rsquo;s focus
+is clearly aimed at the enterprise and not individuals like me. The price per
+user is also about to increase on me, so this felt like a good time to try
+something else. I&amp;rsquo;m only really interested in hosting email for a few custom
+domains and have no needs for any features beyond that. Our family already uses
+iCloud for everything so I figured why not give it a try.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sanebox Spammed Me</title>
+      <link>http://localhost:1313/posts/2014/sanebox-spammed-me/</link>
+      <pubDate>Thu, 20 Feb 2014 22:27:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2014/sanebox-spammed-me/</guid>
+      <description>&lt;h1 id=&#34;sanebox-spammed-me&#34;&gt;Sanebox Spammed Me&lt;/h1&gt;
+&lt;p&gt;A few days ago I signed up for a &lt;a href=&#34;http://www.sanebox.com&#34;&gt;Sanebox&lt;/a&gt; account after having my curiosity piqued from hearing &lt;a href=&#34;http://www.macpowerusers.com/2013/11/17/mac-power-users-164-tackling-email/&#34;&gt;David Sparks&lt;/a&gt; talk about it. I really enjoyed the service in the first few days. It learns from your email habits and moves unimportant messages into a folder called +sanelater. At 4pm each day I would receive an email listing eveything in the +sanelater folder in my inbox.This was great, the mail showing up in my inbox was email from people that I actually wanted to read. Everything else I could review in one swoop at the end of the day without it distracting me…&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Make Gmail play nice with Apple Mail</title>
+      <link>http://localhost:1313/posts/2011/make-gmail-play-nice-with-apple-mail/</link>
+      <pubDate>Sat, 29 Oct 2011 16:14:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2011/make-gmail-play-nice-with-apple-mail/</guid>
+      <description>&lt;p&gt;Yesterday I determined a compromise.  I&amp;rsquo;m going to keep using iCloud for
+contacts and calendars.  Google sync makes a mess of contacts, iCloud &amp;ldquo;just
+works.&amp;rdquo;  I&amp;rsquo;ll keep using Gmail for my main email.  I&amp;rsquo;ll access it through Apple
+Mail on the desktop and the iPhone&amp;rsquo;s built in mail app.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s how I set it up to avoid duplicate messages and other craziness.  Log
+into Gmail&amp;rsquo;s settings and navigate to the labels tab.  Here you can control
+which labels show up in IMAP.  What I did was hide all mail, starred, and
+important from IMAP.  &lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
