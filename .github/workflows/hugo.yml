@@ -41,6 +41,12 @@ jobs:
       - name: Install Dart Sass Embedded
         run: sudo snap install dart-sass
 
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
@@ -57,6 +63,7 @@ jobs:
           key: hugo-${{ github.run_id }}
           restore-keys:
             hugo-
+
       - name: Configure Git
         run: git config core.quotepath false
 
