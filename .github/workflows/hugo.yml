@@ -17,7 +17,7 @@ permissions:
 # Allow one concurrent deployment
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 # Default to bash
 defaults:
@@ -30,6 +30,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.145.4
+      HUGO_ENVIRONMENT: production
+      TZ: America/Los_Angeles
     steps:
       - name: Install Hugo CLI
         run: |
@@ -37,7 +39,10 @@ jobs:
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
       - name: Install Dart Sass Embedded
-        run: sudo snap install dart-sass-embedded
+        run: sudo snap install dart-sass
+        with:
+          submodules: recursive
+          fetch-depth: 0
 
       - name: Checkout
         uses: actions/checkout@v4
