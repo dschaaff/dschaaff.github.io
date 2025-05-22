@@ -116,9 +116,6 @@ languages:
         - name: "Blog"
           weight: 3
           url: "posts/"
-        - name: "About"
-          weight: 2
-          url: "about/"
         - name: "CV"
           weight: 2
           url: "cv/"
