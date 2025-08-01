@@ -1,20 +1,24 @@
 # Curriculum Vitae
 
 {{< details "Table of Contents" >}}
+
 <!-- TOC -->
 
 - [Curriculum Vitae](#curriculum-vitae)
 - [Daniel Schaaff](#daniel-schaaff)
-	- [Professional Summary](#professional-summary)
-	- [Professional Experience](#professional-experience)
-		- [Lead DevOps Engineer, Cordial - San Diego, CA - February 2019 to Present](#lead-devops-engineer-cordial---san-diego-ca---february-2019-to-present)
-		- [Lead System Operations Engineer, Verve - Carlsbad, CA - December 2018 to February 2019](#lead-system-operations-engineer-verve---carlsbad-ca---december-2018-to-february-2019)
-		- [Senior DevOps Engineer, Gimbal - San Diego, CA - May 2017 to December 2017](#senior-devops-engineer-gimbal---san-diego-ca---may-2017-to-december-2017)
-		- [DevOps and IT Operations Manager, KnuEdge - San Diego, CA - September 2014 to May 2017](#devops-and-it-operations-manager-knuedge---san-diego-ca---september-2014-to-may-2017)
-		- [Network Administrator, Choose Chicago - Chicago, IL - April 2013 to September 2013](#network-administrator-choose-chicago---chicago-il---april-2013-to-september-2013)
-	- [Education and Certifications](#education-and-certifications)
+  - [Professional Summary](#professional-summary)
+  - [Professional Experience](#professional-experience)
+    - [Principal DevOps Engineer, Cordial - San Diego, CA - July 2025 to Present](#principal-devops-engineer-cordial---san-diego-ca---july-2025-to-present)
+    - [Lead DevOps Engineer, Cordial - San Diego, CA - July 2020 to July 2025](#lead-devops-engineer-cordial---san-diego-ca---july-2020-to-july-2025)
+    - [Senior DevOps Engineer, Cordial - San Diego, CA - February 2019 to July 2020](#senior-devops-engineer-cordial---san-diego-ca---february-2019-to-july-2020)
+    - [Lead System Operations Engineer, Verve - Carlsbad, CA - December 2018 to February 2019](#lead-system-operations-engineer-verve---carlsbad-ca---december-2018-to-february-2019)
+    - [Senior DevOps Engineer, Gimbal - San Diego, CA - May 2017 to December 2017](#senior-devops-engineer-gimbal---san-diego-ca---may-2017-to-december-2017)
+    - [DevOps and IT Operations Manager, KnuEdge - San Diego, CA - September 2014 to May 2017](#devops-and-it-operations-manager-knuedge---san-diego-ca---september-2014-to-may-2017)
+    - [Network Administrator, Choose Chicago - Chicago, IL - April 2013 to September 2013](#network-administrator-choose-chicago---chicago-il---april-2013-to-september-2013)
+  - [Education and Certifications](#education-and-certifications)
 
 <!-- /TOC -->
+
 {{< /details >}}
 
 # Daniel Schaaff
@@ -25,7 +29,11 @@ Proven DevOps leader looking to leave his mark on the world through technology a
 
 ## Professional Experience
 
-### Lead DevOps Engineer, Cordial - San Diego, CA - February 2019 to Present
+### Principal DevOps Engineer, Cordial - San Diego, CA - July 2025 to Present
+
+### Lead DevOps Engineer, Cordial - San Diego, CA - July 2020 to July 2025
+
+### Senior DevOps Engineer, Cordial - San Diego, CA - February 2019 to July 2020
 
 ### Lead System Operations Engineer, Verve - Carlsbad, CA - December 2018 to February 2019
 
